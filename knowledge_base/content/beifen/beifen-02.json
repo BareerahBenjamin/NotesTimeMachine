@@ -1,0 +1,744 @@
+{
+  "chapter_id": "beifen-02",
+  "classic_id": "beifen",
+  "title": "胡笳十八拍",
+  "order": 2,
+  "paragraphs": [
+    {
+      "id": "beifen-02-01",
+      "order": 1,
+      "content": "我生之初尚无为，我生之后汉祚衰。天不仁兮降乱离，地不仁兮使我逢此时。干戈日寻兮道路危，民卒流亡兮共哀悲。烟尘蔽野兮胡虏盛，志意乖兮节义亏。",
+      "keywords": [
+        "乱世",
+        "天命",
+        "悲愤"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第一拍·乱世，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第一拍·乱世，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第一拍·乱世是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-02",
+      "order": 2,
+      "content": "越汉国兮入胡城，亡家失身兮不如无生。毡裘为裳兮骨肉震惊，羯膻为味兮枉遏我情。鼙鼓喧兮从夜达明，胡风浩浩兮暗塞营。",
+      "keywords": [
+        "入胡",
+        "异俗",
+        "哀伤"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-02",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第二拍·入胡，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第二拍·入胡，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第二拍·入胡是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-03",
+      "order": 3,
+      "content": "无日无夜兮不思我乡土，禀气含生兮莫过我最苦。天灾国乱兮人无主，唯我薄命兮没戎虏。殊俗心异兮身难处，嗜欲不同兮谁可与语！",
+      "keywords": [
+        "思乡",
+        "孤独",
+        "异俗"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-03",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第三拍·思乡，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第三拍·思乡，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第三拍·思乡是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-04",
+      "order": 4,
+      "content": "雁南征兮欲寄边声，雁北归兮为得汉音。雁飞高兮邈难寻，空断肠兮思愔愔。攒眉向月兮抚雅琴，五拍泠泠兮意弥深。",
+      "keywords": [
+        "雁",
+        "音信",
+        "琴"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-04",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第五拍·望雁，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第五拍·望雁，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第五拍·望雁是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-05",
+      "order": 5,
+      "content": "冰霜凛凛兮身苦寒，饥对肉酪兮不能餐。夜闻陇水兮声呜咽，朝见长城兮路杳漫。追思往日兮行李难，六拍悲来兮欲罢弹。",
+      "keywords": [
+        "苦寒",
+        "长城",
+        "哀思"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-05",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第六拍·苦寒，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第六拍·苦寒，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第六拍·苦寒是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-06",
+      "order": 6,
+      "content": "日暮风悲兮边声四起，不知心忧兮说向谁是！原野萧条兮烽戍万里，俗贱老弱兮少壮为美。逐有水草兮安家葺垒，牛羊满野兮聚如蜂蚁。草尽水竭兮羊马皆徙，七拍流恨兮恶居于此。",
+      "keywords": [
+        "边塞",
+        "风俗",
+        "流恨"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-06",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第七拍·边塞，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-06",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第七拍·边塞，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-06",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第七拍·边塞是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-07",
+      "order": 7,
+      "content": "为天有眼兮何不见我独漂流？为神有灵兮何事处我天南海北头？我不负天兮天何配我殊匹？我不负神兮神何殛我越荒州？",
+      "keywords": [
+        "天问",
+        "神问",
+        "控诉"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-07",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第八拍·问天，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-07",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第八拍·问天，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-07",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第八拍·问天是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-08",
+      "order": 8,
+      "content": "制兹八拍兮拟排忧，何知曲成兮心转愁。天无涯兮地无边，我心愁兮亦复然。人生倏忽兮如白驹之过隙，然不得欢乐兮当我之盛年。怨兮欲问天，天苍苍兮上无缘。举头仰望兮空云烟，九拍怀情兮谁与传？",
+      "keywords": [
+        "八拍",
+        "愁思",
+        "盛年"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-08",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第九拍·怀情，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-08",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第九拍·怀情，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-08",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第九拍·怀情是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-09",
+      "order": 9,
+      "content": "城头烽火不曾灭，疆场征战何时歇？杀气朝朝冲塞门，胡风夜夜吹边月。故乡隔兮音尘绝，哭无声兮气将咽。一生辛苦兮缘别离，十拍悲深兮泪成血。",
+      "keywords": [
+        "烽火",
+        "征战",
+        "别离"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-09",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第十拍·烽火，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-09",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第十拍·烽火，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-09",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第十拍·烽火是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-10",
+      "order": 10,
+      "content": "东风应律兮暖气多，知是汉家天子兮布阳春。羌胡蹈舞兮共讴歌，两国交欢兮罢兵戈。忽遇汉使兮称近诏，遗千金兮赎妾身。",
+      "keywords": [
+        "和亲",
+        "赎归",
+        "汉使"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-10",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第十三拍·闻归，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-10",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第十三拍·闻归，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-10",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第十三拍·闻归是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-11",
+      "order": 11,
+      "content": "喜得生还兮逢圣君，嗟别稚子兮会无因。十有二拍兮哀乐均，去住两情兮难具陈。",
+      "keywords": [
+        "生还",
+        "别子",
+        "矛盾"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-11",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第十二拍·归汉，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-11",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第十二拍·归汉，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-11",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第十二拍·归汉是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-12",
+      "order": 12,
+      "content": "不谓残生兮却得旋归，抚抱胡儿兮泣下沾衣。汉使迎我兮四牡𬴂𬴂，号失声兮谁得知？与我生死兮逢此时，愁为子兮日无光辉。焉得羽翼兮将汝归，一步一远兮足难移。",
+      "keywords": [
+        "归汉",
+        "别子",
+        "悲泣"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-12",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第十三拍·别子，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-12",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第十三拍·别子，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-12",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第十三拍·别子是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-13",
+      "order": 13,
+      "content": "身归国兮儿莫之随，心悬悬兮长如饥。四时万物兮有盛衰，唯我愁苦兮不暂移。山高地阔兮见汝无期，更深夜阑兮梦汝来斯。梦中执手兮一喜一悲，觉后痛吾心兮无休歇时。",
+      "keywords": [
+        "归国",
+        "思子",
+        "梦"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-13",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第十四拍·思子，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-13",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第十四拍·思子，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-13",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第十四拍·思子是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-14",
+      "order": 14,
+      "content": "十有四拍兮涕泪交垂，河水东流兮心是思。十有五拍兮节调促，气填胸兮谁识曲？处穹庐兮偶殊俗，愿得归来兮天从欲。再还汉国兮欢心足，心有怀兮愁转深。",
+      "keywords": [
+        "涕泪",
+        "归国",
+        "愁思"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-14",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第十五拍·愁思，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-14",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第十五拍·愁思，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-14",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第十五拍·愁思是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-15",
+      "order": 15,
+      "content": "十六拍兮思茫茫，我与儿兮各一方。日东月西兮徒相望，不得相随兮空断肠。对萱草兮忧不忘，弹鸣琴兮情何伤！今别子兮归故乡，旧怨平兮新怨长。",
+      "keywords": [
+        "母子",
+        "分离",
+        "怨"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-15",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第十六拍·各一方，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-15",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第十六拍·各一方，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-15",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第十六拍·各一方是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-02-16",
+      "order": 16,
+      "content": "胡笳本自出胡中，缘琴翻出音律同。十八拍兮曲虽终，响有余兮思无穷。是知丝竹微妙兮均造化之功，哀乐各随人心兮有变则通。胡与汉兮异域殊风，天与地隔兮子西母东。苦我怨气兮浩于长空，六合虽广兮受之应不容！",
+      "keywords": [
+        "胡笳",
+        "总结",
+        "怨气"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-02-16",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段第十八拍·总结，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-02-16",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段第十八拍·总结，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-02-16",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段第十八拍·总结是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

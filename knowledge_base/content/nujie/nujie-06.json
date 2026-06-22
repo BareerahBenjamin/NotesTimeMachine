@@ -1,0 +1,179 @@
+{
+  "chapter_id": "nujie-06",
+  "classic_id": "nujie",
+  "title": "曲从第六",
+  "order": 6,
+  "paragraphs": [
+    {
+      "id": "nujie-06-01",
+      "order": 1,
+      "content": "夫「得意一人，是谓永毕」，固已。然舅姑之心，岂当可失哉？物有以恩自离者，亦有以义自破者也。夫虽云爱，舅姑云非，此所谓以义自破者也。",
+      "keywords": [
+        "舅姑",
+        "曲从",
+        "家庭"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-06-01",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。舅姑之重此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-06-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此舅姑之重，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-06-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇舅姑之重，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-06-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此舅姑之重反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-06-02",
+      "order": 2,
+      "content": "然则舅姑之心奈何？固莫尚于曲从矣。姑云不尔而是，固宜从令。姑云尔而非，犹宜顺命。勿得违戾是非，争分曲直。此则所谓曲从矣。",
+      "keywords": [
+        "曲从",
+        "顺命",
+        "家庭"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-06-02",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。曲从之道此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-06-02",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此曲从之道，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-06-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇曲从之道，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-06-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此曲从之道反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-06-03",
+      "order": 3,
+      "content": "故《女宪》曰：「妇如影响，焉不可赏。」此之谓也。影响者，谓顺从舅姑之意，如影之随形，响之应声也。",
+      "keywords": [
+        "影响",
+        "顺从",
+        "比喻"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-06-03",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。影响之喻此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-06-03",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此影响之喻，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-06-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇影响之喻，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-06-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此影响之喻反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

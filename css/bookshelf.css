@@ -1,0 +1,191 @@
+/* ========================================
+   Bookshelf Styles v2
+   ======================================== */
+
+/* Bookshelf — Ink Wash Wooden Shelf */
+.bookshelf {
+  margin-bottom: 32px;
+}
+
+.shelf {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 28px 32px 18px;
+  background: linear-gradient(180deg, #C4B59A 0%, #B8A88C 60%, #A89878 100%);
+  border-radius: var(--radius);
+  border: 1px solid #B8A88C;
+  border-bottom: 3px solid #8C7E68;
+  box-shadow:
+    0 6px 16px rgba(44,36,32,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+  position: relative;
+}
+
+/* Wood grain texture overlay */
+.shelf::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.03) 40px,
+    rgba(255,255,255,0.03) 42px
+  );
+  pointer-events: none;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.book-item:hover {
+  transform: translateY(-6px) rotate(-2deg);
+}
+
+.book-spine {
+  width: 56px;
+  height: 160px;
+  border-radius: 4px 8px 8px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--bg);
+  box-shadow:
+    inset 2px 0 4px rgba(0,0,0,0.2),
+    inset -1px 0 2px rgba(255,255,255,0.1),
+    3px 3px 10px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Gold accent lines at top and bottom of spine */
+.book-spine::before,
+.book-spine::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  height: 1px;
+  background: rgba(255,215,0,0.35);
+}
+
+.book-spine::before { top: 6px; }
+.book-spine::after { bottom: 6px; }
+
+.book-item:hover .book-spine {
+  box-shadow:
+    inset 2px 0 4px rgba(0,0,0,0.15),
+    inset -1px 0 2px rgba(255,255,255,0.15),
+    4px 6px 20px rgba(0,0,0,0.25);
+}
+
+.book-item.active .book-spine {
+  box-shadow:
+    inset 2px 0 4px rgba(0,0,0,0.15),
+    inset -1px 0 2px rgba(255,255,255,0.1),
+    0 0 16px rgba(184,149,79,0.3),
+    3px 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Book spine colors */
+.book-spine.shuyuci { background: linear-gradient(135deg, #8B3A2A 0%, #5C2819 100%); }
+.book-spine.nujie { background: linear-gradient(135deg, #2E5A4C 0%, #1A3A2B 100%); }
+.book-spine.beifen { background: linear-gradient(135deg, #4A4A8A 0%, #2D2D5A 100%); }
+.book-spine.donghaiyuge { background: linear-gradient(135deg, #8A6A2A 0%, #5A4519 100%); }
+.book-spine.xuetao { background: linear-gradient(135deg, #6B4C8A 0%, #4A2A5A 100%); }
+.book-spine.yuxuanji { background: linear-gradient(135deg, #4A7A4A 0%, #2A4A2A 100%); }
+.book-spine.liuye { background: linear-gradient(135deg, #7A5A4A 0%, #4A3A2A 100%); }
+.book-spine.liucaichun { background: linear-gradient(135deg, #8A6A4A 0%, #5A4A2A 100%); }
+.book-spine.zhushuzhen { background: linear-gradient(135deg, #8A2A4A 0%, #5A1A2A 100%); }
+.book-spine.weiwan { background: linear-gradient(135deg, #2A5A8A 0%, #1A3A5A 100%); }
+.book-spine.baitouyin { background: linear-gradient(135deg, #8A5A2A 0%, #5A3515 100%); }
+.book-spine.gongci { background: linear-gradient(135deg, #6A8A6A 0%, #4A5A4A 100%); }
+.book-spine.huange { background: linear-gradient(135deg, #7A4A6A 0%, #4A2A4A 100%); }
+.book-spine.taishanyin { background: linear-gradient(135deg, #4A6A8A 0%, #2A4A5A 100%); }
+.book-spine.caishuyuan { background: linear-gradient(135deg, #8A4A4A 0%, #5A2A2A 100%); }
+.book-spine.yuangexing { background: linear-gradient(135deg, #5A5A7A 0%, #3A3A5A 100%); }
+.book-spine.nixiaoshan { background: linear-gradient(135deg, #6A6A8A 0%, #4A4A6A 100%); }
+
+.book-label {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.book-item.active .book-label {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.no-results {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  width: 100%;
+}
+
+/* Dark mode bookshelf - warm wood tones harmonized with bg */
+[data-theme="dark"] .shelf {
+  background: linear-gradient(180deg, #3A3428 0%, #2E2820 60%, #242018 100%);
+  border-color: #3A3428;
+  border-bottom-color: #1A1510;
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+[data-theme="dark"] .shelf::before {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.015) 40px,
+    rgba(255,255,255,0.015) 42px
+  );
+}
+
+[data-theme="dark"] .book-spine {
+  color: #F0EBE3;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 2px 0 4px rgba(0,0,0,0.3),
+    inset -1px 0 2px rgba(255,255,255,0.05),
+    3px 3px 10px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .book-item:hover .book-spine {
+  box-shadow:
+    inset 2px 0 4px rgba(0,0,0,0.2),
+    inset -1px 0 2px rgba(255,255,255,0.1),
+    4px 6px 20px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .book-item.active .book-spine {
+  box-shadow:
+    inset 2px 0 4px rgba(0,0,0,0.2),
+    inset -1px 0 2px rgba(255,255,255,0.05),
+    0 0 16px rgba(224,184,90,0.3),
+    3px 3px 10px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .book-label {
+  color: rgba(240,235,227,0.6);
+}
+
+[data-theme="dark"] .book-item.active .book-label {
+  color: var(--gold);
+}

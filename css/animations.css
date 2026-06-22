@@ -1,0 +1,303 @@
+/* ========================================
+   Animations & Enhancements
+   ======================================== */
+
+/* General Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-in:nth-child(1) { animation-delay: 0.1s; }
+.animate-in:nth-child(2) { animation-delay: 0.2s; }
+.animate-in:nth-child(3) { animation-delay: 0.3s; }
+.animate-in:nth-child(4) { animation-delay: 0.4s; }
+
+/* Book spine hover enhancement */
+.book-spine {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.book-spine:hover {
+  transform: translateY(-6px) rotate(-2deg);
+}
+
+/* Panel entrance */
+.panel-original {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Reader Improvements */
+.current-book-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-author-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--muted);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-serif);
+}
+
+.btn-author-info:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(139,58,42,0.05);
+}
+
+.panel-ornament {
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 50%, transparent 100%);
+  margin: 0 20px;
+  border-radius: 2px;
+}
+
+.ancient-text {
+  position: relative;
+  padding-left: 2.2rem;
+}
+
+.ancient-text::before {
+  content: attr(data-order);
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color: var(--rule);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  width: 1.5rem;
+  text-align: right;
+}
+
+.ancient-text .click-hint {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  background: var(--bg-paper);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--rule);
+}
+
+.ancient-text:hover .click-hint {
+  opacity: 1;
+}
+
+.ancient-text.selected {
+  border-left-width: 3px;
+}
+
+.ancient-text.selected::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+  animation: borderGrow 0.3s ease forwards;
+}
+
+@keyframes borderGrow {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+/* Timeline Improvements */
+.timeline-track::before {
+  background: linear-gradient(
+    to bottom,
+    var(--han) 0%,
+    var(--tang) 20%,
+    var(--song) 40%,
+    var(--ming) 60%,
+    var(--qing) 80%,
+    var(--modern) 100%
+  );
+  width: 3px;
+}
+
+.timeline-item {
+  animation: slideInLeft 0.4s ease forwards;
+  opacity: 0;
+  animation-delay: calc(var(--index, 0) * 0.1s);
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeline-item.hidden-era {
+  display: none;
+}
+
+.timeline-legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.legend-item {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  user-select: none;
+}
+
+.legend-item:hover {
+  opacity: 0.7;
+}
+
+.legend-item.dimmed {
+  opacity: 0.3;
+}
+
+.legend-reset {
+  font-size: 0.75rem;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-left: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.legend-reset:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.legend-reset.active {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+/* ========================================
+   AI Annotation Interpretation
+   ======================================== */
+
+.btn-interpret {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, rgba(184,149,79,0.1) 0%, rgba(184,149,79,0.05) 100%);
+  border: 1px solid rgba(184,149,79,0.3);
+  border-radius: var(--radius-sm);
+  color: var(--gold);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-serif);
+}
+
+.btn-interpret:hover {
+  background: linear-gradient(135deg, rgba(184,149,79,0.2) 0%, rgba(184,149,79,0.1) 100%);
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.btn-interpret.active {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+
+.btn-interpret:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.interpret-icon {
+  font-size: 0.9rem;
+}
+
+.annotation-interpretation {
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, rgba(184,149,79,0.08) 0%, rgba(184,149,79,0.03) 100%);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--gold);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.interpretation-loading {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.interpretation-content {
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.interpretation-label {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.interpretation-text {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+}
+
+.interpretation-error {
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+/* Timeline item expanded state */
+.timeline-item.expanded .timeline-annotation {
+  max-height: none;
+  overflow: visible;
+}
+
+/* Timeline annotation clickable */
+.timeline-annotation {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.timeline-annotation:hover {
+  color: var(--ink);
+}

@@ -1,0 +1,293 @@
+{
+  "chapter_id": "yuxuanji-02",
+  "classic_id": "yuxuanji",
+  "title": "第2卷（共9卷）",
+  "order": 2,
+  "paragraphs": [
+    {
+      "id": "yuxuanji-02-01",
+      "order": 1,
+      "content": "《卖残牡丹》临风兴叹落花频，芳意潜消又一春。应为价高人不问，却缘香甚蝶难亲。红英只称生宫里，翠叶那堪染路尘。及至移根上林苑，王孙方恨买无因。",
+      "keywords": [
+        "春",
+        "花",
+        "恨",
+        "人",
+        "恨"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-01",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-01",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-02-02",
+      "order": 2,
+      "content": "《酬李学士寄簟》珍簟新铺翡翠楼，泓澄玉水记方流。唯应云扇情相似，同向银床恨早秋。",
+      "keywords": [
+        "秋",
+        "恨",
+        "水",
+        "情",
+        "恨"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-02",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-02",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-02-03",
+      "order": 3,
+      "content": "《情书寄李子安》饮冰食蘗志无功，晋水壶关在梦中。秦镜欲分愁堕鹊，舜琴将弄怨飞鸿。井边桐叶鸣秋雨，窗下银灯暗晓风。书信茫茫何处问，持竿尽日碧江空。",
+      "keywords": [
+        "秋",
+        "雨",
+        "愁",
+        "琴",
+        "水"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-03",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-03",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-02-04",
+      "order": 4,
+      "content": "《闺怨》蘼芜盈手泣斜晖，闻道邻家夫壻归。别日南鸿才北去，今朝北鴈又南飞。春来秋去相思在，秋去春来信息稀。扃闭朱门人不到，砧声何事透罗帏。",
+      "keywords": [
+        "相思",
+        "春",
+        "秋",
+        "人",
+        "去"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-04",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-04",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-02-05",
+      "order": 5,
+      "content": "《春情寄子安》山路敧斜石磴危，不愁行苦苦相思。冰销远磵怜清韵，雪远寒峰想玉姿。莫听凡歌春病酒，休招闲客夜贪棋。如松匪石盟长在，比翼连襟会肯迟。虽恨独行冬尽日，终期相见月圆时。别君何物堪持赠，泪落晴光一首诗。",
+      "keywords": [
+        "相思",
+        "春",
+        "月",
+        "雪",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "xinwenfang-yuxuanji-02-05",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "鱼玄机寄李亿（字子安）诗，'山路奇支斜石蹬危，不愁行苦苦相思'，写山路之险与相思之切。李亿为鱼玄机之夫，后弃之。"
+        },
+        {
+          "id": "zhongxing-yuxuanji-02-05",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "'冰销远涧怜清韵，雪远寒峰想玉姿'，以冰、雪喻己之清白与高洁，寓被弃之怨于山水描写之中。"
+        },
+        {
+          "id": "ai-modern-yuxuanji-02-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗春情寄子安是鱼玄机的代表作。辛文房、钟惺等历代评论家对其有精当的评价。鱼玄机才情横溢，其诗情感真挚，语言华美，在唐代女诗人中成就突出。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-02-06",
+      "order": 6,
+      "content": "《打毬作》坚圆净滑一星流，月杖争敲未拟休。无滞碍时从拨弄，有遮栏处任钩留。不辞宛转长随手，却恐相将不到头。毕竟入门应始了，愿君争取最前筹。",
+      "keywords": [
+        "月",
+        "君"
+      ],
+      "annotations": [
+        {
+          "id": "xinwenfang-yuxuanji-02-06",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "鱼玄机《打球作》，'坚圆净滑一星微，月杖争敲未拟归'，写打马球之景，生动活泼。此诗在鱼玄机作品中别具一格，少见的欢快之作。"
+        },
+        {
+          "id": "zhongxing-yuxuanji-02-06",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "'不辞宛转长随手，却恐相将不上天'，以打球喻人生际遇，寓哲理于游戏之中。"
+        },
+        {
+          "id": "ai-modern-yuxuanji-02-06",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗打毬作是鱼玄机的代表作。辛文房、钟惺等历代评论家对其有精当的评价。鱼玄机才情横溢，其诗情感真挚，语言华美，在唐代女诗人中成就突出。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

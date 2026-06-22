@@ -1,0 +1,222 @@
+{
+  "authors": [
+    {
+      "id": "li-qingzhao",
+      "name": "李清照",
+      "era": "宋代",
+      "era_code": "song",
+      "bio": "宋代杰出女词人，婉约派代表，被誉为千古第一才女",
+      "gender": "female"
+    },
+    {
+      "id": "ban-zhao",
+      "name": "班昭",
+      "era": "东汉",
+      "era_code": "han",
+      "bio": "东汉女史学家、文学家，续修汉书，著女诫",
+      "gender": "female"
+    },
+    {
+      "id": "cai-wenji",
+      "name": "蔡文姬",
+      "era": "东汉",
+      "era_code": "han",
+      "bio": "东汉末年著名文学家蔡邕之女，博学多才，精通音律",
+      "gender": "female"
+    },
+    {
+      "id": "gu-taiqing",
+      "name": "顾太清",
+      "era": "清代",
+      "era_code": "qing",
+      "bio": "清代著名女词人，与纳兰性德并称满洲词人双璧",
+      "gender": "female"
+    },
+    {
+      "id": "xue-tao",
+      "name": "薛涛",
+      "era": "唐代",
+      "era_code": "tang",
+      "bio": "唐代著名女诗人，创制薛涛笺，授女校书",
+      "gender": "female"
+    },
+    {
+      "id": "yu-xuanji",
+      "name": "鱼玄机",
+      "era": "唐代",
+      "era_code": "tang",
+      "bio": "唐代著名女诗人，才情横溢，情感真挚",
+      "gender": "female"
+    },
+    {
+      "id": "li-ye",
+      "name": "李冶",
+      "era": "唐代",
+      "era_code": "tang",
+      "bio": "唐代著名女冠，清丽流畅，多写自然景物与道情禅意",
+      "gender": "female"
+    },
+    {
+      "id": "liu-caichun",
+      "name": "刘采春",
+      "era": "唐代",
+      "era_code": "tang",
+      "bio": "唐代著名女艺人，擅长演唱，啰唝曲广为传唱",
+      "gender": "female"
+    },
+    {
+      "id": "zhu-shuzhen",
+      "name": "朱淑真",
+      "era": "宋代",
+      "era_code": "song",
+      "bio": "南宋女词人，与李清照并称宋代女性词人双璧",
+      "gender": "female"
+    },
+    {
+      "id": "wei-wan",
+      "name": "魏玩",
+      "era": "宋代",
+      "era_code": "song",
+      "bio": "宋代著名女词人，丞相曾布之妻，封鲁国夫人",
+      "gender": "female"
+    },
+    {
+      "id": "zhuo-wenjun",
+      "name": "卓文君",
+      "era": "西汉",
+      "era_code": "han",
+      "bio": "中国古代四大才女之一，蜀中四大才女之一",
+      "gender": "female"
+    },
+    {
+      "id": "hua-ruifuren",
+      "name": "花蕊夫人",
+      "era": "五代十国",
+      "era_code": "five_dynasties",
+      "bio": "前蜀开国皇帝王建的妃子，宫词描绘宫廷生活",
+      "gender": "female"
+    },
+    {
+      "id": "huang-e",
+      "name": "黄峨",
+      "era": "明代",
+      "era_code": "ming",
+      "bio": "明代著名女文学家，曲中李易安，杨慎之妻",
+      "gender": "female"
+    },
+    {
+      "id": "xie-daoyun",
+      "name": "谢道韫",
+      "era": "东晋",
+      "era_code": "wei_jin",
+      "bio": "东晋时女诗人，宰相谢安侄女，未若柳絮因风起",
+      "gender": "female"
+    },
+    {
+      "id": "shangguan-waner",
+      "name": "上官婉儿",
+      "era": "唐代",
+      "era_code": "tang",
+      "bio": "唐代女官、诗人、皇妃，有巾帼宰相之名",
+      "gender": "female"
+    },
+    {
+      "id": "ban-jieyu",
+      "name": "班婕妤",
+      "era": "西汉",
+      "era_code": "han",
+      "bio": "西汉女文学家，班固祖姑，古有樊姬今有班婕妤",
+      "gender": "female"
+    },
+    {
+      "id": "xu-hui",
+      "name": "徐惠",
+      "era": "唐代",
+      "era_code": "tang",
+      "bio": "唐太宗李世民妃嫔，八岁能诗，女中魏征",
+      "gender": "female"
+    },
+    {
+      "id": "confucius",
+      "name": "孔子",
+      "era": "春秋",
+      "era_code": "spring_autumn",
+      "bio": "儒家学派创始人，思想家、教育家",
+      "gender": "male"
+    },
+    {
+      "id": "zheng-xuan",
+      "name": "郑玄",
+      "era": "汉代",
+      "era_code": "han",
+      "bio": "东汉经学家，融合古文经学与今文经学",
+      "gender": "male"
+    },
+    {
+      "id": "he-yan",
+      "name": "何晏",
+      "era": "魏晋",
+      "era_code": "wei_jin",
+      "bio": "魏晋玄学代表人物，注《论语》",
+      "gender": "male"
+    },
+    {
+      "id": "zhu-xi",
+      "name": "朱熹",
+      "era": "宋代",
+      "era_code": "song",
+      "bio": "宋代理学集大成者，著《四书章句集注》",
+      "gender": "male"
+    },
+    {
+      "id": "liu-bao-nan",
+      "name": "刘宝楠",
+      "era": "清代",
+      "era_code": "qing",
+      "bio": "清代经学家，著《论语正义》",
+      "gender": "male"
+    },
+    {
+      "id": "wang-bi",
+      "name": "王弼",
+      "era": "魏晋",
+      "era_code": "wei_jin",
+      "bio": "魏晋玄学创始人之一，注《道德经》",
+      "gender": "male"
+    },
+    {
+      "id": "guo-xiang",
+      "name": "郭象",
+      "era": "晋代",
+      "era_code": "jin",
+      "bio": "晋代玄学家，注《庄子》",
+      "gender": "male"
+    },
+    {
+      "id": "li-ling",
+      "name": "李零",
+      "era": "现代",
+      "era_code": "modern",
+      "bio": "当代考古学家、北大教授",
+      "gender": "male"
+    },
+    {
+      "id": "yang-shanda",
+      "name": "杨树达",
+      "era": "现代",
+      "era_code": "modern",
+      "bio": "近代著名语言文字学家",
+      "gender": "male"
+    }
+  ],
+  "eras": [
+    { "code": "han", "name": "汉代", "period": "BC202-AD220" },
+    { "code": "wei_jin", "name": "魏晋", "period": "220-420" },
+    { "code": "tang", "name": "唐代", "period": "618-907" },
+    { "code": "song", "name": "宋代", "period": "960-1279" },
+    { "code": "ming", "name": "明代", "period": "1368-1644" },
+    { "code": "qing", "name": "清代", "period": "1644-1911" },
+    { "code": "five_dynasties", "name": "五代十国", "period": "907-960" },
+    { "code": "modern", "name": "现代", "period": "1912-至今" }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "chapter_id": "donghaiyuge-02",
+  "classic_id": "donghaiyuge",
+  "title": "夏日词",
+  "order": 2,
+  "paragraphs": [
+    {
+      "id": "donghaiyuge-02-01",
+      "order": 1,
+      "content": "昨夜雨疏风骤，浓睡不消残酒。试问卷帘人，却道海棠依旧。知否，知否？应是绿肥红瘦。",
+      "keywords": [
+        "风",
+        "雨",
+        "酒",
+        "红",
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-02-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清此阕《如梦令》，'昨夜雨疏风骤，浓睡不消残酒'，写春夜风雨与残酒未消。'试问卷帘人，却道海棠依旧'，问答之间，惜春之情跃然纸上。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-02-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'知否，知否？应是绿肥红瘦'，以'绿肥红瘦'四字写春末之景，新颖别致。此词虽化用李清照同调词，而太清自有其妙处。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-02-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词昨夜雨疏风骤是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-02-02",
+      "order": 2,
+      "content": "风老莺雏，雨肥梅子，午阴嘉树清圆。地卑山近，衣润费炉烟。人静乌鸢自乐，小桥外、新绿溅溅。凭栏久，黄芦苦竹，拟泛九江船。",
+      "keywords": [
+        "风",
+        "雨",
+        "山",
+        "竹",
+        "梅"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-02-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《满庭芳》，'风老莺雏，雨肥梅子，午阴嘉树清圆'，写初夏之景，清新自然。'地卑山近，衣润费炉烟'，写南方潮湿之气候，细致入微。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-02-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'人静乌鸢自乐，小桥外、新绿溅溅'，以乌鸢之乐衬人之寂寥。太清词善于在写景中寓情，此首可见其功力。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-02-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词风老莺雏是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-02-03",
+      "order": 3,
+      "content": "风柔日薄春犹早，夹衫乍著心情好。睡起觉微寒，梅花鬓上残。",
+      "keywords": [
+        "薄寒",
+        "春末",
+        "闲适"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-donghaiyuge-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "顾太清词，深稳沉著，不事雕琢，纯以情胜，在国朝妇人词中，可称上乘。"
+        },
+        {
+          "id": "kuangzhouyi-donghaiyuge-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清词，其佳处在气格，不在字句。然亦有精于字句者，如'云随碧水歌声转，雪绕红绡舞袖垂'，真佳境也。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "顾太清为清代著名女词人，与纳兰性德并称'男中成容若，女中太清春'。陈廷焯称其词'深稳沉著，不事雕琢，纯以情胜'，况周颐赞其'气格'之高。顾太清的词以题材广泛、情感真挚著称，其代表作《东海渔歌》展现了清代女性词人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

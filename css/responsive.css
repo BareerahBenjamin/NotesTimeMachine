@@ -1,0 +1,101 @@
+/* ========================================
+   Responsive Styles
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .author-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .author-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 0 50px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-mountains {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .detail-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-scroll {
+    max-height: 350px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-selector {
+    margin-left: 0;
+  }
+
+  .shelf {
+    padding: 20px 16px 14px;
+    gap: 14px;
+  }
+
+  .book-spine {
+    width: 48px;
+    height: 130px;
+    font-size: 0.8rem;
+  }
+
+  .text-content {
+    padding: 24px 20px;
+    line-height: 2.2;
+  }
+
+
+
+  .hero-authors-float {
+    gap: 12px;
+  }
+
+  .author-float-name {
+    font-size: 0.85rem;
+  }
+
+  .author-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .author-card {
+    padding: 14px;
+  }
+
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .timeline-legend {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

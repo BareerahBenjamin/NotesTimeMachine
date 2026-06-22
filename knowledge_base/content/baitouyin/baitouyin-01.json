@@ -1,0 +1,56 @@
+{
+  "chapter_id": "baitouyin-01",
+  "classic_id": "baitouyin",
+  "title": "白头吟",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "baitouyin-01-01",
+      "order": 1,
+      "content": "皑如山上雪，皎若云间月。闻君有两意，故来相决绝。今日斗酒会，明旦沟水头。躞蹀御沟上，沟水东西流。凄凄复凄凄，嫁娶不须啼。愿得一心人，白头不相离。竹竿何袅袅，鱼尾何簁簁！男儿重意气，何用钱刀为！",
+      "keywords": [
+        "爱情",
+        "决绝",
+        "白头",
+        "忠贞",
+        "女性意识"
+      ],
+      "annotations": [
+        {
+          "id": "gehong-baitouyin-01",
+          "era": "jin",
+          "era_name": "晋代",
+          "era_code": "jin",
+          "author": "葛洪",
+          "author_id": "ge-hong",
+          "source": "《西京杂记》",
+          "view_angle": "纪事",
+          "content": "司马相如将聘茂陵女为妾，卓文君作《白头吟》以自绝，相如乃止。"
+        },
+        {
+          "id": "shuijingzhu-baitouyin-01",
+          "era": "beiwei",
+          "era_name": "北魏",
+          "era_code": "beiwei",
+          "author": "郦道元",
+          "author_id": "li-dao-yuan",
+          "source": "《水经注》",
+          "view_angle": "地理",
+          "content": "《白头吟》，卓文君所作也。"
+        },
+        {
+          "id": "ai-modern-baitouyin-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《白头吟》相传为卓文君所作，表达了对爱情坚贞不渝的追求和对负心人的决绝。葛洪《西京杂记》记载了司马相如欲纳妾而卓文君作此诗的故事，郦道元《水经注》亦有记载。'愿得一心人，白头不相离'成为千古名句，表达了古代女性对真挚爱情的渴望。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

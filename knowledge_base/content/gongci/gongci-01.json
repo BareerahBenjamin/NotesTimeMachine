@@ -1,0 +1,117 @@
+{
+  "chapter_id": "gongci-01",
+  "classic_id": "gongci",
+  "title": "宫词",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "gongci-01-01",
+      "order": 1,
+      "content": "君王城上竖降旗，妾在深宫那得知？十四万人齐解甲，更无一个是男儿！",
+      "keywords": [
+        "亡国",
+        "讽刺",
+        "家国",
+        "女性",
+        "气节"
+      ],
+      "annotations": [
+        {
+          "id": "shengyu-gongci-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "沈佺期",
+          "author_id": "shen-quan-qi",
+          "source": "《全唐诗》",
+          "view_angle": "诗评",
+          "content": "宫词之作，始于六朝，至唐而盛。其词多写宫中生活，或怨或慕，皆有深意。"
+        },
+        {
+          "id": "ai-modern-gongci-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "宫词是中国古代诗歌的重要题材，以描写宫中生活、宫女情感为主要内容。唐代是宫词创作的鼎盛时期，沈佺期等诗人的作品为宫词的发展奠定了基础。宫词不仅反映了宫中生活的真实面貌，更表达了宫女们内心的哀怨与无奈，具有深刻的社会意义。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "gongci-01-02",
+      "order": 2,
+      "content": "内人相续报花开，准拟君王便看来。逢著五弦琴绣袋，宜春院里按歌回。",
+      "keywords": [
+        "宫词",
+        "宫廷生活",
+        "花卉",
+        "音乐"
+      ],
+      "annotations": [
+        {
+          "id": "shengyu-gongci-02",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "沈佺期",
+          "author_id": "shen-quan-qi",
+          "source": "《全唐诗》",
+          "view_angle": "诗评",
+          "content": "宫词之作，始于六朝，至唐而盛。其词多写宫中生活，或怨或慕，皆有深意。"
+        },
+        {
+          "id": "ai-modern-gongci-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "宫词是中国古代诗歌的重要题材，以描写宫中生活、宫女情感为主要内容。唐代是宫词创作的鼎盛时期，沈佺期等诗人的作品为宫词的发展奠定了基础。宫词不仅反映了宫中生活的真实面貌，更表达了宫女们内心的哀怨与无奈，具有深刻的社会意义。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "gongci-01-03",
+      "order": 3,
+      "content": "朱雀门高花外开，毬场空阔净尘埃。预排白兔兼苍狗，等候君王按鹘来。",
+      "keywords": [
+        "宫词",
+        "宫廷建筑",
+        "狩猎",
+        "生活"
+      ],
+      "annotations": [
+        {
+          "id": "shengyu-gongci-03",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "沈佺期",
+          "author_id": "shen-quan-qi",
+          "source": "《全唐诗》",
+          "view_angle": "诗评",
+          "content": "宫词之作，始于六朝，至唐而盛。其词多写宫中生活，或怨或慕，皆有深意。"
+        },
+        {
+          "id": "ai-modern-gongci-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "宫词是中国古代诗歌的重要题材，以描写宫中生活、宫女情感为主要内容。唐代是宫词创作的鼎盛时期，沈佺期等诗人的作品为宫词的发展奠定了基础。宫词不仅反映了宫中生活的真实面貌，更表达了宫女们内心的哀怨与无奈，具有深刻的社会意义。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

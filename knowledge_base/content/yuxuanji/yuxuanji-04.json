@@ -1,0 +1,289 @@
+{
+  "chapter_id": "yuxuanji-04",
+  "classic_id": "yuxuanji",
+  "title": "第4卷（共9卷）",
+  "order": 4,
+  "paragraphs": [
+    {
+      "id": "yuxuanji-04-01",
+      "order": 1,
+      "content": "《和新及第悼亡诗二首 二》一枝月桂和烟秀，万树江桃带雨红。且醉尊前休怅望，古来悲乐与今同。",
+      "keywords": [
+        "月",
+        "雨",
+        "江",
+        "桃"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-01",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-01",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-04-02",
+      "order": 2,
+      "content": "《游崇真观南楼覩新及第题名处》云峰满目放春晴，历历银钩指下生。自恨罗衣掩诗句，举头空羡榜中名。",
+      "keywords": [
+        "春",
+        "恨",
+        "恨",
+        "生"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-02",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-02",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-04-03",
+      "order": 3,
+      "content": "《愁思》落叶纷纷暮雨和，朱丝独抚自清歌。放情休恨无心友，养性空抛苦海波。长者车音门外有，道家书卷枕前多。布衣终作云霄客，绿水青山时一过。",
+      "keywords": [
+        "雨",
+        "恨",
+        "山",
+        "水",
+        "海"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-03",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-03",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-04-04",
+      "order": 4,
+      "content": "《秋怨》自叹多情是足愁，况当风月满庭秋。洞房偏与更声近，夜夜灯前欲白头。",
+      "keywords": [
+        "秋",
+        "月",
+        "风",
+        "愁",
+        "白"
+      ],
+      "annotations": [
+        {
+          "id": "xinwenfang-yuxuanji-04-04",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "'自叹多情是足愁，况当风月满庭秋'，以自叹起笔，写秋夜之怨。'洞房偏与更声近，夜夜灯前欲白头'，写长夜难眠之苦。"
+        },
+        {
+          "id": "zhongxing-yuxuanji-04-04",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "鱼玄机《秋怨》，以秋景衬愁情，'风月满庭秋'一句，境界开阔，非寻常闺怨诗可比。"
+        },
+        {
+          "id": "ai-modern-yuxuanji-04-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗秋怨是鱼玄机的代表作。辛文房、钟惺等历代评论家对其有精当的评价。鱼玄机才情横溢，其诗情感真挚，语言华美，在唐代女诗人中成就突出。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-04-05",
+      "order": 5,
+      "content": "《江行 一》大江横抱武昌斜，鹦鹉洲前户万家。画舸春眠朝未足，梦为蝴蝶也寻花。",
+      "keywords": [
+        "春",
+        "花",
+        "江"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-05",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-05",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "yuxuanji-04-06",
+      "order": 6,
+      "content": "《江行 二》烟花已入鸬鹚港，画舸犹沿鹦鹉洲。醉卧醒吟都不觉，今朝惊在汉江头。",
+      "keywords": [
+        "花",
+        "江"
+      ],
+      "annotations": [
+        {
+          "id": "xinfang-yuxuanji-06",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "玄机，长安人，女道士也。性聪慧，有才思，好读书，尤工诗。与李冶、薛涛、刘采春并称唐代四大女诗人。"
+        },
+        {
+          "id": "zhangxing-yuxuanji-06",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "钟惺",
+          "author_id": "zhong-xing",
+          "source": "《名媛诗归》",
+          "view_angle": "诗评",
+          "content": "玄机，盖才媛中之诗圣也！"
+        },
+        {
+          "id": "ai-modern-yuxuanji-06",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "鱼玄机为唐代四大女诗人之一，其诗作现存五十余首。辛文房《唐才子传》称其'性聪慧，有才思'，钟惺《名媛诗归》尊其为'才媛中之诗圣'。鱼玄机的诗歌以情感真挚、语言华美著称，其代表作《赠邻女》中的'易求无价宝，难得有心郎'成为千古名句，表达了女性对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+/* ========================================
+   CSS Variables & Reset
+   ======================================== */
+
+/* CSS Variables - Light Mode (Default) */
+:root {
+  --bg: #FDF6E3;
+  --bg2: #F5EDD8;
+  --bg-paper: #FFFEF9;
+  --ink: #2C2420;
+  --ink-light: #4A4038;
+  --muted: #7C6E62;
+  --rule: #D4C4A8;
+  --accent: #8B3A2A;
+  --accent2: #2E5A4C;
+  --gold: #B8954F;
+  --han: #C4553A;
+  --tang: #8B5E3C;
+  --song: #2E5A4C;
+  --ming: #6A4C93;
+  --qing: #4A6FA5;
+  --modern: #8B6914;
+  --ink-wash-1: rgba(60,70,80,0.25);
+  --ink-wash-2: rgba(100,110,120,0.15);
+  --ink-wash-3: rgba(44,36,32,0.10);
+  --shelf-wood: #C4B59A;
+  --shelf-wood-dark: #A89878;
+  --shadow: rgba(44,36,32,0.08);
+  --shadow-lg: rgba(44,36,32,0.12);
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-display: 'ZCOOL XiaoWei', serif;
+  --font-mono: 'SF Mono', 'Monaco', monospace;
+  --radius: 8px;
+  --radius-sm: 4px;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --bg: #141210;
+  --bg2: #1E1C19;
+  --bg-paper: #242220;
+  --ink: #F0EBE3;
+  --ink-light: #D8D0C6;
+  --muted: #A89E92;
+  --rule: #3A3530;
+  --accent: #D4654A;
+  --accent2: #5A9A6A;
+  --gold: #E0B85A;
+  --han: #E07050;
+  --tang: #B88E5C;
+  --song: #5A9A6A;
+  --ming: #9A7CC3;
+  --qing: #7A9FC5;
+  --modern: #C8A040;
+  --ink-wash-1: rgba(220,210,200,0.12);
+  --ink-wash-2: rgba(220,210,200,0.06);
+  --ink-wash-3: rgba(220,210,200,0.04);
+  --shelf-wood: #4A4238;
+  --shelf-wood-dark: #3A3228;
+  --shadow: rgba(0,0,0,0.3);
+  --shadow-lg: rgba(0,0,0,0.45);
+}
+
+/* Ink wash parallax scroll variable */
+:root {
+  --scroll: 0;
+}

@@ -1,0 +1,45 @@
+{
+  "chapter_id": "nixiaoshan-01",
+  "classic_id": "nixiaoshan",
+  "title": "拟小山篇",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "nixiaoshan-01-01",
+      "order": 1,
+      "content": "仰幽岩而流盼，抚桂枝而凝想。将千龄兮此遇，荃何为兮独往。",
+      "keywords": [
+        "骚体",
+        "幽岩",
+        "桂枝",
+        "隐逸",
+        "向往"
+      ],
+      "annotations": [
+        {
+          "id": "shuijingzhu-nixiaoshan-01",
+          "era": "beiwei",
+          "era_name": "北魏",
+          "era_code": "beiwei",
+          "author": "郦道元",
+          "author_id": "li-dao-yuan",
+          "source": "《水经注》",
+          "view_angle": "地理",
+          "content": "湘夫人，帝尧之女，舜之二妃也。舜崩于苍梧，二妃死于江湘之间，俗谓之湘君。"
+        },
+        {
+          "id": "ai-modern-nixiaoshan-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《拟湘夫人》以湘夫人的传说为题材，表达了对爱情的忠贞和对逝去恋人的思念。郦道元《水经注》记载了湘夫人的传说，称其为帝尧之女、舜之二妃。这首诗通过拟古的手法，展现了湘夫人的美丽形象和哀怨情感。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

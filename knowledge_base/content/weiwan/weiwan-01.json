@@ -1,0 +1,246 @@
+{
+  "chapter_id": "weiwan-01",
+  "classic_id": "weiwan",
+  "title": "第1卷（共3卷）",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "weiwan-01-01",
+      "order": 1,
+      "content": "【临江仙】庭院深深深几许，云窗雾阁春迟。为谁憔悴损芳姿。夜来清梦好，应是发南枝。玉瘦檀轻无限恨，南楼羌管休吹。浓香吹尽有谁知。暖风迟日也，别到杏花肥。",
+      "keywords": [
+        "春",
+        "花",
+        "风",
+        "恨",
+        "梦"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-weiwan-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。魏夫人词，笔力甚高，非寻常闺秀可比。"
+        },
+        {
+          "id": "kuangzhouyi-weiwan-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "魏夫人词，虽不及易安之高妙，然亦有可观者。如'波上清风，画船明月人归后'，意境清远，殊有雅韵。"
+        },
+        {
+          "id": "ai-modern-weiwan-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "魏夫人为宋代著名女词人，陈廷焯将其与李清照、朱淑真并列为宋代三大女词人。魏夫人的词以'笔力甚高'著称，其作品意境清远，风格典雅。她的代表作《菩萨蛮·溪山掩映斜阳里》等展现了宋代女性词人的艺术风采。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "weiwan-01-02",
+      "order": 2,
+      "content": "【好事近】雨后晓寒轻，花外早莺啼歇。愁听隔溪残漏，正一声凄咽。不堪西望去程赊，离肠万回结。不似海棠阴下，按凉州时节。",
+      "keywords": [
+        "花",
+        "雨",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-weiwan-01-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "'雨后晓寒轻，花外早莺啼歇'，写雨后清晨之景，清新自然。'愁听隔溪残漏，正一声凄咽'，以漏声衬愁，倍觉凄凉。"
+        },
+        {
+          "id": "kuangzhouyi-weiwan-01-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "'不堪西望去程赊，离肠万回结'，写送别之愁肠百结。魏夫人词多写离愁，此首尤为沉痛。"
+        },
+        {
+          "id": "ai-modern-weiwan-01-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词好事近是魏玩的代表作。陈廷焯、况周颐等历代评论家对其有精当的评价。魏玩为宋代著名女词人，其词婉柔蕴藉，在宋代女性词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "weiwan-01-03",
+      "order": 3,
+      "content": "【阮郎归】夕阳楼外落花飞。晴空碧四垂。去帆回首已天涯。孤烟卷翠微。楼上客，鬓成丝。归来未有期。断魂不忍下危梯。桐阴月影移。",
+      "keywords": [
+        "月",
+        "花",
+        "天",
+        "归",
+        "去"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-weiwan-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。魏夫人词，笔力甚高，非寻常闺秀可比。"
+        },
+        {
+          "id": "kuangzhouyi-weiwan-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "魏夫人词，虽不及易安之高妙，然亦有可观者。如'波上清风，画船明月人归后'，意境清远，殊有雅韵。"
+        },
+        {
+          "id": "ai-modern-weiwan-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "魏夫人为宋代著名女词人，陈廷焯将其与李清照、朱淑真并列为宋代三大女词人。魏夫人的词以'笔力甚高'著称，其作品意境清远，风格典雅。她的代表作《菩萨蛮·溪山掩映斜阳里》等展现了宋代女性词人的艺术风采。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "weiwan-01-04",
+      "order": 4,
+      "content": "【减字木兰花】西楼明月。掩映梨花千树雪。楼上人归。愁听孤城一雁飞。玉人何处。又见江南春色暮。芳信难寻。去后桃花流水深。",
+      "keywords": [
+        "春",
+        "月",
+        "花",
+        "雪",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-weiwan-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。魏夫人词，笔力甚高，非寻常闺秀可比。"
+        },
+        {
+          "id": "kuangzhouyi-weiwan-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "魏夫人词，虽不及易安之高妙，然亦有可观者。如'波上清风，画船明月人归后'，意境清远，殊有雅韵。"
+        },
+        {
+          "id": "ai-modern-weiwan-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "魏夫人为宋代著名女词人，陈廷焯将其与李清照、朱淑真并列为宋代三大女词人。魏夫人的词以'笔力甚高'著称，其作品意境清远，风格典雅。她的代表作《菩萨蛮·溪山掩映斜阳里》等展现了宋代女性词人的艺术风采。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "weiwan-01-05",
+      "order": 5,
+      "content": "【减字木兰花】落花飞絮。杳杳天涯人甚处。欲寄相思。春尽衡阳雁渐稀。离肠泪眼。肠断泪痕流不断。明月西楼。一曲阑干一倍愁。",
+      "keywords": [
+        "相思",
+        "春",
+        "月",
+        "花",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-weiwan-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。魏夫人词，笔力甚高，非寻常闺秀可比。"
+        },
+        {
+          "id": "kuangzhouyi-weiwan-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "魏夫人词，虽不及易安之高妙，然亦有可观者。如'波上清风，画船明月人归后'，意境清远，殊有雅韵。"
+        },
+        {
+          "id": "ai-modern-weiwan-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "魏夫人为宋代著名女词人，陈廷焯将其与李清照、朱淑真并列为宋代三大女词人。魏夫人的词以'笔力甚高'著称，其作品意境清远，风格典雅。她的代表作《菩萨蛮·溪山掩映斜阳里》等展现了宋代女性词人的艺术风采。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

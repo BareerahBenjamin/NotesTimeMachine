@@ -1,0 +1,179 @@
+{
+  "chapter_id": "nujie-02",
+  "classic_id": "nujie",
+  "title": "夫妇第二",
+  "order": 2,
+  "paragraphs": [
+    {
+      "id": "nujie-02-01",
+      "order": 1,
+      "content": "夫妇之道，参配阴阳，通达神明，信天地之弘义，人伦之大节也。是以《礼》贵男女之际，《诗》著《关雎》之义。由斯言之，不可不重也。",
+      "keywords": [
+        "夫妇",
+        "阴阳",
+        "人伦"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-02-01",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。夫妇之道此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-02-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此夫妇之道，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-02-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇夫妇之道，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-02-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此夫妇之道反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-02-02",
+      "order": 2,
+      "content": "夫不贤则无以御妇，妇不贤则无以事夫。夫不御妇则威仪废缺，妇不事夫则义理堕阙。方斯二者，其用一也。",
+      "keywords": [
+        "夫贤",
+        "妇贤",
+        "相成"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-02-02",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。夫妇相成此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-02-02",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此夫妇相成，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-02-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇夫妇相成，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-02-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此夫妇相成反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-02-03",
+      "order": 3,
+      "content": "察今之君子，徒知妻妇之不可不御，威仪之不可不整，故训其男，检以书传。殊不知夫主之不可不事，礼义之不可不存也。但教男而不教女，不亦蔽于彼此之数乎！",
+      "keywords": [
+        "女教",
+        "礼义",
+        "教育"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-02-03",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。女教之重此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-02-03",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此女教之重，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-02-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇女教之重，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-02-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此女教之重反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

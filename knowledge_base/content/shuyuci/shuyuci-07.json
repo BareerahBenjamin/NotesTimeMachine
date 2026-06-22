@@ -1,0 +1,100 @@
+{
+  "chapter_id": "shuyuci-07",
+  "classic_id": "shuyuci",
+  "title": "春雨春愁",
+  "order": 7,
+  "paragraphs": [
+    {
+      "id": "shuyuci-07-01",
+      "order": 1,
+      "content": "暖雨晴风初破冻，柳眼梅腮，已觉春心动。酒意诗情谁与共？泪融残粉花钿重。乍试夹衫金缕缝，山枕斜欹，枕损钗头凤。独抱浓愁无好梦，夜阑犹剪灯花弄。",
+      "keywords": [
+        "春",
+        "愁",
+        "独处"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-shuyuci-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "李易安词，独辟门径，居然可观，其源自淮海、大晟，而铸语则多生造，妇人有此，可谓奇矣。"
+        },
+        {
+          "id": "zhangyan-shuyuci-01",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "张綖",
+          "author_id": "zhang-yan",
+          "source": "《诗余图谱》",
+          "view_angle": "词论",
+          "content": "易安词，婉约以易安为宗，豪放唯幼安称首，皆吾济南人，难乎为继矣。"
+        },
+        {
+          "id": "ai-modern-shuyuci-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李清照作为宋代婉约词派的代表人物，其词作以'以俗为雅'的艺术特色著称。陈廷焯称其'独辟门径，居然可观'，张綖将其与辛弃疾并称为济南二安。李清照的词不仅在艺术上达到了很高的成就，更以其独特的女性视角和真挚的情感表达，在中国文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "shuyuci-07-02",
+      "order": 2,
+      "content": "春到长门春草青，江梅些子破，未开匀。碧云笼碾玉成尘，留晓梦，惊破一瓯春。花影压重门，疏帘铺淡月，好黄昏。二年三度负东君，归来也，著意过今春。",
+      "keywords": [
+        "春",
+        "期盼",
+        "归来"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-shuyuci-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "李易安词，独辟门径，居然可观，其源自淮海、大晟，而铸语则多生造，妇人有此，可谓奇矣。"
+        },
+        {
+          "id": "zhangyan-shuyuci-02",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "张綖",
+          "author_id": "zhang-yan",
+          "source": "《诗余图谱》",
+          "view_angle": "词论",
+          "content": "易安词，婉约以易安为宗，豪放唯幼安称首，皆吾济南人，难乎为继矣。"
+        },
+        {
+          "id": "ai-modern-shuyuci-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李清照作为宋代婉约词派的代表人物，其词作以'以俗为雅'的艺术特色著称。陈廷焯称其'独辟门径，居然可观'，张綖将其与辛弃疾并称为济南二安。李清照的词不仅在艺术上达到了很高的成就，更以其独特的女性视角和真挚的情感表达，在中国文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

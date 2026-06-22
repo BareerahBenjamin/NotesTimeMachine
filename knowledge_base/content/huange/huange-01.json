@@ -1,0 +1,180 @@
+{
+  "chapter_id": "huange-01",
+  "classic_id": "huange",
+  "title": "黄峨散曲",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "huange-01-01",
+      "order": 1,
+      "content": "雁飞曾不到衡阳，锦字何由寄永昌。三春花柳妾薄命，六诏风烟君断肠。曰归曰归愁岁暮，其雨其雨怨朝阳。相闻空有刀环约，何日金鸡下夜郎？",
+      "keywords": [
+        "相思",
+        "离别",
+        "寄外",
+        "夫妻",
+        "谪戍"
+      ],
+      "annotations": [
+        {
+          "id": "ming-huange-01-01",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "徐渭",
+          "author_id": "xu-wei",
+          "source": "《徐文长集》",
+          "view_angle": "诗评",
+          "content": "徐渭论黄峨散曲：\"旨趣闲雅，风致翩翩，填词用韵，天然合律。\"又评其《黄莺儿·苦雨》：\"'积雨酿春寒'这阕，字字绝佳。\"徐渭对黄峨的才华极为推崇。"
+        },
+        {
+          "id": "ming2-huange-01-01",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "王世贞",
+          "author_id": "wang-shizhen",
+          "source": "《艺苑卮言》",
+          "view_angle": "诗评",
+          "content": "王世贞《艺苑卮言》评曰：\"用修妇亦有才情，杨久戍滇，妇寄一律。又《黄莺儿》一词。用修别和三词，俱不能胜。\"高度肯定了黄峨的文学才华。"
+        },
+        {
+          "id": "ming3-huange-01-01",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "骚隐居士",
+          "author_id": "saoyin-jushi",
+          "source": "《衡曲尘谈》",
+          "view_angle": "曲评",
+          "content": "明代骚隐居士《衡曲尘谈》评黄峨《黄莺儿》：\"字字绝佳\"，将此曲推为散曲中的精品。"
+        },
+        {
+          "id": "qing-huange-01-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-deqian",
+          "source": "《明诗别裁集》",
+          "view_angle": "诗评",
+          "content": "沈德潜《明诗别裁集》收录黄峨《寄外》，评曰：\"此诗化用典故，却又极为自然深挚。\""
+        },
+        {
+          "id": "modern-huange-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "郑振铎",
+          "author_id": "zheng-zhengduo",
+          "source": "《中国文学史》",
+          "view_angle": "文学史",
+          "content": "郑振铎《中国文学史》评价黄峨散曲：缠绵悲切，有\"曲中李易安\"之誉。其散曲风格独特，在明代女性文学中独树一帜。"
+        },
+        {
+          "id": "modern2-huange-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "中国文学通史",
+          "author_id": "chinese-lit-history",
+          "source": "《中国文学通史》",
+          "view_angle": "学术研究",
+          "content": "《中国文学通史》评黄峨：\"其词曲风格缠绵悲切，有'曲中李易安'之誉。与杨慎的结合在中国文学史上是一段著名的佳话，他们夫妻二人的诗词成就都很卓著，在明代自成一家。\""
+        },
+        {
+          "id": "ai-modern-huange-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《寄外》是黄峨的代表作，写于丈夫杨慎谪守云南期间。\"雁飞曾不到衡阳\"以飞雁起兴，取王勃《滕王阁序》\"雁阵惊寒，声断衡阳之浦\"之意；\"锦字何由寄永昌\"紧承首句，相传前秦窦滔妻苏氏织锦为回文诗，然永昌更在衡阳之南，水远山遥，书信根本无法传到。全诗化用《诗经》成句：\"曰归曰归\"出自《小雅·采薇》，\"其雨其雨\"出自《卫风·伯兮》，用字重叠，颇有一唱三叹的风调，突出夫妻因长期分离身处两地的思念之情。"
+        },
+        {
+          "id": "ai-modern2-huange-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "女性文学",
+          "content": "黄峨以笔墨寄相思，文风爽丽真挚、纵恣灵动，细腻婉转又真切率直。据《明史》记载：黄峨（1498-1569），字秀眉，四川遂宁人。工部尚书黄珂之女，明代文学家杨慎之妻。博通经史，工诗词，所作散曲尤有名，被誉为\"曲中李易安\"，与卓文君、薛涛、花蕊夫人并称\"蜀中四大才女\"。此诗体现了明代女性在婚姻中的忠贞与坚守。"
+        }
+      ]
+    },
+    {
+      "id": "huange-01-02",
+      "order": 2,
+      "content": "积雨酿轻寒，看繁花树树残。泥途满眼登临倦。云山几盘，江流几湾，天涯极目空肠断。寄书难，无情征雁，飞不到滇南。",
+      "keywords": [
+        "苦雨",
+        "相思",
+        "滇南",
+        "散曲"
+      ],
+      "annotations": [
+        {
+          "id": "ming-huange-01-02",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "骚隐居士",
+          "author_id": "saoyin-jushi",
+          "source": "《衡曲尘谈》",
+          "view_angle": "曲评",
+          "content": "明代骚隐居士《衡曲尘谈》评此曲：\"字字绝佳\"，将其推为散曲中的精品。"
+        },
+        {
+          "id": "modern-huange-01-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "成都方志",
+          "view_angle": "赏析",
+          "content": "\"积雨酿轻寒\"一个\"酿\"字，把潮湿阴冷的体感写活了；\"泥途满眼\"，是写实，也是写心——她的心境已经泥泞不堪。最后一句最妙：\"飞不到滇南\"。这里的\"飞\"，既是眼前飞不动的云，也是她渴望飞到丈夫身边的无尽思念。她把四川到云南的地理距离、想见不能见的心理距离与苦雨连绵的萧瑟意境融在一起，没有一个\"愁\"字，却让人读完胸口发闷。"
+        }
+      ]
+    },
+    {
+      "id": "huange-01-03",
+      "order": 3,
+      "content": "空庭月影斜，东方既白鸦。泪流襟上血，愁穿心上结。鸳鸯被冷雕鞍热。",
+      "keywords": [
+        "闺怨",
+        "相思",
+        "离别",
+        "散曲"
+      ],
+      "annotations": [
+        {
+          "id": "ming-huange-01-03",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "徐渭",
+          "author_id": "xu-wei",
+          "source": "《徐文长集》",
+          "view_angle": "曲评",
+          "content": "徐渭评黄峨散曲：\"旨趣闲雅，风致翩翩，填词用韵，天然合律。\"此曲为黄峨代表作之一。"
+        },
+        {
+          "id": "modern-huange-01-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "《别离经岁又经年》",
+          "view_angle": "赏析",
+          "content": "\"鸳鸯被冷雕鞍热\"这句堪称神来之笔。一边是自己闺中被衾的清冷孤寂，一边是丈夫远方征途上的马鞍余温。一冷一热，一静一动，把两人天各一方的境遇凝于同一画面。这不是寻常儿女的相思，而是因山水相隔的深切思念。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "chapter_id": "shuyuci-01",
+  "classic_id": "shuyuci",
+  "title": "春日闲情",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "shuyuci-01-01",
+      "order": 1,
+      "content": "昨夜雨疏风骤，浓睡不消残酒。试问卷帘人，却道海棠依旧。知否，知否？应是绿肥红瘦。",
+      "keywords": [
+        "春",
+        "花",
+        "惜春"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-shuyuci-01-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》前集卷六十",
+          "view_angle": "词论",
+          "content": "近时妇人能文词如李易安，颇多佳句。小词云'昨夜雨疏风骤，浓睡不消残酒。试问卷帘人，却道海棠依旧。知否，知否？应是绿肥红瘦。''绿肥红瘦'，此语甚新。"
+        },
+        {
+          "id": "chenyu-shuyuci-01-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "陈郁",
+          "author_id": "chen-yu",
+          "source": "《藏一话腴》甲集卷一",
+          "view_angle": "词论",
+          "content": "李易安工造语，《如梦令》'绿肥红瘦'之句，天下称之。"
+        },
+        {
+          "id": "shenjifei-shuyuci-01-01",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "沈际飞",
+          "author_id": "shen-ji-fei",
+          "source": "《草堂诗余正集》卷一",
+          "view_angle": "词论",
+          "content": "'知否'二字，叠得可味。'绿肥红瘦'创获自妇人，大奇！"
+        },
+        {
+          "id": "wangshizhen-shuyuci-01-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王士禛",
+          "author_id": "wang-shi-zhen",
+          "source": "《花草蒙拾》",
+          "view_angle": "词论",
+          "content": "如'绿肥红瘦'、'宠柳娇花'，人工天巧，可称绝唱。"
+        },
+        {
+          "id": "huangliaoyuan-shuyuci-01-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "黄蓼园",
+          "author_id": "huang-liao-yuan",
+          "source": "《蓼园词选》",
+          "view_angle": "词论",
+          "content": "一问极有情，答以'依旧'，答得极澹，跌出'知否'二句来。而'绿肥红瘦'，无限凄婉，却又妙在含蓄。短幅中藏无数曲折，自是圣于词者。"
+        },
+        {
+          "id": "ai-modern-shuyuci-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词为李清照代表作之一，以'绿肥红瘦'四字炼句新奇，将形容词移用于花草，创造出独特的审美意象。胡仔赞其'此语甚新'，陈郁称其'工造语'，王士禛誉为'人工天巧'。全词通过与卷帘人的对话，曲折表达惜春之情，体现了李清照以寻常语入词而意境深远的艺术特色。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "shuyuci-01-02",
+      "order": 2,
+      "content": "蹴罢秋千，起来慵整纤纤手。露浓花瘦，薄汗轻衣透。见客入来，袜刬金钗溜。和羞走，倚门回首，却把青梅嗅。",
+      "keywords": [
+        "少女",
+        "娇羞",
+        "春日"
+      ],
+      "annotations": [
+        {
+          "id": "lipanlong-shuyuci-01-02",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "李攀龙",
+          "author_id": "li-pan-long",
+          "source": "《草堂诗余隽》卷二",
+          "view_angle": "词论",
+          "content": "写出一种临别心神，而新瘦新愁，真如秦女楼头，声声有和鸣之奏。"
+        },
+        {
+          "id": "shenjifei-shuyuci-01-02",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "沈际飞",
+          "author_id": "shen-ji-fei",
+          "source": "《草堂诗余正集》",
+          "view_angle": "词论",
+          "content": "'和羞走，倚门回首，却把青梅嗅'，入神之笔，写出少女娇羞情态。"
+        },
+        {
+          "id": "chentingchao-shuyuci-01-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《云韶集》卷十",
+          "view_angle": "词论",
+          "content": "'新来瘦'三语，婉转曲折，煞是妙绝。笔致绝佳，余韵尤胜。"
+        },
+        {
+          "id": "ai-modern-shuyuci-01-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词描写少女初见来客时的娇羞情态，'和羞走，倚门回首，却把青梅嗅'刻画入微，将少女既害羞又好奇的心理表现得淋漓尽致。李攀龙称其'声声有和鸣之奏'，沈际飞赞其'入神之笔'。词中'露浓花瘦'与'绿肥红瘦'同为李清照炼字的典范。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "shuyuci-01-03",
+      "order": 3,
+      "content": "常记溪亭日暮，沉醉不知归路。兴尽晚回舟，误入藕花深处。争渡，争渡，惊起一滩鸥鹭。",
+      "keywords": [
+        "游春",
+        "醉酒",
+        "荷塘"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-shuyuci-01-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《云韶集》卷十",
+          "view_angle": "词论",
+          "content": "只数语中，层次曲折有味。世徒称其'绿肥红瘦'一语，犹是皮相。"
+        },
+        {
+          "id": "zhangyan-shuyuci-01-03",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "张綖",
+          "author_id": "zhang-yan",
+          "source": "《草堂诗余别录》前集",
+          "view_angle": "词论",
+          "content": "此词盖用韩偓诗意点缀，结句尤为委曲精工，含蓄无穷之意焉。"
+        },
+        {
+          "id": "ai-modern-shuyuci-01-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词追忆少女时期溪亭畅游的欢乐场景，'争渡，争渡，惊起一滩鸥鹭'以动写静，将少女天真烂漫、无忧无虑的形象生动展现。陈廷焯指出其'层次曲折有味'，张綖认为其化用韩偓诗意而自成一格。全词语言自然流畅，毫无雕琢痕迹，体现了李清照早期词作的明快风格。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

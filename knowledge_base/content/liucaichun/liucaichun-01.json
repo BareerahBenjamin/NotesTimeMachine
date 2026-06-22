@@ -1,0 +1,221 @@
+{
+  "chapter_id": "liucaichun-01",
+  "classic_id": "liucaichun",
+  "title": "第1卷（共1卷）",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "liucaichun-01-01",
+      "order": 1,
+      "content": "《啰唝曲六首 一》不喜秦淮水，生憎江上船。载儿夫壻去，经岁又经年。",
+      "keywords": [
+        "水"
+      ],
+      "annotations": [
+        {
+          "id": "yuanzhen-liucaichun-01-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "元稹",
+          "author_id": "yuan-zhen",
+          "source": "《赠刘采春》",
+          "view_angle": "诗评",
+          "content": "'不喜秦淮水，生憎江上船'，以迁怒于水与船起笔，写商妇之怨。夫婿乘船远去，故怨及江水与船，语意天真而情深。"
+        },
+        {
+          "id": "duanjianjie-liucaichun-01-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "段安节",
+          "author_id": "duan-an-jie",
+          "source": "《乐府杂录》",
+          "view_angle": "记事",
+          "content": "刘采春善歌，《啰唝曲》传唱一时。此首'载儿夫婿去，经岁又经年'，写商人久去不归之苦，道出商妇之心声。"
+        },
+        {
+          "id": "ai-modern-liucaichun-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此曲不喜秦淮水是刘采春的代表作。元稹、段安节等对其有精当的评价。刘采春以通俗之语写商妇之情，其作品在唐代女性文学中独树一帜。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liucaichun-01-02",
+      "order": 2,
+      "content": "《啰唝曲六首 二》借问东园柳，枯来得几年。自无枝叶分，莫怨太阳偏。",
+      "keywords": [
+        "柳"
+      ],
+      "annotations": [
+        {
+          "id": "songshi-liucaichun-02",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "佚名",
+          "author_id": "yi-ming",
+          "source": "《宋史·艺文志》",
+          "view_angle": "史志",
+          "content": "刘采春，淮甸人，伶工周季崇之妻也。善歌，其词传入宫中，武宗尝谓左右曰：'刘采春歌，天下无双。'"
+        },
+        {
+          "id": "ai-modern-liucaichun-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "刘采春为唐代著名女诗人，与薛涛、鱼玄机、李冶并称唐代四大女诗人。《宋史·艺文志》记载了她的生平，称其'善歌'，唐武宗曾赞其'天下无双'。刘采春的诗歌以乐府诗为主，多写闺情，语言质朴，情感真挚。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liucaichun-01-03",
+      "order": 3,
+      "content": "《啰唝曲六首 三》莫作商人妇，金钗当卜钱。朝朝江口望，错认几人船。",
+      "keywords": [
+        "江",
+        "人",
+        "金"
+      ],
+      "annotations": [
+        {
+          "id": "songshi-liucaichun-03",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "佚名",
+          "author_id": "yi-ming",
+          "source": "《宋史·艺文志》",
+          "view_angle": "史志",
+          "content": "刘采春，淮甸人，伶工周季崇之妻也。善歌，其词传入宫中，武宗尝谓左右曰：'刘采春歌，天下无双。'"
+        },
+        {
+          "id": "ai-modern-liucaichun-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "刘采春为唐代著名女诗人，与薛涛、鱼玄机、李冶并称唐代四大女诗人。《宋史·艺文志》记载了她的生平，称其'善歌'，唐武宗曾赞其'天下无双'。刘采春的诗歌以乐府诗为主，多写闺情，语言质朴，情感真挚。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liucaichun-01-04",
+      "order": 4,
+      "content": "《啰唝曲六首 四》那年离别日，只道住桐庐。桐庐人不见，今得广州书。",
+      "keywords": [
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "songshi-liucaichun-04",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "佚名",
+          "author_id": "yi-ming",
+          "source": "《宋史·艺文志》",
+          "view_angle": "史志",
+          "content": "刘采春，淮甸人，伶工周季崇之妻也。善歌，其词传入宫中，武宗尝谓左右曰：'刘采春歌，天下无双。'"
+        },
+        {
+          "id": "ai-modern-liucaichun-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "刘采春为唐代著名女诗人，与薛涛、鱼玄机、李冶并称唐代四大女诗人。《宋史·艺文志》记载了她的生平，称其'善歌'，唐武宗曾赞其'天下无双'。刘采春的诗歌以乐府诗为主，多写闺情，语言质朴，情感真挚。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liucaichun-01-05",
+      "order": 5,
+      "content": "《啰唝曲六首 五》昨日胜今日，今年老去年。黄河清有日，白发黑无缘。",
+      "keywords": [
+        "河",
+        "去",
+        "白"
+      ],
+      "annotations": [
+        {
+          "id": "songshi-liucaichun-05",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "佚名",
+          "author_id": "yi-ming",
+          "source": "《宋史·艺文志》",
+          "view_angle": "史志",
+          "content": "刘采春，淮甸人，伶工周季崇之妻也。善歌，其词传入宫中，武宗尝谓左右曰：'刘采春歌，天下无双。'"
+        },
+        {
+          "id": "ai-modern-liucaichun-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "刘采春为唐代著名女诗人，与薛涛、鱼玄机、李冶并称唐代四大女诗人。《宋史·艺文志》记载了她的生平，称其'善歌'，唐武宗曾赞其'天下无双'。刘采春的诗歌以乐府诗为主，多写闺情，语言质朴，情感真挚。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liucaichun-01-06",
+      "order": 6,
+      "content": "《啰唝曲六首 六》昨日北风寒，牵船浦里安。潮来打缆断，摇橹始知难。",
+      "keywords": [
+        "诗"
+      ],
+      "annotations": [
+        {
+          "id": "songshi-liucaichun-06",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "佚名",
+          "author_id": "yi-ming",
+          "source": "《宋史·艺文志》",
+          "view_angle": "史志",
+          "content": "刘采春，淮甸人，伶工周季崇之妻也。善歌，其词传入宫中，武宗尝谓左右曰：'刘采春歌，天下无双。'"
+        },
+        {
+          "id": "ai-modern-liucaichun-06",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "刘采春为唐代著名女诗人，与薛涛、鱼玄机、李冶并称唐代四大女诗人。《宋史·艺文志》记载了她的生平，称其'善歌'，唐武宗曾赞其'天下无双'。刘采春的诗歌以乐府诗为主，多写闺情，语言质朴，情感真挚。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

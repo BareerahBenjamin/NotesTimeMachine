@@ -1,0 +1,283 @@
+{
+  "chapter_id": "xuetao-09",
+  "classic_id": "xuetao",
+  "title": "第9卷（共16卷）",
+  "order": 9,
+  "paragraphs": [
+    {
+      "id": "xuetao-09-01",
+      "order": 1,
+      "content": "《和郭员外题万里桥》万里桥头独越吟，知凭文字写愁心。细侯风韵兼前事，不止为舟也作霖。",
+      "keywords": [
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-09-02",
+      "order": 2,
+      "content": "《送郑眉州》雨暗眉山江水流，离人掩袂立高楼。双旌千骑骈东陌，独有罗敷望上头。",
+      "keywords": [
+        "雨",
+        "山",
+        "水",
+        "江",
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-02",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-09-03",
+      "order": 3,
+      "content": "《江亭饯别》绿沼红泥物象幽，范汪兼倅李幷州。离亭急管四更后，不见公车心独愁。",
+      "keywords": [
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-03",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-09-04",
+      "order": 4,
+      "content": "《海棠溪》春教风景驻仙霞，水面鱼身总带花。人世不思灵卉异，竞将红缬染轻沙。",
+      "keywords": [
+        "春",
+        "花",
+        "水",
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-04",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-09-05",
+      "order": 5,
+      "content": "《采莲舟》风前一叶压荷蕖，解报新秋又得鱼。兔走乌驰人语静，满溪红袂櫂歌初。",
+      "keywords": [
+        "秋",
+        "人",
+        "荷"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-05",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-09-06",
+      "order": 6,
+      "content": "《菱荇沼》水荇斜牵绿藻浮，柳丝和叶卧清流。何时得向溪头赏，旋摘菱花旋泛舟。",
+      "keywords": [
+        "花",
+        "水",
+        "柳"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-06",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-06",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-06",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

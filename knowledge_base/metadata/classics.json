@@ -1,0 +1,157 @@
+{
+  "classics": [
+    {
+      "id": "shuyuci",
+      "title": "漱玉词",
+      "author": "李清照",
+      "dynasty": "宋",
+      "category": "词",
+      "total_chapters": 12,
+      "description": "宋代女词人李清照词集，婉约派代表，以清新自然之笔写尽人生悲欢"
+    },
+    {
+      "id": "nujie",
+      "title": "女诫",
+      "author": "班昭",
+      "dynasty": "东汉",
+      "category": "女训",
+      "total_chapters": 7,
+      "description": "东汉班昭所著女性教育经典，共七篇，为中国最早的系统女教著作"
+    },
+    {
+      "id": "beifen",
+      "title": "悲愤诗",
+      "author": "蔡文姬",
+      "dynasty": "东汉",
+      "category": "诗歌",
+      "total_chapters": 2,
+      "description": "蔡文姬代表作：五言《悲愤诗》与《胡笳十八拍》，以亲身经历写乱离之苦"
+    },
+    {
+      "id": "donghaiyuge",
+      "title": "东海渔歌",
+      "author": "顾太清",
+      "dynasty": "清",
+      "category": "词",
+      "total_chapters": 8,
+      "description": "清代女词人顾太清词集，清丽婉约，与纳兰性德齐名"
+    },
+    {
+      "id": "xuetao",
+      "title": "薛涛诗",
+      "author": "薛涛",
+      "dynasty": "唐",
+      "category": "诗歌",
+      "total_chapters": 16,
+      "description": "唐代女诗人薛涛诗集，创制薛涛笺，与元稹、白居易等唱和"
+    },
+    {
+      "id": "yuxuanji",
+      "title": "鱼玄机诗",
+      "author": "鱼玄机",
+      "dynasty": "唐",
+      "category": "诗歌",
+      "total_chapters": 9,
+      "description": "唐代女道士鱼玄机诗集，才情横溢，情感真挚"
+    },
+    {
+      "id": "liuye",
+      "title": "李冶诗",
+      "author": "李冶",
+      "dynasty": "唐",
+      "category": "诗歌",
+      "total_chapters": 4,
+      "description": "唐代女冠李冶诗集，清丽流畅，多写自然景物与道情禅意"
+    },
+    {
+      "id": "liucaichun",
+      "title": "刘采春曲",
+      "author": "刘采春",
+      "dynasty": "唐",
+      "category": "曲",
+      "total_chapters": 1,
+      "description": "唐代女艺人刘采春《啰唝曲》，通俗易懂，表达下层妇女离别相思"
+    },
+    {
+      "id": "zhushuzhen",
+      "title": "朱淑真词",
+      "author": "朱淑真",
+      "dynasty": "宋",
+      "category": "词",
+      "total_chapters": 5,
+      "description": "南宋女词人朱淑真词集，与李清照并称宋代女性词人双璧"
+    },
+    {
+      "id": "weiwan",
+      "title": "魏夫人词",
+      "author": "魏玩",
+      "dynasty": "宋",
+      "category": "词",
+      "total_chapters": 3,
+      "description": "宋代女词人魏玩词集，婉柔蕴藉，风格近似秦少游"
+    },
+    {
+      "id": "baitouyin",
+      "title": "白头吟",
+      "author": "卓文君",
+      "dynasty": "西汉",
+      "category": "诗歌",
+      "total_chapters": 1,
+      "description": "汉乐府民歌，相传卓文君作，愿得一心人，白头不相离"
+    },
+    {
+      "id": "gongci",
+      "title": "宫词",
+      "author": "花蕊夫人",
+      "dynasty": "五代十国",
+      "category": "诗歌",
+      "total_chapters": 1,
+      "description": "前蜀花蕊夫人宫词，描绘宫廷生活，展现女性家国情怀"
+    },
+    {
+      "id": "huange",
+      "title": "黄峨散曲",
+      "author": "黄峨",
+      "dynasty": "明",
+      "category": "曲",
+      "total_chapters": 1,
+      "description": "明代女文学家黄峨散曲集，曲中李易安，与杨慎唱和"
+    },
+    {
+      "id": "taishanyin",
+      "title": "泰山吟",
+      "author": "谢道韫",
+      "dynasty": "东晋",
+      "category": "诗歌",
+      "total_chapters": 1,
+      "description": "东晋才女谢道韫玄言诗，未若柳絮因风起，有林下风气"
+    },
+    {
+      "id": "caishuyuan",
+      "title": "彩书怨",
+      "author": "上官婉儿",
+      "dynasty": "唐",
+      "category": "诗歌",
+      "total_chapters": 1,
+      "description": "唐代女官上官婉儿诗作，巾帼宰相，主持风雅"
+    },
+    {
+      "id": "yuangexing",
+      "title": "怨歌行",
+      "author": "班婕妤",
+      "dynasty": "西汉",
+      "category": "诗歌",
+      "total_chapters": 1,
+      "description": "西汉女文学家班婕妤诗作，古有樊姬，今有班婕妤"
+    },
+    {
+      "id": "nixiaoshan",
+      "title": "拟小山篇",
+      "author": "徐惠",
+      "dynasty": "唐",
+      "category": "诗歌",
+      "total_chapters": 1,
+      "description": "唐代女诗人徐惠八岁所作骚体诗，女中魏征"
+    }
+  ]
+}

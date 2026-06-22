@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注疏时光机 - 女性古典文学注疏</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=20260622b">
+  <link rel="stylesheet" href="css/community.css?v=20260622b">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <div class="logo" data-action="navigateToHome">
+        <span class="logo-text">注疏时光机</span>
+      </div>
+      <nav class="nav" id="mainNav">
+        <a href="#" class="nav-link active" data-page="home">首页</a>
+        <a href="#" class="nav-link" data-page="authors">作者</a>
+        <a href="#" class="nav-link" data-page="bookshelf">书架</a>
+        <a href="#" class="nav-link" data-page="community">社区</a>
+      </nav>
+      <div class="header-actions">
+        <div id="userMenu"></div>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换夜间模式" data-action="toggleTheme">
+          <span class="theme-icon-light">&#x2600;</span>
+          <span class="theme-icon-dark">&#x263D;</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="菜单">&#x2630;</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#" class="mobile-nav-link active" data-page="home">首页</a>
+      <a href="#" class="mobile-nav-link" data-page="authors">作者</a>
+      <a href="#" class="mobile-nav-link" data-page="bookshelf">书架</a>
+      <a href="#" class="mobile-nav-link" data-page="community">社区</a>
+    </div>
+  </header>
+
+  <!-- Page Container -->
+  <main class="page-container">
+
+    <!-- Home Page -->
+    <section class="page page-home active" id="page-home">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero-mountains">
+          <div class="mountain-back">
+            <svg viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 200L60 180C120 160 240 120 360 110C480 100 600 120 720 130C840 140 960 140 1080 120C1200 100 1320 60 1380 40L1440 20V200H0Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="mountain-front">
+            <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 160L80 140C160 120 320 80 480 70C640 60 800 80 960 100C1120 120 1280 100 1360 90L1440 80V160H0Z" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+        <div class="container">
+          <div class="hero-authors-float">
+            <span class="author-float-name" style="--delay:0">班婕妤</span>
+            <span class="author-float-name" style="--delay:1">卓文君</span>
+            <span class="author-float-name" style="--delay:2">班昭</span>
+            <span class="author-float-name" style="--delay:3">蔡文姬</span>
+            <span class="author-float-name" style="--delay:4">谢道韫</span>
+            <span class="author-float-name" style="--delay:5">上官婉儿</span>
+            <span class="author-float-name" style="--delay:6">薛涛</span>
+            <span class="author-float-name" style="--delay:7">李冶</span>
+            <span class="author-float-name" style="--delay:8">鱼玄机</span>
+            <span class="author-float-name" style="--delay:9">花蕊夫人</span>
+            <span class="author-float-name" style="--delay:10">李清照</span>
+            <span class="author-float-name" style="--delay:11">朱淑真</span>
+            <span class="author-float-name" style="--delay:12">黄峨</span>
+            <span class="author-float-name" style="--delay:13">顾太清</span>
+          </div>
+          <h1 class="hero-title">听历代学者如何品读她们的文字</h1>
+          <p class="hero-subtitle">Women's Classical Literature Through Time</p>
+          <div class="hero-divider"></div>
+          <p class="hero-desc">
+            从李清照的婉约词风，到班昭的女教经典——<br>
+            点击任一句古籍，展开历代注疏时间轴，看千年学术对话如何诠释她们的才华。
+          </p>
+          
+          <!-- Semantic Search on Home Page -->
+          <div class="hero-search">
+            <div class="search-bar" id="searchBar">
+              <input type="text" id="semanticSearch" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
+              <button class="btn btn-search" data-action="semanticSearch">检索</button>
+            </div>
+          </div>
+          
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-action="navigateToBookshelf">
+              <span>&#x2699;</span> 浏览书架
+            </button>
+            <button class="btn btn-secondary" data-action="navigateToAuthors">
+              <span>&#x2764;</span> 认识作者
+            </button>
+          </div>
+          <div class="hero-scroll-hint">
+            <span>&#x25BD;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authors Page -->
+    <section class="page page-authors" id="page-authors">
+      <div class="container">
+        <div class="section-header">
+          <h2>作者与作品</h2>
+          <p class="section-desc">穿越时空，认识这些才华横溢的女性文学家</p>
+        </div>
+        
+        <!-- Author Cards -->
+        <div class="author-cards" id="authorCards">
+          <div class="author-card" data-book="yuangexing" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #5A5A7A; --avatar-text: #F0F0FF">班</div>
+            <div class="author-info">
+              <h4>班婕妤</h4>
+              <span class="author-dynasty">西汉 · 前48-2</span>
+              <p class="author-desc">西汉女文学家，《怨歌行》作者</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="baitouyin" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #8A5A2A; --avatar-text: #FFF5E6">卓</div>
+            <div class="author-info">
+              <h4>卓文君</h4>
+              <span class="author-dynasty">西汉 · 前175-前121</span>
+              <p class="author-desc">汉乐府民歌，《白头吟》传世</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="nujie" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #2E5A4C; --avatar-text: #E8F5F0">班</div>
+            <div class="author-info">
+              <h4>班昭</h4>
+              <span class="author-dynasty">东汉 · 约45-116</span>
+              <p class="author-desc">中国第一位女历史学家，《女诫》作者</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="beifen" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #4A4A8A; --avatar-text: #EEF0FF">蔡</div>
+            <div class="author-info">
+              <h4>蔡文姬</h4>
+              <span class="author-dynasty">东汉 · 约177-249</span>
+              <p class="author-desc">才女诗人，以《悲愤诗》《胡笳十八拍》闻名</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="taishanyin" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #4A6A8A; --avatar-text: #E8F0FF">谢</div>
+            <div class="author-info">
+              <h4>谢道韫</h4>
+              <span class="author-dynasty">东晋 · 约349-409</span>
+              <p class="author-desc">东晋才女，"未若柳絮因风起"</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="caishuyuan" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #8A4A4A; --avatar-text: #FFF0F0">上</div>
+            <div class="author-info">
+              <h4>上官婉儿</h4>
+              <span class="author-dynasty">唐代 · 664-710</span>
+              <p class="author-desc">唐代女官、诗人，"巾帼宰相"</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="xuetao" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #6B4C8A; --avatar-text: #F5EEFF">薛</div>
+            <div class="author-info">
+              <h4>薛涛</h4>
+              <span class="author-dynasty">唐代 · 约768-832</span>
+              <p class="author-desc">唐代著名女诗人，创制薛涛笺</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="liuye" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #7A5A4A; --avatar-text: #FAF0E6">李</div>
+            <div class="author-info">
+              <h4>李冶</h4>
+              <span class="author-dynasty">唐代 · ？-784</span>
+              <p class="author-desc">唐代著名女冠，诗风豪放</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="nixiaoshan" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #6A6A8A; --avatar-text: #F0F0FF">徐</div>
+            <div class="author-info">
+              <h4>徐惠</h4>
+              <span class="author-dynasty">唐代 · 627-650</span>
+              <p class="author-desc">唐太宗妃嫔，"女中魏征"</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="liucaichun" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #8A6A4A; --avatar-text: #FFFAF0">刘</div>
+            <div class="author-info">
+              <h4>刘采春</h4>
+              <span class="author-dynasty">唐代 · 约8世纪</span>
+              <p class="author-desc">唐代著名女艺人，《啰唝曲》传唱千古</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="yuxuanji" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #4A7A4A; --avatar-text: #E8F5E9">鱼</div>
+            <div class="author-info">
+              <h4>鱼玄机</h4>
+              <span class="author-dynasty">唐代 · 约844-871</span>
+              <p class="author-desc">晚唐著名女诗人，才情横溢</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="gongci" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #6A8A6A; --avatar-text: #F0FFF0">花</div>
+            <div class="author-info">
+              <h4>花蕊夫人</h4>
+              <span class="author-dynasty">五代十国 · 约883-926</span>
+              <p class="author-desc">前蜀花蕊夫人，《述国亡诗》传世</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="weiwan" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #2A5A8A; --avatar-text: #E8F0FF">魏</div>
+            <div class="author-info">
+              <h4>魏玩</h4>
+              <span class="author-dynasty">宋代 · ？-约1096</span>
+              <p class="author-desc">宋代著名女词人，封鲁国夫人</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="shuyuci" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #8B3A2A; --avatar-text: #FFF8F0">清</div>
+            <div class="author-info">
+              <h4>李清照</h4>
+              <span class="author-dynasty">宋代 · 1084-1155</span>
+              <p class="author-desc">婉约派代表词人，被誉为"千古第一才女"</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="zhushuzhen" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #8A2A4A; --avatar-text: #FFF0F5">朱</div>
+            <div class="author-info">
+              <h4>朱淑真</h4>
+              <span class="author-dynasty">宋代 · 约1135-1180</span>
+              <p class="author-desc">宋代著名女词人，《断肠集》作者</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="huange" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #7A4A6A; --avatar-text: #FFF0F8">黄</div>
+            <div class="author-info">
+              <h4>黄峨</h4>
+              <span class="author-dynasty">明代 · 1498-1569</span>
+              <p class="author-desc">明代女文学家，"曲中李易安"</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+          <div class="author-card" data-book="donghaiyuge" data-action="selectAuthorCard">
+            <div class="author-avatar" style="--avatar-bg: #8A6A2A; --avatar-text: #FFFAF0">顾</div>
+            <div class="author-info">
+              <h4>顾太清</h4>
+              <span class="author-dynasty">清代 · 1799-1877</span>
+              <p class="author-desc">清代著名女词人，与纳兰性德齐名</p>
+            </div>
+            <div class="author-card-actions">
+              <button class="author-detail-btn" data-action="toggleAuthorDetail" title="作者简介">&#x2139;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bookshelf Page -->
+    <section class="page page-bookshelf" id="page-bookshelf">
+      <div class="container">
+        <div class="section-header">
+          <h2>古籍书架</h2>
+          <p class="section-desc">点击书脊，开启一段穿越千年的阅读之旅</p>
+        </div>
+        
+        <div class="bookshelf" id="bookshelf">
+          <div class="shelf">
+            <!-- Books rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Page -->
+    <section class="page page-community" id="page-community">
+      <div id="communityContent"></div>
+    </section>
+
+    <!-- Reader Page -->
+    <section class="page page-reader" id="page-reader">
+      <div class="container">
+        <!-- Back Button -->
+        <div class="reader-back">
+          <button class="btn btn-secondary" data-action="navigateBack">
+            <span>&#x25C0;</span> 返回书架
+          </button>
+        </div>
+
+        <!-- Semantic Search -->
+        <div class="search-bar" id="searchBar">
+          <input type="text" id="semanticSearch" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
+          <button class="btn btn-search" data-action="semanticSearch">检索</button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+
+        <!-- Current Book Header -->
+        <div class="current-book-header" id="currentBookHeader">
+          <div class="current-book-title-row">
+            <h3 id="currentBookTitle">《女诫》· 卑弱第一</h3>
+            <div class="current-book-actions">
+              <button class="btn-author-info" data-action="showCurrentAuthorDetail" title="作者简介">
+                <span>&#x2139;</span> 作者
+              </button>
+              <button class="btn-book-info" data-action="showCurrentBookDetail" title="作品详情">
+                <span>&#x1F4D6;</span> 作品
+              </button>
+            </div>
+          </div>
+          <span class="chapter-nav" id="chapterNav">
+            <button class="btn-nav" data-action="prevChapter">&#x25C0;</button>
+            <span id="chapterIndicator">1/1</span>
+            <button class="btn-nav" data-action="nextChapter">&#x25B6;</button>
+          </span>
+        </div>
+
+        <!-- Main Reader -->
+        <div class="reader-container">
+          <div class="panel panel-original">
+            <div class="panel-header">
+              <h3>原文</h3>
+              <span class="panel-badge">点击句子查看注疏</span>
+            </div>
+            <div class="panel-ornament"></div>
+            <div class="text-content" id="originalText">
+              <!-- Dynamic content -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail Panels: Timeline + AI -->
+        <div class="detail-panels" id="detailPanels">
+          <div class="panel panel-timeline" id="timelinePanel">
+            <div class="panel-header">
+              <h3>历代注疏时间轴</h3>
+              <button class="close-timeline" data-action="closeTimeline">&#x2715;</button>
+            </div>
+            <div class="panel-scroll" id="timelineScroll">
+              <div class="timeline-selected-sentence" id="selectedSentence"></div>
+              <div class="timeline-track" id="timelineTrack">
+                <!-- Timeline items -->
+              </div>
+            </div>
+            <div class="timeline-legend">
+              <span class="legend-item" data-era="han" data-action="filterTimeline"><span class="dot dot-han"></span>汉代</span>
+              <span class="legend-item" data-era="tang" data-action="filterTimeline"><span class="dot dot-tang"></span>唐代</span>
+              <span class="legend-item" data-era="song" data-action="filterTimeline"><span class="dot dot-song"></span>宋代</span>
+              <span class="legend-item" data-era="ming" data-action="filterTimeline"><span class="dot dot-ming"></span>明代</span>
+              <span class="legend-item" data-era="qing" data-action="filterTimeline"><span class="dot dot-qing"></span>清代</span>
+              <span class="legend-item" data-era="modern" data-action="filterTimeline"><span class="dot dot-modern"></span>现代</span>
+              <span class="legend-item legend-reset" data-action="filterTimeline">全部</span>
+            </div>
+          </div>
+
+          <div class="panel panel-ai-summary" id="aiSummary">
+            <div class="panel-header">
+              <h3><span class="ai-icon">&#x2728;</span> AI 思想史脉络</h3>
+            </div>
+            <div class="panel-scroll">
+              <div class="ai-content" id="aiContent">
+                <p class="ai-placeholder">选中句子后，AI 将自动分析历代注疏的演变脉络与思想差异。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modals -->
+  <div class="author-detail-modal" id="authorDetail">
+    <div class="modal-overlay" data-action="closeAuthorDetail"></div>
+    <div class="modal-content">
+      <button class="modal-close" data-action="closeAuthorDetail">&#x2715;</button>
+      <div class="author-detail-content" id="authorDetailContent">
+        <!-- Dynamic content -->
+      </div>
+    </div>
+  </div>
+
+  <div class="book-detail-modal" id="bookDetail">
+    <div class="modal-overlay" data-action="closeBookDetail"></div>
+    <div class="modal-content">
+      <button class="modal-close" data-action="closeBookDetail">&#x2715;</button>
+      <div class="book-detail-content" id="bookDetailContent">
+        <!-- Dynamic content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span>注疏时光机</span>
+        </div>
+        <p class="footer-desc">
+          让古籍阅读从"知道意思"提升到"理解思想史"
+        </p>
+        <p class="footer-meta">
+          TRAE AI 创造力大赛 · 学习工作 + 社会公益赛道
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

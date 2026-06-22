@@ -1,0 +1,139 @@
+/* ========================================
+   Buttons & Sections Styles
+   ======================================== */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-family: var(--font-serif);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 12px rgba(139,58,42,0.2);
+}
+
+.btn-primary:hover {
+  background: #7A3224;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139,58,42,0.25);
+}
+
+.btn-secondary {
+  background: rgba(44,36,32,0.04);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+  background: rgba(44,36,32,0.08);
+  border-color: var(--muted);
+}
+
+/* Sections */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.book-search {
+  margin-left: auto;
+}
+
+.book-search input {
+  padding: 8px 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  background: var(--bg-paper);
+  color: var(--ink);
+  width: 180px;
+  transition: all 0.3s ease;
+  font-family: var(--font-serif);
+}
+
+.book-search input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(139,58,42,0.08);
+  width: 220px;
+}
+
+.book-search input::placeholder {
+  color: var(--muted);
+}
+
+/* Dark Mode Components */
+[data-theme="dark"] .btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background: #E07050;
+  box-shadow: 0 4px 16px rgba(212,101,74,0.3);
+}
+
+[data-theme="dark"] .btn-secondary {
+  border-color: var(--rule);
+  color: var(--ink-light);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+[data-theme="dark"] .btn-search {
+  background: var(--accent);
+  color: white;
+}
+
+[data-theme="dark"] .book-search input {
+  background: var(--bg-paper);
+  border-color: var(--rule);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .book-search input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(224,184,90,0.12);
+}
+
+[data-theme="dark"] .section-header h2 {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .no-results {
+  color: var(--muted);
+}

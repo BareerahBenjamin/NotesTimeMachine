@@ -1,0 +1,151 @@
+{
+  "chapter_id": "donghaiyuge-04",
+  "classic_id": "donghaiyuge",
+  "title": "冬日词",
+  "order": 4,
+  "paragraphs": [
+    {
+      "id": "donghaiyuge-04-01",
+      "order": 1,
+      "content": "一重山，两重山，山远天高烟水寒，相思枫叶丹。菊花开，菊花残，塞雁高飞人未还，一帘风月闲。",
+      "keywords": [
+        "相思",
+        "月",
+        "花",
+        "风",
+        "山"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-04-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《长相思》，'一重山，两重山，山远天高烟水寒'，以重叠之山写距离之远。'相思枫叶丹'，以枫叶之红喻相思之切。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-04-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'菊花开，菊花残，塞雁高飞人未还'，以菊花之开残与雁之高飞，写时光流逝而人未归。'一帘风月闲'，以闲景衬忙愁。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-04-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词一重山是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-04-02",
+      "order": 2,
+      "content": "驿外断桥边，寂寞开无主。已是黄昏独自愁，更著风和雨。无意苦争春，一任群芳妒。零落成泥碾作尘，只有香如故。",
+      "keywords": [
+        "春",
+        "风",
+        "雨",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-04-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《卜算子》，'驿外断桥边，寂寞开无主'，写梅花之孤高。'已是黄昏独自愁，更著风和雨'，以黄昏风雨衬梅花之寂寞。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-04-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'零落成泥碾作尘，只有香如故'，写梅花虽凋零而香气不改，寓品格之高洁。太清此词借梅自喻，寄托深远。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-04-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词驿外断桥边是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-04-03",
+      "order": 3,
+      "content": "雪似梅花，梅花似雪。似和不似都奇绝。恼人风味阿谁知？请君问取南楼月。记得去年，探梅时节。老来旧事无人说。为谁醉倒为谁醒？到今犹恨轻离别。",
+      "keywords": [
+        "离别",
+        "月",
+        "花",
+        "风",
+        "雪"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-04-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《踏莎行》，'雪似梅花，梅花似雪。似和不似都奇绝'，以雪与梅之似与不似起笔，新颖别致。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-04-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'记得去年，探梅时节。老来旧事无人说'，写追忆往事之感慨。'为谁醉倒为谁醒？到今犹恨轻离别'，以问句收束，余味无穷。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-04-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词雪似梅花是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

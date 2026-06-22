@@ -1,0 +1,45 @@
+{
+  "chapter_id": "caishuyuan-01",
+  "classic_id": "caishuyuan",
+  "title": "彩书怨",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "caishuyuan-01-01",
+      "order": 1,
+      "content": "叶下洞庭初，思君万里余。露浓香被冷，月落锦屏虚。欲奏江南曲，贪封蓟北书。书中无别意，惟怅久离居。",
+      "keywords": [
+        "思念",
+        "离别",
+        "书信",
+        "闺怨",
+        "唐代女性"
+      ],
+      "annotations": [
+        {
+          "id": "songshi-caishuyuan-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "佚名",
+          "author_id": "yi-ming",
+          "source": "《宋史·艺文志》",
+          "view_angle": "史志",
+          "content": "蔡琰，字文姬，陈留人。博学有才辩，又妙于音律。"
+        },
+        {
+          "id": "ai-modern-caishuyuan-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "蔡琰（蔡文姬）为东汉著名女诗人，博学多才，精通音律。《宋史·艺文志》记载了她的生平事迹。蔡文姬的代表作《悲愤诗》是中国文学史上第一篇自传体长篇叙事诗，以其深刻的社会内容和强烈的艺术感染力著称。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

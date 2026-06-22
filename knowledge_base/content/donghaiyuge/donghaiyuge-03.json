@@ -1,0 +1,150 @@
+{
+  "chapter_id": "donghaiyuge-03",
+  "classic_id": "donghaiyuge",
+  "title": "秋日词",
+  "order": 3,
+  "paragraphs": [
+    {
+      "id": "donghaiyuge-03-01",
+      "order": 1,
+      "content": "秋风萧瑟天气凉，草木摇落露为霜。群燕辞归鹄南翔，念君客游思断肠。",
+      "keywords": [
+        "秋",
+        "风",
+        "天",
+        "君",
+        "归"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-03-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《菩萨蛮》，'秋风萧瑟天气凉，草木摇落露为霜'，化用曹丕《燕歌行》句，写秋日之萧瑟。'群燕辞归鹄南翔'，以候鸟南归衬人之未归。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-03-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'念君客游思断肠'，直抒胸臆，思念之情溢于言表。太清词多写思念，此首尤为深切。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-03-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词秋风萧瑟天气凉是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-03-02",
+      "order": 2,
+      "content": "秋到边城角声哀，烽火照高台。悲歌击筑，凭高酹酒，此兴悠哉。多情谁似南山月，特地暮云开。灞桥烟柳，曲江池馆，应待人来。",
+      "keywords": [
+        "秋",
+        "月",
+        "酒",
+        "山",
+        "云"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-03-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《秋波媚》，'秋到边城角声哀，烽火照高台'，写边城秋景，苍凉悲壮。'悲歌击筑，凭高酹酒，此兴悠哉'，写登高之豪兴。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-03-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'多情谁似南山月，特地暮云开'，以南山月之多情衬人之深情。'灞桥烟柳，曲江池馆，应待人来'，以长安之景收束，寄托归来之望。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-03-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词秋到边城角声哀是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-03-03",
+      "order": 3,
+      "content": "无言独上西楼，月如钩。寂寞梧桐深院锁清秋。剪不断，理还乱，是离愁。别是一般滋味在心头。",
+      "keywords": [
+        "秋",
+        "月",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-03-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《相见欢》，'无言独上西楼，月如钩'，写独处之寂寞。'寂寞梧桐深院锁清秋'，以梧桐、深院、清秋三意象，营造孤寂氛围。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-03-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'剪不断，理还乱，是离愁'，以丝之难断难理喻愁之纷乱，形象生动。'别是一般滋味在心头'，写愁之难以言说，余味无穷。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-03-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词无言独上西楼是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

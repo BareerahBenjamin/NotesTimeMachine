@@ -1,0 +1,56 @@
+{
+  "chapter_id": "liuye-04",
+  "classic_id": "liuye",
+  "title": "第4卷（共4卷）",
+  "order": 4,
+  "paragraphs": [
+    {
+      "id": "liuye-04-01",
+      "order": 1,
+      "content": "《柳》最爱纤纤曲水滨，夕阳移影过青苹。东风又染一年绿，楚客更伤千里春。低叶已藏依岸櫂，高枝应闭上楼人。舞腰渐重烟光老，散作飞绵惹翠裀。",
+      "keywords": [
+        "春",
+        "水",
+        "人",
+        "青",
+        "翠"
+      ],
+      "annotations": [
+        {
+          "id": "gaozhongwu-liuye-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "高仲武",
+          "author_id": "gao-zhong-wu",
+          "source": "《中兴间气集》",
+          "view_angle": "诗评",
+          "content": "李季兰（李冶），名冶，以字行，吴兴人也。有诗名，五言律诗，善写闺情，词旨清婉，多佳句。"
+        },
+        {
+          "id": "xinfang-liuye-01",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "李冶，字季兰，吴兴人也。女道士。聪慧有才藻，工诗文，与陆羽、皎然相友善。"
+        },
+        {
+          "id": "ai-modern-liuye-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李冶（李季兰）为唐代著名女诗人，与薛涛、鱼玄机、刘采春并称唐代四大女诗人。高仲武《中兴间气集》称其'五言律诗，善写闺情，词旨清婉'，辛文房《唐才子传》称其'聪慧有才藻'。李冶的诗歌以五言律诗见长，其代表作《寄校书七兄》《明月夜留别》等展现了唐代女诗人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

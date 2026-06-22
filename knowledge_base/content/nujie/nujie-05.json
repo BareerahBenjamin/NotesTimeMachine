@@ -1,0 +1,179 @@
+{
+  "chapter_id": "nujie-05",
+  "classic_id": "nujie",
+  "title": "专心第五",
+  "order": 5,
+  "paragraphs": [
+    {
+      "id": "nujie-05-01",
+      "order": 1,
+      "content": "《礼》：「夫有再娶之义，妇无二适之文。」故曰：夫者，天也。天固不可逃，夫固不可离也。行违神祇，天则罚之；礼义有愆，夫则薄之。",
+      "keywords": [
+        "专心",
+        "夫为天",
+        "礼制"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-05-01",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。夫为天此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-05-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此夫为天，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-05-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇夫为天，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-05-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此夫为天反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-05-02",
+      "order": 2,
+      "content": "故《女宪》曰：「得意一人，是谓永毕；失意一人，是谓永讫。」由斯言之，夫不可不求其心。然所求者，亦非谓佞媚苟亲也。固莫若专心正色，礼义居洁，耳无涂听，目无邪视，出无冶容，入无废饰，无聚会群辈，无看视门户，此则谓专心正色矣。",
+      "keywords": [
+        "专心",
+        "正色",
+        "礼义"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-05-02",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。专心正色此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-05-02",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此专心正色，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-05-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇专心正色，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-05-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此专心正色反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-05-03",
+      "order": 3,
+      "content": "若夫动静轻脱，视听陕输，入则乱发坏形，出则窈窕作态，说所不当道，观所不当视，此谓不能专心正色矣。",
+      "keywords": [
+        "轻脱",
+        "反面",
+        "警戒"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-05-03",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。反面警戒此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-05-03",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此反面警戒，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-05-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇反面警戒，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-05-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此反面警戒反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "chapter_id": "donghaiyuge-06",
+  "classic_id": "donghaiyuge",
+  "title": "游赏纪胜",
+  "order": 6,
+  "paragraphs": [
+    {
+      "id": "donghaiyuge-06-01",
+      "order": 1,
+      "content": "大江东去，浪淘尽、千古风流人物。故垒西边，人道是、三国周郎赤壁。乱石穿空，惊涛拍岸，卷起千堆雪。江山如画，一时多少豪杰。",
+      "keywords": [
+        "江景",
+        "怀古",
+        "壮阔"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-donghaiyuge-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "顾太清词，深稳沉著，不事雕琢，纯以情胜，在国朝妇人词中，可称上乘。"
+        },
+        {
+          "id": "kuangzhouyi-donghaiyuge-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清词，其佳处在气格，不在字句。然亦有精于字句者，如'云随碧水歌声转，雪绕红绡舞袖垂'，真佳境也。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "顾太清为清代著名女词人，与纳兰性德并称'男中成容若，女中太清春'。陈廷焯称其词'深稳沉著，不事雕琢，纯以情胜'，况周颐赞其'气格'之高。顾太清的词以题材广泛、情感真挚著称，其代表作《东海渔歌》展现了清代女性词人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-06-02",
+      "order": 2,
+      "content": "明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。",
+      "keywords": [
+        "明月",
+        "中秋",
+        "旷达"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-donghaiyuge-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "顾太清词，深稳沉著，不事雕琢，纯以情胜，在国朝妇人词中，可称上乘。"
+        },
+        {
+          "id": "kuangzhouyi-donghaiyuge-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清词，其佳处在气格，不在字句。然亦有精于字句者，如'云随碧水歌声转，雪绕红绡舞袖垂'，真佳境也。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "顾太清为清代著名女词人，与纳兰性德并称'男中成容若，女中太清春'。陈廷焯称其词'深稳沉著，不事雕琢，纯以情胜'，况周颐赞其'气格'之高。顾太清的词以题材广泛、情感真挚著称，其代表作《东海渔歌》展现了清代女性词人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-06-03",
+      "order": 3,
+      "content": "世事一场大梦，人生几度秋凉。夜来风叶已鸣廊，看取眉头鬓上。酒贱常愁客少，月明多被云妨。中秋谁与共孤光，把盏凄然北望。",
+      "keywords": [
+        "秋凉",
+        "人生",
+        "感慨"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-donghaiyuge-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "顾太清词，深稳沉著，不事雕琢，纯以情胜，在国朝妇人词中，可称上乘。"
+        },
+        {
+          "id": "kuangzhouyi-donghaiyuge-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清词，其佳处在气格，不在字句。然亦有精于字句者，如'云随碧水歌声转，雪绕红绡舞袖垂'，真佳境也。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "顾太清为清代著名女词人，与纳兰性德并称'男中成容若，女中太清春'。陈廷焯称其词'深稳沉著，不事雕琢，纯以情胜'，况周颐赞其'气格'之高。顾太清的词以题材广泛、情感真挚著称，其代表作《东海渔歌》展现了清代女性词人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

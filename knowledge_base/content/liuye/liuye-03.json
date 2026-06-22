@@ -1,0 +1,287 @@
+{
+  "chapter_id": "liuye-03",
+  "classic_id": "liuye",
+  "title": "第3卷（共4卷）",
+  "order": 3,
+  "paragraphs": [
+    {
+      "id": "liuye-03-01",
+      "order": 1,
+      "content": "《结素鱼贻友人》尺素如残雪，结为双鲤鱼。欲知心里事，看取腹中书。",
+      "keywords": [
+        "雪"
+      ],
+      "annotations": [
+        {
+          "id": "gaozhongwu-liuye-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "高仲武",
+          "author_id": "gao-zhong-wu",
+          "source": "《中兴间气集》",
+          "view_angle": "诗评",
+          "content": "李季兰（李冶），名冶，以字行，吴兴人也。有诗名，五言律诗，善写闺情，词旨清婉，多佳句。"
+        },
+        {
+          "id": "xinfang-liuye-01",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "李冶，字季兰，吴兴人也。女道士。聪慧有才藻，工诗文，与陆羽、皎然相友善。"
+        },
+        {
+          "id": "ai-modern-liuye-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李冶（李季兰）为唐代著名女诗人，与薛涛、鱼玄机、刘采春并称唐代四大女诗人。高仲武《中兴间气集》称其'五言律诗，善写闺情，词旨清婉'，辛文房《唐才子传》称其'聪慧有才藻'。李冶的诗歌以五言律诗见长，其代表作《寄校书七兄》《明月夜留别》等展现了唐代女诗人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liuye-03-02",
+      "order": 2,
+      "content": "《偶居》心远浮云知不还，心云并在有无间。狂风何事相摇荡，吹向南山复北山。",
+      "keywords": [
+        "风",
+        "山",
+        "云"
+      ],
+      "annotations": [
+        {
+          "id": "gaozhongwu-liuye-03-02",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "高仲武",
+          "author_id": "gao-zhong-wu",
+          "source": "《中兴间气集》",
+          "view_angle": "诗评",
+          "content": "'心远浮云知不还，心云并在有无间'，写心境之超脱，如浮云般自由。'狂风何事相摇荡，吹向南山复北山'，以风之摇荡喻世事之无常。"
+        },
+        {
+          "id": "xinwenfang-liuye-03-02",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "李冶此诗颇有禅意，'心云并在有无间'，写心境与浮云合一，在有无之间，超然物外。"
+        },
+        {
+          "id": "ai-modern-liuye-03-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗偶居是李冶的代表作。高仲武、辛文房等历代评论家对其有精当的评价。李冶为唐代著名女道士诗人，其诗清丽流畅，在唐代女诗人中独树一帜。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liuye-03-03",
+      "order": 3,
+      "content": "《明月夜留别》离人无语月无声，明月有光人有情。别后相思人似月，云间水上到层城。",
+      "keywords": [
+        "相思",
+        "月",
+        "水",
+        "人",
+        "情"
+      ],
+      "annotations": [
+        {
+          "id": "gaozhongwu-liuye-03",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "高仲武",
+          "author_id": "gao-zhong-wu",
+          "source": "《中兴间气集》",
+          "view_angle": "诗评",
+          "content": "李季兰（李冶），名冶，以字行，吴兴人也。有诗名，五言律诗，善写闺情，词旨清婉，多佳句。"
+        },
+        {
+          "id": "xinfang-liuye-03",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "李冶，字季兰，吴兴人也。女道士。聪慧有才藻，工诗文，与陆羽、皎然相友善。"
+        },
+        {
+          "id": "ai-modern-liuye-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李冶（李季兰）为唐代著名女诗人，与薛涛、鱼玄机、刘采春并称唐代四大女诗人。高仲武《中兴间气集》称其'五言律诗，善写闺情，词旨清婉'，辛文房《唐才子传》称其'聪慧有才藻'。李冶的诗歌以五言律诗见长，其代表作《寄校书七兄》《明月夜留别》等展现了唐代女诗人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liuye-03-04",
+      "order": 4,
+      "content": "《春闺怨》百尺井栏上，数株桃已红。念君辽海北，抛妾宋家东。",
+      "keywords": [
+        "海",
+        "桃",
+        "君",
+        "妾"
+      ],
+      "annotations": [
+        {
+          "id": "gaozhongwu-liuye-04",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "高仲武",
+          "author_id": "gao-zhong-wu",
+          "source": "《中兴间气集》",
+          "view_angle": "诗评",
+          "content": "李季兰（李冶），名冶，以字行，吴兴人也。有诗名，五言律诗，善写闺情，词旨清婉，多佳句。"
+        },
+        {
+          "id": "xinfang-liuye-04",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "李冶，字季兰，吴兴人也。女道士。聪慧有才藻，工诗文，与陆羽、皎然相友善。"
+        },
+        {
+          "id": "ai-modern-liuye-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李冶（李季兰）为唐代著名女诗人，与薛涛、鱼玄机、刘采春并称唐代四大女诗人。高仲武《中兴间气集》称其'五言律诗，善写闺情，词旨清婉'，辛文房《唐才子传》称其'聪慧有才藻'。李冶的诗歌以五言律诗见长，其代表作《寄校书七兄》《明月夜留别》等展现了唐代女诗人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liuye-03-05",
+      "order": 5,
+      "content": "《句》经时未架却，心绪乱纵横。已看云鬓散，更念木枯荣。鞞鼓喧行选，旌旗拂座隅。不覩河阳一县花，空见青山三两点。",
+      "keywords": [
+        "花",
+        "山",
+        "河",
+        "青"
+      ],
+      "annotations": [
+        {
+          "id": "gaozhongwu-liuye-05",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "高仲武",
+          "author_id": "gao-zhong-wu",
+          "source": "《中兴间气集》",
+          "view_angle": "诗评",
+          "content": "李季兰（李冶），名冶，以字行，吴兴人也。有诗名，五言律诗，善写闺情，词旨清婉，多佳句。"
+        },
+        {
+          "id": "xinfang-liuye-05",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "李冶，字季兰，吴兴人也。女道士。聪慧有才藻，工诗文，与陆羽、皎然相友善。"
+        },
+        {
+          "id": "ai-modern-liuye-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李冶（李季兰）为唐代著名女诗人，与薛涛、鱼玄机、刘采春并称唐代四大女诗人。高仲武《中兴间气集》称其'五言律诗，善写闺情，词旨清婉'，辛文房《唐才子传》称其'聪慧有才藻'。李冶的诗歌以五言律诗见长，其代表作《寄校书七兄》《明月夜留别》等展现了唐代女诗人的艺术成就。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "liuye-03-06",
+      "order": 6,
+      "content": "《蔷薇花》翠融红绽浑无力，斜倚栏干似诧人。深处最宜香惹蝶，摘时兼恐焰烧春。当空巧结玲珑帐，著地能铺锦绣裀。最好凌晨和露看，碧纱窗外一枝新。",
+      "keywords": [
+        "春",
+        "花",
+        "红",
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "gaozhongwu-liuye-03-06",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "高仲武",
+          "author_id": "gao-zhong-wu",
+          "source": "《中兴间气集》",
+          "view_angle": "诗评",
+          "content": "'翠融红绽浑无力，斜倚栏干似诧人'，写蔷薇之姿态，以拟人手法写花之娇柔。"
+        },
+        {
+          "id": "xinwenfang-liuye-03-06",
+          "era": "yuan",
+          "era_name": "元代",
+          "era_code": "yuan",
+          "author": "辛文房",
+          "author_id": "xin-wen-fang",
+          "source": "《唐才子传》",
+          "view_angle": "传记",
+          "content": "'深处最宜香惹蝶，摘时兼恐艳烧云'，以蝶恋花、花映云之意象，写蔷薇之美。李冶咏物诗多佳作，此首可见其才华。"
+        },
+        {
+          "id": "ai-modern-liuye-03-06",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗蔷薇花是李冶的代表作。高仲武、辛文房等历代评论家对其有精当的评价。李冶为唐代著名女道士诗人，其诗清丽流畅，在唐代女诗人中独树一帜。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

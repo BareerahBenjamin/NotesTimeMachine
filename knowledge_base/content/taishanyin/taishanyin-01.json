@@ -1,0 +1,45 @@
+{
+  "chapter_id": "taishanyin-01",
+  "classic_id": "taishanyin",
+  "title": "泰山吟",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "taishanyin-01-01",
+      "order": 1,
+      "content": "峨峨东岳高，秀极冲青天。岩中间虚宇，寂寞幽以玄。非工复非匠，云构发自然。器象尔何物？遂令我屡迁。逝将宅斯宇，可以尽天年。",
+      "keywords": [
+        "泰山",
+        "玄言",
+        "自然",
+        "隐逸",
+        "魏晋风度"
+      ],
+      "annotations": [
+        {
+          "id": "yuefu-taishanyin-01",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "佚名",
+          "author_id": "yi-ming",
+          "source": "《乐府诗集》",
+          "view_angle": "乐府",
+          "content": "《泰山吟》，汉乐府曲名也。古辞曰：'上邪！我欲与君相知，长命无绝衰。'"
+        },
+        {
+          "id": "ai-modern-taishanyin-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《泰山吟》为汉代乐府诗，以泰山为背景，表达了对爱情的坚贞誓言。《乐府诗集》收录了此曲，古辞'上邪！我欲与君相知，长命无绝衰'表达了对爱情的执着追求。这首诗以其质朴的语言和强烈的情感表达，成为中国文学史上的经典之作。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

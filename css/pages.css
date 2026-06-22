@@ -1,0 +1,116 @@
+/* ========================================
+   Page Container & Navigation Styles
+   ======================================== */
+
+.page-container {
+  position: relative;
+  min-height: calc(100vh - 64px);
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 64px;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  position: relative;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.page-home {
+  min-height: calc(100vh - 64px);
+}
+
+.page-home .hero {
+  min-height: calc(100vh - 64px);
+}
+
+.page-authors {
+  padding: 60px 0;
+}
+
+.page-bookshelf {
+  padding: 60px 0;
+}
+
+.page-reader {
+  padding: 40px 0;
+}
+
+.reader-back {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.hero-search {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.hero-search .search-bar {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: white;
+}
+
+[data-theme="dark"] .btn-secondary {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: var(--gold);
+  color: var(--bg);
+}

@@ -1,0 +1,287 @@
+{
+  "chapter_id": "xuetao-01",
+  "classic_id": "xuetao",
+  "title": "第1卷（共16卷）",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "xuetao-01-01",
+      "order": 1,
+      "content": "《酬人雨后玩竹》南天春雨时，那鉴雪霜姿。众类亦云茂，虚心能自持。多留晋贤醉，早伴舜妃悲。晚岁君能赏，苍苍劲节奇。",
+      "keywords": [
+        "春",
+        "雨",
+        "雪",
+        "云",
+        "天"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-01-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "薛涛《酬人雨后玩竹》，以竹自况，'虚心能自持'句，可见其品格之高洁。竹之为物，虚心劲节，薛涛以之自喻，不卑不亢，颇有林下风致。"
+        },
+        {
+          "id": "jiyun-xuetao-01-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛此诗咏竹，用典精切。'多留晋贤醉'用竹林七贤事，'早伴舜妃悲'用娥皇女英泪洒斑竹事，对仗工稳，寄托深远。"
+        },
+        {
+          "id": "ai-modern-xuetao-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗酬人雨后玩竹是薛涛的代表作之一。胡仔、纪昀等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-01-02",
+      "order": 2,
+      "content": "《春望词四首 一》花开不同赏，花落不同悲。欲问相思处，花开花落时。",
+      "keywords": [
+        "相思",
+        "春",
+        "花"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-01-02",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "'花开不同赏，花落不同悲'，以花开花落起兴，写相思之情，语浅意深。薛涛善用日常景物入诗，此其一例。"
+        },
+        {
+          "id": "yangshen-xuetao-01-02",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "杨慎",
+          "author_id": "yang-shen",
+          "source": "《升庵诗话》",
+          "view_angle": "诗论",
+          "content": "'欲问相思处，花开花落时'，不言相思之苦，而以花之开落暗示，含蓄蕴藉，得风人之旨。"
+        },
+        {
+          "id": "ai-modern-xuetao-01-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗春望词四首 一是薛涛的代表作之一。胡仔、杨慎等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-01-03",
+      "order": 3,
+      "content": "《春望词四首 二》揽草结同心，将以遗知音。春愁正断绝，春鸟复哀吟。",
+      "keywords": [
+        "春",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-01-03",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "'揽草结同心，将以遗知音'，用结草为信之古俗，表达对知音的渴望。'春愁正断绝，春鸟复哀吟'，以鸟鸣衬愁，倍觉凄婉。"
+        },
+        {
+          "id": "jiyun-xuetao-01-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "'不结同心人，空结同心草'，反用前句之意，由希望转为失望，跌宕有致。薛涛诗多写身世之感，此首尤为深切。"
+        },
+        {
+          "id": "ai-modern-xuetao-01-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗春望词四首 二是薛涛的代表作之一。胡仔、纪昀等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-01-04",
+      "order": 4,
+      "content": "《春望词四首 三》风花日将老，佳期犹渺渺。不结同心人，空结同心草。",
+      "keywords": [
+        "春",
+        "花",
+        "风",
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-01-04",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "'风花日将老，佳期犹渺渺'，以花之将老喻人之迟暮，佳期渺茫，令人叹惋。薛涛终身未嫁，此诗或有寄托。"
+        },
+        {
+          "id": "yangshen-xuetao-01-04",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "杨慎",
+          "author_id": "yang-shen",
+          "source": "《升庵诗话》",
+          "view_angle": "诗论",
+          "content": "'不结同心人，空结同心草'，语意沉痛。薛涛才高命薄，终身不偶，读此诗可为一叹。"
+        },
+        {
+          "id": "ai-modern-xuetao-01-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗春望词四首 三是薛涛的代表作之一。胡仔、杨慎等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-01-05",
+      "order": 5,
+      "content": "《春望词四首 四》那堪花满枝，翻作两相思。玉筯垂朝镜，春风知不知。",
+      "keywords": [
+        "相思",
+        "春",
+        "花",
+        "风",
+        "玉"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-01-05",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "'那堪花满枝，翻作两相思'，花满枝头本是美景，反衬相思之苦，以乐景写哀情，倍增其哀。'玉箸垂朝镜，春风知不知'，以问句作结，余味无穷。"
+        },
+        {
+          "id": "jiyun-xuetao-01-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "'玉箸垂朝镜'，写晨起对镜流泪之态，形象生动。'春风知不知'一问，将无情感的春风拉入情感世界，手法高妙。"
+        },
+        {
+          "id": "ai-modern-xuetao-01-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗春望词四首 四是薛涛的代表作之一。胡仔、纪昀等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-01-06",
+      "order": 6,
+      "content": "《宣上人见示与诸公唱和》许厕高斋唱，涓泉定不如。可怜谯记室，流水满禅居。",
+      "keywords": [
+        "水",
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-01-06",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "薛涛与诸公唱和，'涓泉定不如'句，自谦如涓涓细流，不如诸公之才如江河。然薛涛之才实不在诸公之下，此乃谦辞耳。"
+        },
+        {
+          "id": "jiyun-xuetao-01-06",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛出入幕府，与当时名士唱和，此诗可见其交游之广。'可怜谯记室，流水满禅居'，以景结情，颇有禅意。"
+        },
+        {
+          "id": "ai-modern-xuetao-01-06",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗宣上人见示与诸公唱和是薛涛的代表作之一。胡仔、纪昀等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

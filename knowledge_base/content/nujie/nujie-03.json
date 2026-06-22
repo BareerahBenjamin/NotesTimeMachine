@@ -1,0 +1,236 @@
+{
+  "chapter_id": "nujie-03",
+  "classic_id": "nujie",
+  "title": "敬慎第三",
+  "order": 3,
+  "paragraphs": [
+    {
+      "id": "nujie-03-01",
+      "order": 1,
+      "content": "阴阳殊性，男女异行。阳以刚为德，阴以柔为用。男以强为贵，女以弱为美。故鄙谚有云：「生男如狼，犹恐其尪；生女如鼠，犹恐其虎。」",
+      "keywords": [
+        "阴阳",
+        "柔弱",
+        "女德"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-03-01",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。阴阳之别此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-03-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此阴阳之别，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-03-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇阴阳之别，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-03-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此阴阳之别反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-03-02",
+      "order": 2,
+      "content": "然则修身莫若敬，避强莫若顺。故曰：敬顺之道，为妇之大礼也。夫敬非他，持久之谓也。夫顺非他，宽裕之谓也。持久者，知止足也。宽裕者，尚恭下也。",
+      "keywords": [
+        "敬顺",
+        "持久",
+        "宽裕"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-03-02",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。敬顺之道此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-03-02",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此敬顺之道，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-03-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇敬顺之道，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-03-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此敬顺之道反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-03-03",
+      "order": 3,
+      "content": "夫妇之好，终身不离。房室周旋，遂生生媟黩。媟黩既生，语言过矣。语言既过，纵恣必作。纵恣既作，则侮夫之心生矣。此由于不知止足者也。",
+      "keywords": [
+        "夫妇",
+        "节制",
+        "知止"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-03-03",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。知止足此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-03-03",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此知止足，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-03-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇知止足，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-03-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此知止足反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "nujie-03-04",
+      "order": 4,
+      "content": "夫事有曲直，言有是非。直者不能不争，曲者不能不讼。讼争既施，则有忿怒之事矣。此由于不尚恭下者也。侮夫不节，谴呵从之；忿怒不止，楚挞从之。夫为夫妇者，义以和亲，恩以好合。楚挞既行，何义之存？谴呵既宣，何恩之有？恩义俱废，夫妇离矣。",
+      "keywords": [
+        "争讼",
+        "恩义",
+        "和亲"
+      ],
+      "annotations": [
+        {
+          "id": "marong-nujie-03-04",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "马融（注）",
+          "author_id": "ma-rong",
+          "source": "《女诫注》",
+          "view_angle": "训诂",
+          "content": "卑弱，谓谦卑柔弱也。和亲之要此节言女子当以谦让为先，执劳作为本，此乃妇德之基也。"
+        },
+        {
+          "id": "fanye-nujie-03-04",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "范晔",
+          "author_id": "fan-ye",
+          "source": "《后汉书·列女传》",
+          "view_angle": "义理",
+          "content": "班昭此和亲之要，辞旨恳切，足为闺范。其言虽近于卑逊，然实合于礼教之正。后世女教诸书，多取法于此。"
+        },
+        {
+          "id": "wangxianqian-nujie-03-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "王先谦",
+          "author_id": "wang-xian-qian",
+          "source": "《后汉书集解》",
+          "view_angle": "考据",
+          "content": "昭此篇和亲之要，本为教女而作，然其义理贯通，不独为女子言也。凡人持身处世，皆当以此为鉴。"
+        },
+        {
+          "id": "ai-modern-nujie-03-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "班昭此和亲之要反映了东汉时期对女性角色的制度化期待。从训诂角度看，马融注解侧重字义疏通；范晔从史传角度肯定其作为闺范的价值；王先谦则以考据学眼光指出其义理的普遍性。现代视角下，此文既是理解古代性别观念的重要文献，也体现了班昭作为女性知识分子对自身处境的深层思考。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

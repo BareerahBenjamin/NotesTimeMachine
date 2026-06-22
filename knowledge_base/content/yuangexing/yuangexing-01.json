@@ -1,0 +1,56 @@
+{
+  "chapter_id": "yuangexing-01",
+  "classic_id": "yuangexing",
+  "title": "怨歌行",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "yuangexing-01-01",
+      "order": 1,
+      "content": "新裂齐纨素，皎洁如霜雪。裁为合欢扇，团团似明月。出入君怀袖，动摇微风发。常恐秋节至，凉飙夺炎热。弃捐箧笥中，恩情中道绝。",
+      "keywords": [
+        "团扇",
+        "哀怨",
+        "弃捐",
+        "宫怨",
+        "女性命运"
+      ],
+      "annotations": [
+        {
+          "id": "yuefu-yuangexing-01",
+          "era": "han",
+          "era_name": "汉代",
+          "era_code": "han",
+          "author": "佚名",
+          "author_id": "yi-ming",
+          "source": "《乐府诗集》",
+          "view_angle": "乐府",
+          "content": "《怨歌行》，汉班婕妤所作也。婕妤失宠，作此诗以自伤。"
+        },
+        {
+          "id": "shuijingzhu-yuangexing-01",
+          "era": "beiwei",
+          "era_name": "北魏",
+          "era_code": "beiwei",
+          "author": "郦道元",
+          "author_id": "li-dao-yuan",
+          "source": "《水经注》",
+          "view_angle": "地理",
+          "content": "《怨歌行》，班婕妤作。"
+        },
+        {
+          "id": "ai-modern-yuangexing-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《怨歌行》相传为班婕妤所作，以团扇为喻，表达了失宠后的哀怨与无奈。《乐府诗集》和《水经注》均有记载。'常恐秋节至，凉飙夺炎热。弃捐箧笥中，恩情中道绝'成为千古名句，反映了古代女性在宫廷中的悲惨命运。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

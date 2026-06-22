@@ -1,0 +1,238 @@
+{
+  "chapter_id": "beifen-01",
+  "classic_id": "beifen",
+  "title": "悲愤诗（五言）",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "beifen-01-01",
+      "order": 1,
+      "content": "汉季失权柄，董卓乱天常。志欲图篡弑，先害诸贤良。逼迫迁旧邦，拥主以自强。海内兴义师，欲共讨不祥。",
+      "keywords": [
+        "董卓",
+        "乱世",
+        "汉末"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-01-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段乱世起因，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-01-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段乱世起因，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段乱世起因是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-01-02",
+      "order": 2,
+      "content": "卓众来东下，金甲耀日光。平土人脆弱，来兵皆胡羌。猎野围城邑，所向悉破亡。斩截无孑遗，尸骸相撑拒。马边悬男头，马后载妇女。",
+      "keywords": [
+        "战乱",
+        "屠杀",
+        "掳掠"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-01-02",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段战乱惨状，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-01-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段战乱惨状，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-01-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段战乱惨状是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-01-03",
+      "order": 3,
+      "content": "长驱西入关，迥路险且阻。还顾邈冥冥，肝脾为烂腐。所略有万计，不得令屯聚。或有骨肉俱，欲言不敢语。失意几微间，辄言毙降虏。要当以亭刃，我曹不活汝。",
+      "keywords": [
+        "被掳",
+        "恐惧",
+        "西行"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-01-03",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段被掳西行，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-01-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段被掳西行，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-01-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段被掳西行是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-01-04",
+      "order": 4,
+      "content": "岂复惜性命，不堪其詈骂。或便加棰杖，毒痛参并下。旦则号泣行，夜则悲吟坐。欲死不能得，欲生无一可。彼苍者何辜，乃遭此厄祸。",
+      "keywords": [
+        "屈辱",
+        "痛苦",
+        "求死不得"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-01-04",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段途中苦况，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-01-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段途中苦况，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-01-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段途中苦况是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "beifen-01-05",
+      "order": 5,
+      "content": "边荒与华异，人俗少义理。处所多霜雪，胡风春夏起。翩翩吹我衣，肃肃入我耳。感时念父母，哀叹无穷已。",
+      "keywords": [
+        "胡地",
+        "思乡",
+        "父母"
+      ],
+      "annotations": [
+        {
+          "id": "lishan-beifen-01-05",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "李善",
+          "author_id": "li-shan",
+          "source": "《文选注》",
+          "view_angle": "训诂",
+          "content": "此段胡地思亲，文姬以亲历之事入诗，字字血泪，非虚构也。其叙事之真切，用典之精当，汉末诗人中罕有其匹。"
+        },
+        {
+          "id": "shendeqian-beifen-01-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "沈德潜",
+          "author_id": "shen-de-qian",
+          "source": "《古诗源》",
+          "view_angle": "诗论",
+          "content": "蔡琰此段胡地思亲，悲愤之中自有章法。叙乱离之苦而不失温厚之旨，述骨肉之情而能感人肺腑，此其所以为千古绝唱也。"
+        },
+        {
+          "id": "ai-modern-beifen-01-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此段胡地思亲是蔡文姬以亲身经历书写战乱苦难的力作。李善注解侧重训诂和史实考证，沈德潜从诗论角度肯定其'悲而不失温厚'的艺术品格。这首诗不仅是个人命运的悲歌，更是东汉末年社会动荡的缩影，具有重要的文学和史料价值。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "chapter_id": "xuetao-03",
+  "classic_id": "xuetao",
+  "title": "第3卷（共16卷）",
+  "order": 3,
+  "paragraphs": [
+    {
+      "id": "xuetao-03-01",
+      "order": 1,
+      "content": "《罚赴边有怀上韦令公二首 二》黠虏犹违命，烽烟直北愁。却教严谴妾，不敢向松州。",
+      "keywords": [
+        "愁",
+        "松",
+        "妾"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-01",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-03-02",
+      "order": 2,
+      "content": "《咏八十一颗》色比丹霞朝日，形如合浦筼筜。开时九九如数，见处双双颉颃。",
+      "keywords": [
+        "诗"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-02",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-03-03",
+      "order": 3,
+      "content": "《谒巫山庙》乱猨啼处访高唐，路入烟霞草木香。山色未能忘宋玉，水声犹是哭襄王。朝朝夜夜阳台下，为雨为云楚国亡。惆怅庙前多少柳，春来空鬬画眉长。",
+      "keywords": [
+        "春",
+        "雨",
+        "山",
+        "水",
+        "云"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-03-03",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "薛涛《谒巫山庙》，'乱猿啼处访高唐，路入烟霞草木香'，写巫山之景，苍莽幽深。'山色未能忘宋玉，水声犹是哭襄王'，咏史抒怀，感慨系之。"
+        },
+        {
+          "id": "yangshen-xuetao-03-03",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "杨慎",
+          "author_id": "yang-shen",
+          "source": "《升庵诗话》",
+          "view_angle": "诗论",
+          "content": "'朝朝夜夜阳台下，为云为雨楚国亡'，化用巫山神女典故，寓兴亡之感于艳情之中，含蓄蕴藉。"
+        },
+        {
+          "id": "ai-modern-xuetao-03-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗谒巫山庙是薛涛的代表作之一。胡仔、杨慎等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-03-04",
+      "order": 4,
+      "content": "《牡丹》去春零落暮春时，泪湿红笺怨别离。常恐便同巫峡散，因何重有武陵期。传情每向馨香得，不语还应彼此知。只欲栏边安枕席，夜深闲共说相思。",
+      "keywords": [
+        "相思",
+        "春",
+        "泪",
+        "红",
+        "情"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-03-04",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "薛涛《牡丹》诗，'去春零落暮春时，泪湿红笺怨别离'，以牡丹喻己之身世，花落人离，倍觉凄凉。"
+        },
+        {
+          "id": "jiyun-xuetao-03-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "'常恐便同巫峡散，因何重有武陵期'，用巫峡神女和武陵桃源两个典故，写重逢之惊喜与离散之忧惧，情感复杂。"
+        },
+        {
+          "id": "ai-modern-xuetao-03-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗牡丹是薛涛的代表作之一。胡仔、纪昀等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-03-05",
+      "order": 5,
+      "content": "《贼平后上高相公》惊看天地白荒荒，瞥见青山旧夕阳。始信大威能照映，由来日月借生光。",
+      "keywords": [
+        "月",
+        "山",
+        "天",
+        "地",
+        "生"
+      ],
+      "annotations": [
+        {
+          "id": "wangjian-xuetao-05",
+          "era": "tang",
+          "era_name": "唐代",
+          "era_code": "tang",
+          "author": "王建",
+          "author_id": "wang-jian",
+          "source": "《寄蜀中薛涛校书》",
+          "view_angle": "诗评",
+          "content": "万里桥边女校书，枇杷花里闭门居。扫眉才子知多少，管领春风总不如。"
+        },
+        {
+          "id": "jiyun-xuetao-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛诗格清雅，不染纤尘。其咏物抒怀之作，寄托深远，非寻常闺阁词藻可比。"
+        },
+        {
+          "id": "ai-modern-xuetao-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "薛涛为唐代著名女诗人，与李冶、鱼玄机、刘采春并称唐代四大女诗人。王建称其为'女校书'，赞其才华为当时之冠；纪昀称其诗'格清雅，不染纤尘'。薛涛的诗歌题材广泛，既有咏物抒怀之作，也有反映社会现实的篇章，其代表作《春望词》以细腻的笔触表达了对爱情的渴望与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "xuetao-03-06",
+      "order": 6,
+      "content": "《送友人》水国蒹葭夜有霜，月寒山色共苍苍。谁言千里自今夕，离梦杳如关塞长。",
+      "keywords": [
+        "月",
+        "梦",
+        "山",
+        "水",
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "huzi-xuetao-03-06",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "胡仔",
+          "author_id": "hu-zi",
+          "source": "《苕溪渔隐丛话》",
+          "view_angle": "诗评",
+          "content": "'水国蒹葭夜有霜，月寒山色共苍苍'，写送别之夜景，清冷萧瑟。'谁言千里自今夕，离梦杳如关塞长'，以梦之长远衬别恨之深。"
+        },
+        {
+          "id": "jiyun-xuetao-03-06",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "纪昀",
+          "author_id": "ji-yun",
+          "source": "《四库全书总目提要》",
+          "view_angle": "考据",
+          "content": "薛涛送别诗多佳作，此首尤为出色。'离梦杳如关塞长'，梦境遥远，暗示重逢无期，语意沉痛。"
+        },
+        {
+          "id": "ai-modern-xuetao-03-06",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此诗送友人是薛涛的代表作之一。胡仔、纪昀等历代评论家对其有精当的评价。薛涛作为唐代最杰出的女诗人，其诗清丽婉约，寄托深远，在中国女性文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

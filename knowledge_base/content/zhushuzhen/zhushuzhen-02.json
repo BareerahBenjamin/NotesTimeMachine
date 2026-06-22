@@ -1,0 +1,248 @@
+{
+  "chapter_id": "zhushuzhen-02",
+  "classic_id": "zhushuzhen",
+  "title": "第2卷（共5卷）",
+  "order": 2,
+  "paragraphs": [
+    {
+      "id": "zhushuzhen-02-01",
+      "order": 1,
+      "content": "【江城子】斜风细雨作春寒。对尊前。忆前欢。曾把梨花，寂寞泪阑干。芳草断烟南浦路，和别泪，看青山。昨宵结得梦夤缘。水云间。悄无言。争奈醒来，愁恨又依然。展转衾裯空懊恼，天易见，见伊难。",
+      "keywords": [
+        "春",
+        "花",
+        "风",
+        "雨",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "朱淑真词，风致之佳，情词之妙，直可亚于易安。宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。"
+        },
+        {
+          "id": "weizhonggong-zhushuzhen-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "魏仲恭",
+          "author_id": "wei-zhong-gong",
+          "source": "《断肠诗集序》",
+          "view_angle": "序跋",
+          "content": "比往武林，见旅邸中好事者往往传诵朱淑真词，每窃听之，清新婉丽，蓄思多情，能道人意中事，岂泛泛者所能及，未尝不一唱三叹也。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "朱淑真为宋代著名女词人，与李清照并称'宋代女性词人双璧'。陈廷焯称其'风致之佳，情词之妙，直可亚于易安'，魏仲恭序称其'清新婉丽，蓄思多情'。朱淑真的作品以真挚的情感表达和独特的女性视角著称，其词集名为《断肠集》，反映了她不幸的婚姻和抑郁的一生。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "zhushuzhen-02-02",
+      "order": 2,
+      "content": "【减字木兰花】独行独坐。独倡独酬还独卧。伫立伤神。无奈轻寒著摸人。此情谁见。泪洗残妆无一半。愁病相仍。剔尽寒灯梦不成。",
+      "keywords": [
+        "花",
+        "愁",
+        "泪",
+        "梦",
+        "人"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "朱淑真词，风致之佳，情词之妙，直可亚于易安。宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。"
+        },
+        {
+          "id": "weizhonggong-zhushuzhen-02",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "魏仲恭",
+          "author_id": "wei-zhong-gong",
+          "source": "《断肠诗集序》",
+          "view_angle": "序跋",
+          "content": "比往武林，见旅邸中好事者往往传诵朱淑真词，每窃听之，清新婉丽，蓄思多情，能道人意中事，岂泛泛者所能及，未尝不一唱三叹也。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "朱淑真为宋代著名女词人，与李清照并称'宋代女性词人双璧'。陈廷焯称其'风致之佳，情词之妙，直可亚于易安'，魏仲恭序称其'清新婉丽，蓄思多情'。朱淑真的作品以真挚的情感表达和独特的女性视角著称，其词集名为《断肠集》，反映了她不幸的婚姻和抑郁的一生。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "zhushuzhen-02-03",
+      "order": 3,
+      "content": "【眼儿媚】迟迟春日弄轻柔。花径暗香流。清明过了，不堪回首，云锁朱楼。午窗睡起莺声巧，何处唤春愁。绿杨影里，海棠亭畔，红杏梢头。",
+      "keywords": [
+        "春",
+        "花",
+        "愁",
+        "海",
+        "云"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "朱淑真词，风致之佳，情词之妙，直可亚于易安。宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。"
+        },
+        {
+          "id": "weizhonggong-zhushuzhen-03",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "魏仲恭",
+          "author_id": "wei-zhong-gong",
+          "source": "《断肠诗集序》",
+          "view_angle": "序跋",
+          "content": "比往武林，见旅邸中好事者往往传诵朱淑真词，每窃听之，清新婉丽，蓄思多情，能道人意中事，岂泛泛者所能及，未尝不一唱三叹也。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "朱淑真为宋代著名女词人，与李清照并称'宋代女性词人双璧'。陈廷焯称其'风致之佳，情词之妙，直可亚于易安'，魏仲恭序称其'清新婉丽，蓄思多情'。朱淑真的作品以真挚的情感表达和独特的女性视角著称，其词集名为《断肠集》，反映了她不幸的婚姻和抑郁的一生。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "zhushuzhen-02-04",
+      "order": 4,
+      "content": "【鹧鸪天】独倚阑干昼日长。纷纷蜂蝶斗轻狂。一天飞絮东风恶，满路桃花春水香。当此际，意偏长。萋萋芳草傍池塘。千锺尚欲偕春醉，幸有荼蘼与海棠。",
+      "keywords": [
+        "春",
+        "花",
+        "风",
+        "水",
+        "海"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "朱淑真词，风致之佳，情词之妙，直可亚于易安。宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。"
+        },
+        {
+          "id": "weizhonggong-zhushuzhen-04",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "魏仲恭",
+          "author_id": "wei-zhong-gong",
+          "source": "《断肠诗集序》",
+          "view_angle": "序跋",
+          "content": "比往武林，见旅邸中好事者往往传诵朱淑真词，每窃听之，清新婉丽，蓄思多情，能道人意中事，岂泛泛者所能及，未尝不一唱三叹也。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "朱淑真为宋代著名女词人，与李清照并称'宋代女性词人双璧'。陈廷焯称其'风致之佳，情词之妙，直可亚于易安'，魏仲恭序称其'清新婉丽，蓄思多情'。朱淑真的作品以真挚的情感表达和独特的女性视角著称，其词集名为《断肠集》，反映了她不幸的婚姻和抑郁的一生。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "zhushuzhen-02-05",
+      "order": 5,
+      "content": "【清平乐】风光紧急。三月俄三十。拟欲留连计无及。绿野烟愁露泣。倩谁寄语春宵。城头画鼓轻敲。缱绻临歧嘱付，来年早到梅梢。",
+      "keywords": [
+        "春",
+        "月",
+        "风",
+        "愁",
+        "画"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "朱淑真词，风致之佳，情词之妙，直可亚于易安。宋妇人能词者不少，易安为冠，次则朱淑真，次则魏夫人也。"
+        },
+        {
+          "id": "weizhonggong-zhushuzhen-05",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "魏仲恭",
+          "author_id": "wei-zhong-gong",
+          "source": "《断肠诗集序》",
+          "view_angle": "序跋",
+          "content": "比往武林，见旅邸中好事者往往传诵朱淑真词，每窃听之，清新婉丽，蓄思多情，能道人意中事，岂泛泛者所能及，未尝不一唱三叹也。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "朱淑真为宋代著名女词人，与李清照并称'宋代女性词人双璧'。陈廷焯称其'风致之佳，情词之妙，直可亚于易安'，魏仲恭序称其'清新婉丽，蓄思多情'。朱淑真的作品以真挚的情感表达和独特的女性视角著称，其词集名为《断肠集》，反映了她不幸的婚姻和抑郁的一生。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

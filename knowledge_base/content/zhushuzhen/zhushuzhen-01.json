@@ -1,0 +1,214 @@
+{
+  "chapter_id": "zhushuzhen-01",
+  "classic_id": "zhushuzhen",
+  "title": "第1卷（共5卷）",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "zhushuzhen-01-01",
+      "order": 1,
+      "content": "【忆秦娥】弯弯曲。新年新月钩寒玉。钩寒玉。凤鞋儿小，翠眉儿蹙。闹蛾雪柳添妆束。烛龙火树争驰逐。争驰逐。元宵三五，不如初六。",
+      "keywords": [
+        "月",
+        "雪",
+        "柳",
+        "玉",
+        "翠"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-01-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》卷二",
+          "view_angle": "词论",
+          "content": "朱淑真词，才力不逮易安，然规模唐、五代，不失分寸。如'年年玉镜台'及'春已半'等篇，殊不让和凝、李殉辈。唯骨韵不高，可称小品。"
+        },
+        {
+          "id": "weizhonggong-zhushuzhen-01-01",
+          "era": "song",
+          "era_name": "宋代",
+          "era_code": "song",
+          "author": "魏仲恭",
+          "author_id": "wei-zhong-gong",
+          "source": "《断肠诗集序》",
+          "view_angle": "序跋",
+          "content": "清新婉丽，蓄思多情，能道人意中事，岂泛泛者所能及，未尝不一唱三叹也。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《忆秦娥》描写元宵佳节的情景，'弯弯曲，新年新月钩寒玉'以新月喻美人，构思精巧。陈廷焯《白雨斋词话》称其'规模唐、五代，不失分寸'，魏仲恭序称其'清新婉丽，蓄思多情'。朱淑真以细腻笔触描绘节日景象，寄寓对美好爱情的向往。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "zhushuzhen-01-02",
+      "order": 2,
+      "content": "【浣溪纱・浣溪沙】春巷夭桃吐绛英。春衣初试薄罗轻。风和烟暖燕巢成。小院湘帘闲不卷，曲房朱户闷长扃。恼人光景又清明。",
+      "keywords": [
+        "春",
+        "风",
+        "人",
+        "桃"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-01-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "朱淑真词，风致不减易安，而沉痛过之。"
+        },
+        {
+          "id": "kuangzhouyi-zhushuzhen-01-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》卷四",
+          "view_angle": "词论",
+          "content": "淑真清空婉约，纯乎北宋；易安笔情近浓至，意境较沈博，下开南宋风气。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-01-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《浣溪沙》描写春日闺中愁绪，'恼人光景又清明'将春光与愁情并置，以乐景写哀情。陈廷焯称其'风致不减易安，而沉痛过之'，况周颐认为其'清空婉约，纯乎北宋'。朱淑真通过细腻的景物描写，表达了内心的孤寂与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "zhushuzhen-01-03",
+      "order": 3,
+      "content": "【生查子】寒食不多时，几日东风恶。无绪倦寻芳，闲却秋千索。玉减翠裙交，病怯罗衣薄。不忍卷帘看，寂寞梨花落。",
+      "keywords": [
+        "秋",
+        "花",
+        "风",
+        "生",
+        "玉"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-01-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》卷二",
+          "view_angle": "词论",
+          "content": "如'年年玉镜台'及'春已半'等篇，殊不让和凝、李殉辈。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-01-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《生查子》表达寒食节期间的愁思，'不忍卷帘看，寂寞梨花落'以梨花飘落象征青春逝去和爱情无望。陈廷焯称其可与五代词人媲美。朱淑真以'玉减翠裙交，病怯罗衣薄'刻画女主人公的憔悴形象，展现了其高超的描写技巧。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "zhushuzhen-01-04",
+      "order": 4,
+      "content": "【生查子】年年玉镜台，梅蕊宫妆困。今岁未还家，怕见江南信。酒从别后疏，泪向愁中尽。遥想楚云深，人远天涯近。",
+      "keywords": [
+        "愁",
+        "泪",
+        "酒",
+        "江",
+        "云"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-zhushuzhen-01-04",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "淑真清空婉约，纯乎北宋；易安笔情近浓至，意境较沈博，下开南宋风气。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-01-04",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此《生查子》表达对远方亲人的思念，'人远天涯近'以空间的远近对比，表达内心的牵挂。况周颐称朱淑真词'清空婉约，纯乎北宋'。朱淑真通过'酒从别后疏，泪向愁中尽'展现了离别后的痛苦与无奈。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "zhushuzhen-01-05",
+      "order": 5,
+      "content": "【谒金门】春已半。触目此情无限。十二阑干闲倚遍。愁来天不管。好是风和日暖。输与莺莺燕燕。满院落花帘不卷。断肠芳草远。",
+      "keywords": [
+        "春",
+        "花",
+        "风",
+        "愁",
+        "天"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-zhushuzhen-01-05",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "朱淑真词，风致之佳，情词之妙，直可亚于易安。"
+        },
+        {
+          "id": "ai-modern-zhushuzhen-01-05",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "《谒金门》为朱淑真代表作之一，'春已半，触目此情无限'开篇即奠定愁绪基调。'满院落花帘不卷，断肠芳草远'以落花和芳草象征逝去的青春和遥远的思念。陈廷焯称其'风致之佳，情词之妙，直可亚于易安'，给予极高评价。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

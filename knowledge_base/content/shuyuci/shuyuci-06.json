@@ -1,0 +1,100 @@
+{
+  "chapter_id": "shuyuci-06",
+  "classic_id": "shuyuci",
+  "title": "咏史抒怀",
+  "order": 6,
+  "paragraphs": [
+    {
+      "id": "shuyuci-06-01",
+      "order": 1,
+      "content": "生当作人杰，死亦为鬼雄。至今思项羽，不肯过江东。",
+      "keywords": [
+        "咏史",
+        "项羽",
+        "豪迈"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-shuyuci-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "李易安词，独辟门径，居然可观，其源自淮海、大晟，而铸语则多生造，妇人有此，可谓奇矣。"
+        },
+        {
+          "id": "zhangyan-shuyuci-01",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "张綖",
+          "author_id": "zhang-yan",
+          "source": "《诗余图谱》",
+          "view_angle": "词论",
+          "content": "易安词，婉约以易安为宗，豪放唯幼安称首，皆吾济南人，难乎为继矣。"
+        },
+        {
+          "id": "ai-modern-shuyuci-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李清照作为宋代婉约词派的代表人物，其词作以'以俗为雅'的艺术特色著称。陈廷焯称其'独辟门径，居然可观'，张綖将其与辛弃疾并称为济南二安。李清照的词不仅在艺术上达到了很高的成就，更以其独特的女性视角和真挚的情感表达，在中国文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "shuyuci-06-02",
+      "order": 2,
+      "content": "两汉本继绍，新室如赘疣。所以嵇中散，至死薄殷周。",
+      "keywords": [
+        "咏史",
+        "忠义",
+        "气节"
+      ],
+      "annotations": [
+        {
+          "id": "chentingchao-shuyuci-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "陈廷焯",
+          "author_id": "chen-ting-chao",
+          "source": "《白雨斋词话》",
+          "view_angle": "词论",
+          "content": "李易安词，独辟门径，居然可观，其源自淮海、大晟，而铸语则多生造，妇人有此，可谓奇矣。"
+        },
+        {
+          "id": "zhangyan-shuyuci-02",
+          "era": "ming",
+          "era_name": "明代",
+          "era_code": "ming",
+          "author": "张綖",
+          "author_id": "zhang-yan",
+          "source": "《诗余图谱》",
+          "view_angle": "词论",
+          "content": "易安词，婉约以易安为宗，豪放唯幼安称首，皆吾济南人，难乎为继矣。"
+        },
+        {
+          "id": "ai-modern-shuyuci-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "李清照作为宋代婉约词派的代表人物，其词作以'以俗为雅'的艺术特色著称。陈廷焯称其'独辟门径，居然可观'，张綖将其与辛弃疾并称为济南二安。李清照的词不仅在艺术上达到了很高的成就，更以其独特的女性视角和真挚的情感表达，在中国文学史上占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}

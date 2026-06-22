@@ -1,0 +1,152 @@
+{
+  "chapter_id": "donghaiyuge-01",
+  "classic_id": "donghaiyuge",
+  "title": "春日词",
+  "order": 1,
+  "paragraphs": [
+    {
+      "id": "donghaiyuge-01-01",
+      "order": 1,
+      "content": "一叚春愁付柳丝，小楼独坐燕归时。落花流水两依依。梦里不知身是客，醒时方觉泪沾衣。东风吹恨上眉枝。",
+      "keywords": [
+        "春",
+        "花",
+        "风",
+        "愁",
+        "恨"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-01-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清此阕，'一叚春愁付柳丝，小楼独坐燕归时'，以柳丝载愁，燕归衬人之未归，意境凄婉。'梦里不知身是客'，化用李煜词句，而自有新意。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-01-01",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'醒时方觉泪沾衣'，由梦中之欢转为醒后之悲，对比强烈。太清词善于用梦境与现实的转换来表达情感，此首可见一斑。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-01-01",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词一叚春愁付柳丝是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-01-02",
+      "order": 2,
+      "content": "斜日小楼东，一片春愁细雨中。燕子不知人去也，飞来飞去落花风。独自倚栏干，无限春愁说更难。只有杜鹃知此意，声声道不如归。",
+      "keywords": [
+        "春",
+        "花",
+        "风",
+        "雨",
+        "愁"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-01-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《南乡子》，'斜日小楼东，一片春愁细雨中'，以斜日、细雨烘托春愁，情景交融。'燕子不知人去也，飞来飞去落花风'，以燕子之无知衬人之有情。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-01-02",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'独自倚栏干，无限春愁说更难'，写独处之寂寞。'只有杜鹃知此意，声声道不如归'，以杜鹃啼归收束，语意沉痛。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-01-02",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词斜日小楼东是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    },
+    {
+      "id": "donghaiyuge-01-03",
+      "order": 3,
+      "content": "记得那年花下，深夜初识谢娘时。水堂西面画帘垂，携手暗相期。惆怅晓莺残月，相别从此隔香尘。如今俱是异乡人，相见更无因。",
+      "keywords": [
+        "月",
+        "花",
+        "水",
+        "人",
+        "夜"
+      ],
+      "annotations": [
+        {
+          "id": "kuangzhouyi-donghaiyuge-01-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "况周颐",
+          "author_id": "kuang-zhou-yi",
+          "source": "《蕙风词话》",
+          "view_angle": "词论",
+          "content": "太清《临江仙》，'记得那年花下，深夜初识谢娘时'，写初识之情景，温馨而难忘。'惆怅晓莺残月，相别从此隔香尘'，以晓莺残月衬别离之惆怅。"
+        },
+        {
+          "id": "tanxian-donghaiyuge-01-03",
+          "era": "qing",
+          "era_name": "清代",
+          "era_code": "qing",
+          "author": "谭献",
+          "author_id": "tan-xian",
+          "source": "《复堂词话》",
+          "view_angle": "词论",
+          "content": "'如今俱是异乡人，相见更无因'，写重逢无期之叹。太清晚年被逐出府第，此词或有身世之感。"
+        },
+        {
+          "id": "ai-modern-donghaiyuge-01-03",
+          "era": "modern",
+          "era_name": "现代",
+          "era_code": "modern",
+          "author": "AI 综合解读",
+          "author_id": "ai-modern",
+          "source": "基于历代注疏的 AI 整理",
+          "view_angle": "思想史",
+          "content": "此词记得那年花下是顾太清的代表作。况周颐、谭献等对其有精当的评价。顾太清为清代最杰出的女词人，其词清丽婉约，在清代词坛占有重要地位。",
+          "ai_generated": true
+        }
+      ]
+    }
+  ]
+}
