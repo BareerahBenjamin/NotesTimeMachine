@@ -2,7 +2,11 @@
  * 全局配置与静态数据
  */
 
-export const API_BASE = 'http://localhost:5001';
+// API 地址：本地开发用 localhost，生产环境用部署的函数计算 URL
+// 部署时修改下方 PRODUCTION_API_BASE 为你的阿里云函数计算 HTTP 触发器 URL
+const PRODUCTION_API_BASE = 'https://YOUR_FC_URL.cn-shanghai.fc.aliyuncs.com';
+const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+export const API_BASE = isLocal ? 'http://localhost:5001' : PRODUCTION_API_BASE;
 
 // 书架书籍列表（按年代顺序排序）
 export const BOOKS = [

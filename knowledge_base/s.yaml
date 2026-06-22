@@ -1,0 +1,48 @@
+# 阿里云函数计算 Serverless Devs 部署配置
+# 文档: https://serverless.help/s/yaml
+
+edition: 3.0.0
+name: notes-time-machine
+access: default
+
+vars:
+  region: cn-shanghai
+  functionName: notes-time-machine-api
+  serviceName: notes-time-machine
+
+resources:
+  notes-time-machine:
+    component: fc3
+    props:
+      region: ${vars.region}
+      functionName: ${vars.functionName}
+      description: 注疏时光机 - 女性古典文学注疏阅读器 API
+      runtime: python3.10
+      handler: handler.handler
+      timeout: 60
+      memorySize: 512
+      diskSize: 512
+      cpu: 0.5
+      instanceConcurrency: 10
+      environmentVariables:
+        OPENAI_API_KEY: ${env.OPENAI_API_KEY}
+        OPENAI_BASE_URL: ${env.OPENAI_BASE_URL}
+        OPENAI_MODEL: ${env.OPENAI_MODEL}
+        EMBEDDING_MODEL: ${env.EMBEDDING_MODEL}
+      triggers:
+        - triggerName: http-trigger
+          triggerType: http
+          triggerConfig:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+      customDomains:
+        - domainName: auto
+          protocol: HTTPS
+          routeConfigs:
+            - path: /*
+              functionName: ${vars.functionName}
