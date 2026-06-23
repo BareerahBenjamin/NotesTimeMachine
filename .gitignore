@@ -156,3 +156,5 @@ CLAUDE.md
 
 # ChromaDB embeddings (large binary files)
 knowledge_base/embeddings/chroma/
+
+DEPLOY.md

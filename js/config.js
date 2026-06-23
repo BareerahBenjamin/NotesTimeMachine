@@ -2,12 +2,6 @@
  * 全局配置与静态数据
  */
 
-// API 地址：本地开发用 localhost，生产环境用部署的函数计算 URL
-// 部署时修改下方 PRODUCTION_API_BASE 为你的阿里云函数计算 HTTP 触发器 URL
-const PRODUCTION_API_BASE = 'https://YOUR_FC_URL.cn-shanghai.fc.aliyuncs.com';
-const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-export const API_BASE = isLocal ? 'http://localhost:5001' : PRODUCTION_API_BASE;
-
 // 书架书籍列表（按年代顺序排序）
 export const BOOKS = [
   { 
@@ -444,3 +438,22 @@ export const ERA_CLASS_MAP = {
   qing: 'qing',
   modern: 'modern'
 };
+
+// Supabase 配置
+export const SUPABASE_URL = 'https://knuickkzjbcgpdpwwtcz.supabase.co';
+export const SUPABASE_ANON_KEY = 'sb_publishable_kvxTx2MwI60Hof3bV_2EMA_FL4e0OpN';
+
+// API 基础地址：本地开发用 localhost，生产环境用 Supabase Edge Functions
+const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+export const API_BASE = isLocal 
+  ? 'http://localhost:54321/functions/v1'  // 本地开发（需要运行 supabase start）
+  : `${SUPABASE_URL}/functions/v1`;         // 生产环境
+
+// 初始化 Supabase 客户端（用于直接数据库访问）
+let supabaseClient = null;
+export function getSupabase() {
+  if (!supabaseClient && typeof window.supabase !== 'undefined') {
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  }
+  return supabaseClient;
+}

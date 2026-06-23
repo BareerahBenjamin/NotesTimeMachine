@@ -3,6 +3,7 @@
  */
 import { state } from './state.js';
 import { checkApiConnection } from './api.js';
+import { getSupabase } from './config.js';
 import * as bookshelf from './ui/bookshelf.js';
 import * as reader from './ui/reader.js';
 import * as timeline from './ui/timeline.js';
@@ -219,6 +220,10 @@ function initTheme() {
 }
 
 async function init() {
+  // 初始化 Supabase 客户端
+  window.supabaseClient = getSupabase();
+  console.log('Supabase client initialized:', !!window.supabaseClient);
+
   document.addEventListener('click', handleDocumentClick);
   document.addEventListener('keydown', handleKeyDown);
   
@@ -230,6 +235,11 @@ async function init() {
   bookshelf.renderBookshelf();
   initCommunity();
   await checkApiConnection();
+  
+  // 将 supabaseClient 暴露到全局，供其他模块使用
+  if (window.supabaseClient) {
+    window.supabase = window.supabaseClient;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
