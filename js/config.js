@@ -424,8 +424,9 @@ export const DEMO_DATA = {
   }
 };
 
-export const DEMO_NOTICE = '当前后端未启动，仅展示演示段。' +
-  '完整数据请运行：cd knowledge_base && python scripts/api_server.py';
+export const DEMO_NOTICE = '当前后端不可用（知识库未初始化）。请按顺序检查：' +
+  '① cd cf-worker && npx wrangler deploy（部署后端），' +
+  '② cd cf-worker && node scripts/upload-r2.mjs（上传知识库 JSON 到 R2）';
 
 export const ERA_ORDER = ['han', 'wei_jin', 'tang', 'song', 'ming', 'qing', 'modern'];
 
@@ -439,21 +440,11 @@ export const ERA_CLASS_MAP = {
   modern: 'modern'
 };
 
-// Supabase 配置
-export const SUPABASE_URL = 'https://knuickkzjbcgpdpwwtcz.supabase.co';
-export const SUPABASE_ANON_KEY = 'sb_publishable_kvxTx2MwI60Hof3bV_2EMA_FL4e0OpN';
+// Cloudflare Workers 后端 API 配置
+// 部署后替换为你的 Workers 域名，例如：https://zhushu-notes-api.你的用户名.workers.dev
+const WORKERS_PROD_URL = 'https://zhushu-notes-api.bareerahmoooo.workers.dev';
 
-// API 基础地址：本地开发用 localhost，生产环境用 Supabase Edge Functions
 const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
 export const API_BASE = isLocal 
-  ? 'http://localhost:54321/functions/v1'  // 本地开发（需要运行 supabase start）
-  : `${SUPABASE_URL}/functions/v1`;         // 生产环境
-
-// 初始化 Supabase 客户端（用于直接数据库访问）
-let supabaseClient = null;
-export function getSupabase() {
-  if (!supabaseClient && typeof window.supabase !== 'undefined') {
-    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-  }
-  return supabaseClient;
-}
+  ? 'http://localhost:8787'     // 本地开发：wrangler dev 默认端口 8787
+  : WORKERS_PROD_URL;            // 生产环境：Cloudflare Workers

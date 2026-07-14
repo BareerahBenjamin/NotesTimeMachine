@@ -1,0 +1,252 @@
+import * as communityApi from './communityApi.js';
+import * as state from '../state.js';
+import * as reader from './reader.js';
+import { BOOK_NAMES } from '../config.js';
+
+const PROFILE_PAGE_ID = 'page-profile';
+const PROFILE_CONTENT_ID = 'profileContent';
+let currentUserId = null;
+let currentTab = 'reading';
+
+function escapeHtml(str) {
+  if (str == null) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function classicTitle(classicId) {
+  const key = String(classicId || '');
+  if (BOOK_NAMES && BOOK_NAMES[key]) return BOOK_NAMES[key];
+  const extraMap = {
+    lunyu: '论语', xiaojing: '孝经', daxue: '大学',
+    zhongyong: '中庸', mengzi: '孟子', laoji: '老子',
+    zhuangzi: '庄子', sunzi: '孙子兵法', shiji: '史记',
+    chuci: '楚辞', shijing: '诗经', tangshi: '唐诗三百首',
+    songci: '宋词三百首',
+  };
+  return extraMap[key] || key;
+}
+
+function navigateProfileBack() {
+  const prev = state.getPreviousPage() || 'community';
+  state.navigateTo(prev);
+}
+
+export async function openUserProfile(userId) {
+  if (!userId) return;
+  const page = document.getElementById(PROFILE_PAGE_ID);
+  if (!page) return;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  page.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  currentUserId = userId;
+  currentTab = 'reading';
+  const content = document.getElementById(PROFILE_CONTENT_ID);
+  if (content) content.innerHTML = '<div class="empty-state">加载中...</div>';
+  await renderProfile();
+}
+
+async function renderProfile() {
+  const content = document.getElementById(PROFILE_CONTENT_ID);
+  if (!content || !currentUserId) return;
+  try {
+    const [profileRes, postsRes, progressRes] = await Promise.all([
+      communityApi.getUserProfile(currentUserId),
+      communityApi.getUserPosts(currentUserId, 1, 20),
+      communityApi.getUserReadingProgress(currentUserId),
+    ]);
+
+    if (profileRes.error) {
+      content.innerHTML = `<div class="empty-state">加载失败：${escapeHtml(profileRes.error)}</div>`;
+      return;
+    }
+    if (!profileRes.user) {
+      content.innerHTML = `<div class="empty-state">用户不存在</div>`;
+      return;
+    }
+
+    const { user, stats } = profileRes;
+
+    content.innerHTML = `
+      <div class="profile-card">
+        <div class="profile-avatar">
+          ${user.avatar
+            ? `<img src="${escapeHtml(user.avatar)}" alt="${escapeHtml(user.nickname || user.username)}" onerror="this.parentNode.innerHTML='<span class=avatar-placeholder>${escapeHtml((user.nickname || user.username || '?').charAt(0))}</span>'">`
+            : `<span class="avatar-placeholder">${escapeHtml((user.nickname || user.username || '?').charAt(0))}</span>`
+          }
+        </div>
+        <div class="profile-main">
+          <div class="profile-name-row">
+            <h2 class="profile-name">${escapeHtml(user.nickname || user.username)}</h2>
+            <span class="profile-username">@${escapeHtml(user.username)}</span>
+          </div>
+          ${user.bio ? `<div class="profile-bio">${escapeHtml(user.bio)}</div>` : ''}
+          <div class="profile-meta">
+            <span>注册：${escapeHtml(communityApi.formatTime(user.created_at))}</span>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div class="stat-item"><span class="stat-num">${stats.books_count || 0}</span><span class="stat-label">在读古籍</span></div>
+          <div class="stat-item"><span class="stat-num">${stats.post_count || 0}</span><span class="stat-label">帖子</span></div>
+          <div class="stat-item"><span class="stat-num">${stats.total_likes || 0}</span><span class="stat-label">获赞</span></div>
+          <div class="stat-item"><span class="stat-num">${stats.total_views || 0}</span><span class="stat-label">阅读量</span></div>
+          <div class="stat-item"><span class="stat-num">${stats.total_comments || 0}</span><span class="stat-label">评论</span></div>
+        </div>
+      </div>
+
+      <div class="profile-tabs">
+        <button class="tab-btn ${currentTab === 'reading' ? 'active' : ''}" data-profile-tab="reading">读书进度 <span class="tab-count">${(progressRes.progress || []).length}</span></button>
+        <button class="tab-btn ${currentTab === 'posts' ? 'active' : ''}" data-profile-tab="posts">发帖记录 <span class="tab-count">${postsRes.total || 0}</span></button>
+      </div>
+
+      <div class="profile-tab-panel" id="profileTabPanel">
+        ${renderTabBody(currentTab, postsRes, progressRes)}
+      </div>
+    `;
+  } catch (error) {
+    console.error('渲染个人页失败:', error);
+    content.innerHTML = `<div class="empty-state">加载失败：${escapeHtml(error.message || String(error))}</div>`;
+  }
+}
+
+function renderTabBody(tab, postsRes, progressRes) {
+  if (tab === 'reading') {
+    const list = progressRes?.progress || [];
+    if (list.length === 0) {
+      return `<div class="empty-state">暂无读书进度<br><span style="font-size:14px;color:#999;">登录后在读书页翻章或选段会自动记录</span></div>`;
+    }
+    return `
+      <div class="reading-list">
+        ${list.map(p => {
+          const pct = Math.max(0, Math.min(100, Math.round(Number(p.progress_pct || 0) * 100)));
+          const title = classicTitle(p.classic_id);
+          const chapterLabel = typeof p.chapter_index === 'number' ? `第 ${p.chapter_index + 1} 章` : (p.chapter_index || '-');
+          return `
+          <div class="reading-card" data-action="openClassicFromProgress" data-classic-id="${escapeHtml(p.classic_id)}" data-chapter-index="${Number(p.chapter_index || 0)}" data-paragraph-id="${escapeHtml(p.paragraph_id || '')}">
+            <div class="reading-card-header">
+              <div class="reading-title">${escapeHtml(title)}</div>
+              <div class="reading-time">${escapeHtml(communityApi.formatTime(p.last_read_at))}</div>
+            </div>
+            <div class="reading-card-meta">
+              <span>当前：${escapeHtml(chapterLabel)}</span>
+              <span class="progress-pct">${pct}%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width:${pct}%"></div>
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  const list = postsRes?.posts || [];
+  if (list.length === 0) {
+    return `<div class="empty-state">暂无发帖记录</div>`;
+  }
+  return `
+    <div class="posts-list">
+      ${list.map(p => `
+        <div class="post-card" data-post-id="${p.id}">
+          <div class="post-header">
+            <span class="post-category" style="background-color:${p.category_color || '#8B3A2A'}">${escapeHtml(p.category_name || '综合交流')}</span>
+            <span class="post-time">${escapeHtml(communityApi.formatTime(p.created_at))}</span>
+          </div>
+          <h3 class="post-title">${escapeHtml(p.title)}</h3>
+          <p class="post-preview">${escapeHtml(p.content)}</p>
+          <div class="post-stats">
+            <span class="post-stat">阅读 ${p.view_count || 0}</span>
+            <span class="post-stat">评论 ${p.comment_count || 0}</span>
+            <span class="post-stat">点赞 ${p.like_count || 0}</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+async function handleTabSwitch(tab) {
+  if (tab !== 'reading' && tab !== 'posts') return;
+  currentTab = tab;
+  const panel = document.getElementById('profileTabPanel');
+  if (!panel) return;
+  panel.innerHTML = '<div class="empty-state">加载中...</div>';
+  if (tab === 'reading') {
+    const pr = await communityApi.getUserReadingProgress(currentUserId);
+    panel.innerHTML = renderTabBody('reading', null, pr);
+  } else {
+    const po = await communityApi.getUserPosts(currentUserId, 1, 20);
+    panel.innerHTML = renderTabBody('posts', po, null);
+  }
+}
+
+document.addEventListener('click', (e) => {
+  const backBtn = e.target.closest('#page-profile [data-action="navigateBack"]');
+  if (backBtn) {
+    navigateProfileBack();
+    return;
+  }
+
+  const authorEl = e.target.closest('[data-user-id]');
+  if (authorEl && authorEl.dataset.userId) {
+    const uid = Number(authorEl.dataset.userId);
+    if (!isNaN(uid)) openUserProfile(uid);
+    return;
+  }
+
+  const myProf = e.target.closest('[data-action="myProfile"]');
+  if (myProf) {
+    const uid = state.getCurrentUserId();
+    if (uid) openUserProfile(uid);
+    return;
+  }
+
+  if (!document.getElementById(PROFILE_PAGE_ID)?.classList.contains('active')) return;
+
+  const tabBtn = e.target.closest('[data-profile-tab]');
+  if (tabBtn) {
+    const tab = tabBtn.dataset.profileTab;
+    document.querySelectorAll('#page-profile .tab-btn').forEach(b => {
+      b.classList.toggle('active', b === tabBtn);
+    });
+    handleTabSwitch(tab);
+    return;
+  }
+
+  const progressCard = e.target.closest('[data-action="openClassicFromProgress"]');
+  if (progressCard) {
+    const classicId = progressCard.dataset.classicId;
+    const chapterIndex = Number(progressCard.dataset.chapterIndex ?? 0);
+    const paragraphId = progressCard.dataset.paragraphId || '';
+    if (!classicId) return;
+    state.setPendingRead({
+      classicId,
+      chapterIndex: isNaN(chapterIndex) ? 0 : chapterIndex,
+      paragraphId,
+    });
+    state.navigateTo('reader');
+    setTimeout(() => {
+      reader.loadBook(classicId);
+    }, 250);
+    return;
+  }
+
+  const postCard = e.target.closest('#profileTabPanel .post-card[data-post-id]');
+  if (postCard) {
+    const postId = Number(postCard.dataset.postId);
+    if (!isNaN(postId)) {
+      state.navigateTo('community');
+      setTimeout(() => {
+        const ev = new CustomEvent('open-post-detail', { detail: { postId } });
+        document.dispatchEvent(ev);
+      }, 80);
+    }
+    return;
+  }
+});
+
+export { openUserProfile as default };

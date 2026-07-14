@@ -32,23 +32,29 @@ env/
 pip-log.txt
 pip-delete-this-directory.txt
 
-# PyCharm
-.idea/
-
 # ============================================
-# Node.js
+# Node.js / Wrangler (Cloudflare CLI)
 # ============================================
 node_modules/
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .npm
 .yarn-integrity
 
+# Wrangler (Cloudflare Workers / Pages local state)
+.wrangler/
+.wrangler.toml
+.wrangler2/
+.pages-build-output/
+.pages/
+workers-preview/
+
 # ============================================
-# Database
+# Database (local / embedded)
 # ============================================
 *.db
 *.sqlite
@@ -57,7 +63,7 @@ yarn-error.log*
 *.db-wal
 *.db-shm
 
-# ChromaDB
+# Legacy ChromaDB (replaced by Cloudflare Vectorize)
 chroma_db/
 *.hnsw
 *.hnswv
@@ -74,14 +80,14 @@ credentials.json
 *.key
 *.crt
 secrets.json
+*.env.*
+.toml.secrets
 
 # ============================================
 # Logs
 # ============================================
 *.log
 logs/
-temp.log
-error.log
 
 # ============================================
 # IDE & Editor
@@ -92,7 +98,16 @@ error.log
 *.swp
 *.swo
 *~
+
+# ============================================
+# OS
+# ============================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
 # ============================================
@@ -112,8 +127,6 @@ temp/
 *.pyc
 *.pyo
 *.pyd
-.Python
-*.so
 *.dylib
 
 # ============================================
@@ -124,37 +137,25 @@ temp/
 .coverage.*
 htmlcov/
 .pytest_cache/
-.coverage.*
 nosetests.xml
 coverage.xml
 *.cover
 
 # ============================================
-# OS
-# ============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# ============================================
 # Project Specific
 # ============================================
+
+# 知识库大文件与生成产物
+knowledge_base/embeddings/chroma/
 knowledge_base/db/*.db
 knowledge_base/chroma_db/
 knowledge_base/index/
-*.log
-server.log
-frontend.log
-api.log
 
-.claude
-CLAUDE.md
-
-# ChromaDB embeddings (large binary files)
-knowledge_base/embeddings/chroma/
-
+# 部署说明与本地草稿（已被 README 与脚本内说明替代）
 DEPLOY.md
+CLAUDE.md
+.claude
+
+# Agent 工作目录
+.trae/
+.agola/

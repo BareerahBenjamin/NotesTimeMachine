@@ -2,12 +2,36 @@
  * 阅读器：段落渲染、章节导航、选段交互
  */
 import { BOOKS, BOOK_NAMES, DEMO_DATA, DEMO_NOTICE } from '../config.js';
-import { state } from '../state.js';
+import { state, consumePendingRead, getCurrentUserId } from '../state.js';
 import { fetchParagraphs, fetchParagraphAnnotations, fetchChapters } from '../api.js';
 import * as timeline from './timeline.js';
 import * as aiPanel from './aiPanel.js';
 import * as bookshelf from './bookshelf.js';
 import * as authorCards from './authorCards.js';
+import { isLoggedIn, updateMyReadingProgress } from './communityApi.js';
+
+// ===== 读书进度自动保存（节流 1.2s，避免频繁请求）=====
+let _saveTimer = null;
+function saveReadingProgress(extraParagraphId = null) {
+  if (!isLoggedIn() || !state.currentBook) return;
+  const classicId = state.currentBook;
+  const chapterIndex = Number(state.currentChapterIndex || 0);
+  const totalChapters = Math.max(1, state.chapters.length || 1);
+  const progressPct = state.chapters.length > 0
+    ? Math.max(0, Math.min(1, (chapterIndex + 1) / totalChapters))
+    : 0;
+  const paragraphId = extraParagraphId || state.selectedParagraph?.id || null;
+  const payload = {
+    classic_id: classicId,
+    chapter_index: chapterIndex,
+    progress_pct: progressPct,
+  };
+  if (paragraphId) payload.paragraph_id = String(paragraphId);
+  if (_saveTimer) clearTimeout(_saveTimer);
+  _saveTimer = setTimeout(() => {
+    updateMyReadingProgress(payload).catch(() => {});
+  }, 1200);
+}
 
 export function renderParagraphs(paragraphs) {
   const container = document.getElementById('originalText');
@@ -54,6 +78,8 @@ export async function selectParagraph(para) {
   } else {
     aiPanel.updateLocalAIAnalysis(para);
   }
+
+  saveReadingProgress(para.id);
 }
 
 export async function loadCurrentChapter() {
@@ -71,6 +97,8 @@ export async function loadCurrentChapter() {
   renderParagraphs(paragraphs);
   timeline.closeTimeline();
   aiPanel.resetAIPanel();
+
+  saveReadingProgress();
 }
 
 export function prevChapter() {
@@ -114,6 +142,16 @@ export function loadDemoBook(bookId) {
 }
 
 export async function loadBook(bookId) {
+  // 若从个人主页的读书进度卡点进来，优先按 pendingRead 跳转
+  const pending = consumePendingRead();
+  let targetChapterIndex = null;
+  let targetParagraphId = null;
+  if (pending && pending.classicId) {
+    bookId = pending.classicId;
+    targetChapterIndex = pending.chapterIndex != null ? Number(pending.chapterIndex) : null;
+    targetParagraphId = pending.paragraphId || null;
+  }
+
   state.currentBook = bookId;
   state.currentChapterIndex = 0;
 
@@ -132,7 +170,23 @@ export async function loadBook(bookId) {
     loadDemoBook(bookId);
     return;
   }
+
+  if (targetChapterIndex != null && !isNaN(targetChapterIndex)
+      && targetChapterIndex >= 0 && targetChapterIndex < state.chapters.length) {
+    state.currentChapterIndex = targetChapterIndex;
+  }
   await loadCurrentChapter();
+
+  if (targetParagraphId) {
+    // 滚动并选中指定段落
+    const el = document.querySelector(`[data-id="${String(targetParagraphId).replace(/"/g,'')}"]`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    const paras = state.currentParagraphs || [];
+    const p = paras.find(x => x.id === targetParagraphId);
+    if (p) await selectParagraph(p);
+  }
 }
 
 // 重新暴露以便搜索模块使用

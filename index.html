@@ -4,22 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>注疏时光机 - 女性古典文学注疏</title>
+  <link rel="icon" type="image/png" href="images/icon.png?v=20260715g">
+  <link rel="shortcut icon" type="image/png" href="images/icon.png?v=20260715g">
+  <link rel="apple-touch-icon" href="images/icon.png?v=20260715g">
   <!-- Google Fonts (国内镜像) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
   <!-- 备用：fonts.loli.net 镜像 -->
   <!-- <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" href="css/main.css?v=20260622b">
-  <link rel="stylesheet" href="css/community.css?v=20260622b">
-  <!-- Supabase JS Client -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="css/main.css?v=20260715g">
+  <link rel="stylesheet" href="css/community.css?v=20260715g">
 </head>
 <body>
   <!-- Header -->
   <header class="header" id="header">
     <div class="container header-inner">
       <div class="logo" data-action="navigateToHome">
+        <img class="logo-icon" src="images/icon.png?v=20260715g" alt="注疏时光机">
         <span class="logo-text">注疏时光机</span>
       </div>
       <nav class="nav" id="mainNav">
@@ -91,18 +93,19 @@
           
           <!-- Semantic Search on Home Page -->
           <div class="hero-search">
-            <div class="search-bar" id="searchBar">
-              <input type="text" id="semanticSearch" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
+            <div class="search-bar">
+              <input type="text" id="heroSemanticSearch" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
               <button class="btn btn-search" data-action="semanticSearch">检索</button>
             </div>
+            <div class="search-results" id="heroSearchResults"></div>
           </div>
           
           <div class="hero-actions">
             <button class="btn btn-primary" data-action="navigateToBookshelf">
-              <span>&#x2699;</span> 浏览书架
+              浏览书架
             </button>
             <button class="btn btn-secondary" data-action="navigateToAuthors">
-              <span>&#x2764;</span> 认识作者
+              认识作者
             </button>
           </div>
           <div class="hero-scroll-hint">
@@ -345,11 +348,11 @@
         </div>
 
         <!-- Semantic Search -->
-        <div class="search-bar" id="searchBar">
-          <input type="text" id="semanticSearch" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
+        <div class="search-bar">
+          <input type="text" id="readerSemanticSearch" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
           <button class="btn btn-search" data-action="semanticSearch">检索</button>
         </div>
-        <div class="search-results" id="searchResults"></div>
+        <div class="search-results" id="readerSearchResults"></div>
 
         <!-- Current Book Header -->
         <div class="current-book-header" id="currentBookHeader">
@@ -423,6 +426,20 @@
       </div>
     </section>
 
+    <!-- Profile Page -->
+    <section class="page page-profile" id="page-profile">
+      <div class="container">
+        <div class="reader-back" style="margin-bottom: 24px;">
+          <button class="btn btn-secondary" data-action="navigateBack">
+            <span>&#x25C0;</span> 返回
+          </button>
+        </div>
+        <div id="profileContent">
+          <div class="empty-state">加载中...</div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Modals -->
@@ -451,6 +468,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
+          <img class="footer-logo-icon" src="images/icon.png?v=20260715g" alt="注疏时光机">
           <span>注疏时光机</span>
         </div>
         <p class="footer-desc">
@@ -464,6 +482,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main.js?v=20260715g"></script>
+  <script type="module" src="js/ui/profile.js?v=20260715g"></script>
 </body>
 </html>

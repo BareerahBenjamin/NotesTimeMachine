@@ -4,22 +4,22 @@
    ======================================== */
 
 /* Core */
-@import url('variables.css');
-@import url('reset.css');
+@import url('variables.css?v=20260715g');
+@import url('reset.css?v=20260715g');
 
 /* Layout */
-@import url('header.css');
-@import url('pages.css');
-@import url('hero.css');
-@import url('components.css');
-@import url('search.css');
+@import url('header.css?v=20260715g');
+@import url('pages.css?v=20260715g');
+@import url('hero.css?v=20260715g');
+@import url('components.css?v=20260715g');
+@import url('search.css?v=20260715g');
 
 /* Components */
-@import url('bookshelf.css');
-@import url('reader.css');
-@import url('authors.css');
-@import url('sections.css');
+@import url('bookshelf.css?v=20260715g');
+@import url('reader.css?v=20260715g');
+@import url('authors.css?v=20260715g');
+@import url('sections.css?v=20260715g');
 
 /* Utilities */
-@import url('animations.css');
-@import url('responsive.css');
+@import url('animations.css?v=20260715g');
+@import url('responsive.css?v=20260715g');

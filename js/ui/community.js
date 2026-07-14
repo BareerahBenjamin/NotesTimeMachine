@@ -49,7 +49,6 @@ export async function renderCommunityPage() {
     container.innerHTML = `
       <div class="community-container">
         <div class="empty-state">
-          <div class="empty-state-icon">⚠️</div>
           <div class="empty-state-text">加载失败，请刷新页面重试</div>
           <div style="font-size: 0.9rem; color: var(--muted); margin-top: 8px;">${error.message}</div>
         </div>
@@ -91,7 +90,6 @@ async function loadPosts(page = 1) {
     if (posts.length === 0) {
       postList.innerHTML = `
         <div class="empty-state">
-          <div class="empty-state-icon">📝</div>
           <div class="empty-state-text">还没有帖子，来说点什么吧</div>
         </div>
       `;
@@ -103,15 +101,15 @@ async function loadPosts(page = 1) {
       <div class="post-card" data-post-id="${post.id}">
         <div class="post-header">
           <span class="post-category" style="background-color: ${post.category_color || '#8B3A2A'}">${post.category_name || '综合交流'}</span>
-          <span class="post-author">${post.nickname || post.username}</span>
+          <span class="post-author" data-user-id="${post.user_id || ''}" title="查看个人主页">${post.nickname || post.username}</span>
           <span class="post-time">${communityApi.formatTime(post.created_at)}</span>
         </div>
         <h3 class="post-title">${escapeHtml(post.title)}</h3>
         <p class="post-preview">${escapeHtml(post.content)}</p>
         <div class="post-stats">
-          <span class="post-stat">👁 ${post.view_count || 0}</span>
-          <span class="post-stat">💬 ${post.comment_count || 0}</span>
-          <span class="post-stat">❤️ ${post.like_count || 0}</span>
+          <span class="post-stat">阅读 ${post.view_count || 0}</span>
+          <span class="post-stat">评论 ${post.comment_count || 0}</span>
+          <span class="post-stat">点赞 ${post.like_count || 0}</span>
         </div>
       </div>
     `).join('');
@@ -250,9 +248,9 @@ export async function renderPostDetail(postId) {
           <h1 class="post-detail-title">${escapeHtml(currentPost.title)}</h1>
           <div class="post-detail-meta">
             <span class="post-category" style="background-color: ${currentPost.category_color || '#8B3A2A'}">${currentPost.category_name || '综合交流'}</span>
-            <span>${currentPost.nickname || currentPost.username}</span>
+            <span data-user-id="${currentPost.user_id || ''}" title="查看个人主页">${currentPost.nickname || currentPost.username}</span>
             <span>${communityApi.formatTime(currentPost.created_at)}</span>
-            <span>👁 ${currentPost.view_count || 0} 阅读</span>
+            <span>${currentPost.view_count || 0} 阅读</span>
           </div>
         </div>
 
@@ -260,12 +258,12 @@ export async function renderPostDetail(postId) {
 
         <div class="post-actions">
           <button class="action-btn ${currentPost.user_liked ? 'liked' : ''}" id="likeBtn" data-action="toggleLike">
-            ❤️ ${currentPost.user_liked ? '已赞' : '点赞'} <span id="likeCount">${currentPost.like_count || 0}</span>
+            ${currentPost.user_liked ? '已赞' : '点赞'} <span id="likeCount">${currentPost.like_count || 0}</span>
           </button>
           <button class="action-btn" data-action="scrollToComments">
-            💬 评论 <span id="commentCount">${currentPost.comment_count || 0}</span>
+            评论 <span id="commentCount">${currentPost.comment_count || 0}</span>
           </button>
-          ${isAuthor ? `<button class="action-btn danger" data-action="deletePost">🗑 删除</button>` : ''}
+          ${isAuthor ? `<button class="action-btn danger" data-action="deletePost">删除</button>` : ''}
         </div>
 
         <div class="comments-section" id="commentsSection">
@@ -309,7 +307,7 @@ async function loadComments(postId) {
     commentList.innerHTML = comments.map(comment => `
       <div class="comment-item" data-comment-id="${comment.id}">
         <div class="comment-header">
-          <span class="comment-author">${escapeHtml(comment.nickname || comment.username)}</span>
+          <span class="comment-author" data-user-id="${comment.user_id || ''}" title="查看个人主页">${escapeHtml(comment.nickname || comment.username)}</span>
           <span class="comment-time">${communityApi.formatTime(comment.created_at)}</span>
           ${userInfo && userInfo.id === comment.user_id ? `<button class="comment-delete" data-action="deleteComment" data-comment-id="${comment.id}">删除</button>` : ''}
         </div>
@@ -322,18 +320,8 @@ async function loadComments(postId) {
   }
 }
 
-// 绑定社区事件
+// 绑定社区事件（事件委托逻辑已移至 initCommunity，此处仅做按钮显隐等一次性初始化）
 function bindCommunityEvents() {
-  // 分类筛选
-  document.querySelectorAll('.category-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentCategoryId = btn.dataset.category || null;
-      loadPosts(1);
-    });
-  });
-
   // 发帖按钮
   const createBtn = document.getElementById('createPostBtn');
   if (createBtn) {
@@ -346,22 +334,6 @@ function bindCommunityEvents() {
       }
     });
   }
-
-  // 帖子点击
-  document.querySelectorAll('.post-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const postId = card.dataset.postId;
-      renderPostDetail(postId);
-    });
-  });
-
-  // 分页
-  document.querySelectorAll('.page-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const page = parseInt(btn.dataset.page);
-      loadPosts(page);
-    });
-  });
 }
 
 // 绑定帖子详情事件
@@ -390,10 +362,10 @@ function bindPostDetailEvents(postId) {
     
     if (result.liked) {
       likeBtn.classList.add('liked');
-      likeBtn.innerHTML = `❤️ 已赞 <span id="likeCount">${parseInt(likeCount.textContent) + 1}</span>`;
+      likeBtn.innerHTML = `已赞 <span id="likeCount">${parseInt(likeCount.textContent) + 1}</span>`;
     } else {
       likeBtn.classList.remove('liked');
-      likeBtn.innerHTML = `❤️ 点赞 <span id="likeCount">${parseInt(likeCount.textContent) - 1}</span>`;
+      likeBtn.innerHTML = `点赞 <span id="likeCount">${parseInt(likeCount.textContent) - 1}</span>`;
     }
   });
 
@@ -602,6 +574,7 @@ export function updateUserMenu() {
             <div style="font-weight: 600;">${userInfo.nickname || userInfo.username}</div>
             <div style="font-size: 0.85rem; color: var(--muted);">@${userInfo.username}</div>
           </div>
+          <button class="user-dropdown-item" data-action="myProfile">我的主页</button>
           <button class="user-dropdown-item" data-action="logout">退出登录</button>
         </div>
       </div>
@@ -659,21 +632,56 @@ function escapeHtml(text) {
 // 导出初始化函数
 export function initCommunity() {
   updateUserMenu();
-  
-  // 全局事件绑定
+
+  // 全局事件委托：帖子卡片、分类筛选、分页、模态框关闭等（innerHTML 重写后依然生效）
   document.addEventListener('click', (e) => {
     // 关闭模态框
-    if (e.target.dataset.action === 'closePostModal') {
+    if (e.target.dataset?.action === 'closePostModal') {
       closePostModal();
+      return;
     }
-    if (e.target.dataset.action === 'closeAuthModal') {
+    if (e.target.dataset?.action === 'closeAuthModal') {
       closeAuthModal();
+      return;
     }
-    
+
     // 点击模态框外部关闭
     const modal = e.target.closest('.modal-overlay');
     if (modal && e.target === modal && modal.classList.contains('visible')) {
       modal.classList.remove('visible');
+      return;
+    }
+
+    // 帖子卡片点击 → 打开详情
+    const postCard = e.target.closest('.post-card');
+    if (postCard && postCard.dataset.postId) {
+      const postId = Number(postCard.dataset.postId);
+      if (!isNaN(postId) && typeof renderPostDetail === 'function') {
+        renderPostDetail(postId);
+      }
+      return;
+    }
+
+    // 分类筛选按钮
+    const categoryBtn = e.target.closest('.category-btn');
+    if (categoryBtn && categoryBtn.dataset.category !== undefined) {
+      document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+      categoryBtn.classList.add('active');
+      const catVal = categoryBtn.dataset.category || null;
+      currentCategoryId = (catVal === '' || catVal === null) ? null : Number(catVal);
+      if (isNaN(currentCategoryId)) currentCategoryId = catVal;
+      if (typeof loadPosts === 'function') loadPosts(1);
+      return;
+    }
+
+    // 分页按钮
+    const pageBtn = e.target.closest('.page-btn');
+    if (pageBtn && pageBtn.dataset.page) {
+      const page = parseInt(pageBtn.dataset.page, 10);
+      if (!isNaN(page) && typeof loadPosts === 'function') {
+        loadPosts(page);
+      }
+      return;
     }
   });
 }
