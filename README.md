@@ -89,6 +89,10 @@ Worker 使用 cf-worker 下的 npm run deploy。Pages 使用 node cf-worker/scri
 
 生产 Worker 要求通过 Cloudflare Secret 提供由安全随机源生成的 64 位十六进制 JWT_SIGNING_KEY。旧签名值须移除，旧会话会失效。反馈 Schema 仅在启用反馈前按审核后的增量迁移执行。生产更新前确认备份和版本回退目标。非生产 Pages 域名默认使用同源 API，接入 Preview 时须先配置独立的后端和数据库。现有生产 URL 见页首。
 
+GitHub Actions 的 `V2 checks` 在 PR 上验证类型、测试及两个部署工件。`Deploy zhushu-notes` 从 `main` 发布同一提交的 Worker 和 Pages。先通过 Actions 手动运行，完成线上验收后可将仓库变量 `AUTO_DEPLOY_PRODUCTION` 设为 `true`，开启合并后发布。工作流读取 `production` 环境的 `CLOUDFLARE_ACCOUNT_ID` 变量与 `CLOUDFLARE_API_TOKEN` Secret。
+
+若首次发布需要初始化或轮换生产签名，可临时设置 `production` 环境的 `JWT_BOOTSTRAP` Secret，将新签名与 Worker 代码一并部署。成功后移除 GitHub 中的临时 Secret，后续部署沿用 Cloudflare 已保存的签名。Worker 的 `/api/health` 与 Pages 的 `/release.json` 可核对实际提交。若某次发布只需更新 `zhushu-notes`，可在分支顶端提交和合并提交的消息开头使用 `[CF-Pages-Skip]`，跳过另一个 Git 集成的 Pages 项目。
+
 ## 评测与已知限制
 
 | 项目 | 记录 |

@@ -43,6 +43,7 @@ app.get('/api/health', (c) => {
     status: 'ok',
     rag_available: !!c.env.VECTOR_INDEX,
     environment: c.env.ENVIRONMENT,
+    release: c.env.CF_VERSION_METADATA?.tag,
   });
 });
 

@@ -1,0 +1,72 @@
+name: Deploy zhushu-notes
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zhushu-notes-production
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.AUTO_DEPLOY_PRODUCTION == 'true')
+    uses: ./.github/workflows/ci.yml
+
+  deploy:
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production
+    env:
+      WRANGLER_SEND_METRICS: 'false'
+      RELEASE_SITE_URL: https://zhushu-notes.pages.dev
+      RELEASE_API_URL: https://zhushu-notes-api.bareerahmoooo.workers.dev
+      RELEASE_ENVIRONMENT: production
+      RELEASE_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: cf-worker/package-lock.json
+      - run: npm ci
+        working-directory: cf-worker
+      - name: Deploy Worker and verify API
+        working-directory: cf-worker
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          JWT_BOOTSTRAP: ${{ secrets.JWT_BOOTSTRAP }}
+        run: |
+          set -euo pipefail
+          : "${CLOUDFLARE_ACCOUNT_ID:?Set the production Cloudflare account ID}"
+          : "${CLOUDFLARE_API_TOKEN:?Set the production Cloudflare API token}"
+          deploy_args=(--tag "$RELEASE_COMMIT")
+          if [[ -n "$JWT_BOOTSTRAP" ]]; then
+            umask 077
+            secret_file="$(mktemp)"
+            trap 'rm -f "$secret_file"' EXIT
+            printf 'JWT_SIGNING_KEY=%s\n' "$JWT_BOOTSTRAP" > "$secret_file"
+            unset JWT_BOOTSTRAP
+            deploy_args+=(--secrets-file "$secret_file")
+          fi
+          ./node_modules/.bin/wrangler deploy "${deploy_args[@]}"
+          node scripts/release-smoke.mjs --api-only
+      - name: Deploy Pages and verify both versions
+        env:
+          BRANCH: main
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ANALYTICS_ENABLED: ${{ vars.ANALYTICS_ENABLED }}
+          ANALYTICS_ENVIRONMENT: production
+          ANALYTICS_HOST: ${{ vars.ANALYTICS_HOST }}
+          ANALYTICS_PROJECT_TOKEN: ${{ vars.ANALYTICS_PROJECT_TOKEN }}
+        run: |
+          node cf-worker/scripts/deploy-pages.mjs
+          node cf-worker/scripts/release-smoke.mjs
