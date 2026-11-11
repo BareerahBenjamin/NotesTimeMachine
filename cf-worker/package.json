@@ -16,6 +16,7 @@
     "test": "node tests/reliability.mjs && node tests/grounding.mjs && node tests/dev-transport.mjs && node tests/activation-feedback.mjs && node tests/feedback-workflow.mjs"
   },
   "dependencies": {
+    "@noble/hashes": "2.4.0",
     "hono": "^4.6.0",
     "jose": "^5.9.0"
   },

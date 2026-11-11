@@ -1,4 +1,6 @@
 import { timingSafeEqual } from 'node:crypto';
+import { pbkdf2 } from '@noble/hashes/pbkdf2.js';
+import { sha256 } from '@noble/hashes/sha2.js';
 
 const VERSION = 'pbkdf2-sha256-v1';
 const ITERATIONS = 600_000;
@@ -13,11 +15,18 @@ function fromHex(value: string): Uint8Array<ArrayBuffer> {
 }
 
 async function derive(password: string, salt: Uint8Array<ArrayBuffer>): Promise<Uint8Array> {
-  const key = await crypto.subtle.importKey('raw', encoder.encode(password), 'PBKDF2', false, ['deriveBits']);
-  const bits = await crypto.subtle.deriveBits(
-    { name: 'PBKDF2', hash: 'SHA-256', salt, iterations: ITERATIONS }, key, 256,
-  );
-  return new Uint8Array(bits);
+  const bytes = encoder.encode(password);
+  const key = await crypto.subtle.importKey('raw', bytes, 'PBKDF2', false, ['deriveBits']);
+  try {
+    const bits = await crypto.subtle.deriveBits(
+      { name: 'PBKDF2', hash: 'SHA-256', salt, iterations: ITERATIONS }, key, 256,
+    );
+    return new Uint8Array(bits);
+  } catch (error) {
+    if (!(error instanceof Error) || error.name !== 'NotSupportedError') throw error;
+    // Hosted Workers cap native PBKDF2. Derive the same digest without changing the work factor.
+    return pbkdf2(sha256, bytes, salt, { c: ITERATIONS, dkLen: 32 });
+  }
 }
 
 export async function hashPassword(password: string): Promise<string> {

@@ -19,6 +19,26 @@ for(const sql of (await readFile('schema.sql','utf8')).replace(/--[^\n]*/g,'').s
 let a,b,id,cid;
 await check('register/login two users',async()=>{for(const username of ['alice','bob'])assert.equal((await req('/register',{username,password:'private-test-password'})).status,201);a=(await req('/login',{username:'alice',password:'private-test-password'})).body;b=(await req('/login',{username:'bob',password:'private-test-password'})).body;assert.ok(a.token&&b.token)});
 await check('invalid credentials/anonymous writes',async()=>{assert.equal((await req('/login',{username:'alice',password:'wrong'})).status,401);assert.equal((await req('/posts',{title:'x',content:'x'})).status,401)});
+await check('hosted PBKDF2 cap preserves native hashes and supports registration', async () => {
+  const account = { username: 'runtime-cap-test', password: 'runtime-cap-fixture-password' };
+  const subtle = crypto.subtle;
+  const originalDerive = Object.getOwnPropertyDescriptor(subtle, 'deriveBits');
+  Object.defineProperty(subtle, 'deriveBits', {
+    configurable: true,
+    async value(algorithm) {
+      assert.equal(algorithm.iterations, 600_000);
+      throw new DOMException('Hosted Worker PBKDF2 iteration cap', 'NotSupportedError');
+    },
+  });
+  try {
+    assert.equal((await req('/login', { username: 'alice', password: 'private-test-password' })).status, 200);
+    assert.equal((await req('/register', account)).status, 201);
+  } finally {
+    if (originalDerive) Object.defineProperty(subtle, 'deriveBits', originalDerive);
+    else delete subtle.deriveBits;
+  }
+  assert.equal((await req('/login', account)).status, 200);
+});
 await check('different salts and known password collision rejected', async () => {
   const { results: users } = await db.prepare("SELECT password_hash FROM users WHERE username IN ('alice', 'bob')").all();
   assert.equal(users.length, 2);
