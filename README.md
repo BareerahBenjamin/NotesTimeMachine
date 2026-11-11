@@ -93,6 +93,8 @@ GitHub Actions 的 `V2 checks` 在 PR 上验证类型、测试及两个部署工
 
 若首次发布需要初始化或轮换生产签名，可临时设置 `production` 环境的 `JWT_BOOTSTRAP` Secret，将新签名与 Worker 代码一并部署。成功后移除 GitHub 中的临时 Secret，后续部署沿用 Cloudflare 已保存的签名。Worker 的 `/api/health` 与 Pages 的 `/release.json` 可核对实际提交。若某次发布只需更新 `zhushu-notes`，可在分支顶端提交和合并提交的消息开头使用 `[CF-Pages-Skip]`，跳过另一个 Git 集成的 Pages 项目。
 
+Worker 内部的 `PASSWORD_DERIVATION` Durable Object 使用独立 CPU 预算计算 600,000 轮 PBKDF2-SHA256。首次 Worker 部署会创建该类，账号和密码摘要继续保存在 D1。
+
 ## 评测与已知限制
 
 | 项目 | 记录 |

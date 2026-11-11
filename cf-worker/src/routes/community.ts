@@ -49,7 +49,7 @@ communityRoutes.post('/register', async (c) => {
   try {
     const info = await db
       .prepare('INSERT INTO users (username, password_hash, nickname) VALUES (?, ?, ?)')
-      .bind(username, await hashPassword(password), nickname || username)
+      .bind(username, await hashPassword(password, c.env.PASSWORD_DERIVATION), nickname || username)
       .run();
 
     if (!info.success) return c.json({ error: '注册失败' }, 400);
@@ -82,7 +82,7 @@ communityRoutes.post('/login', async (c) => {
     .bind(username)
     .first();
 
-  if (!user || !await verifyPassword(password, user.password_hash)) {
+  if (!user || !await verifyPassword(password, user.password_hash, c.env.PASSWORD_DERIVATION)) {
     return c.json({ error: '用户名或密码错误' }, 401);
   }
 
@@ -130,7 +130,7 @@ communityRoutes.post('/reset-password', async (c) => {
   const result = await db.prepare(`
     UPDATE users SET password_hash = ?
     WHERE id = ? AND password_hash = ? AND ? > unixepoch('now')
-  `).bind(await hashPassword(password), account.id, account.password_hash, expiresAt).run();
+  `).bind(await hashPassword(password, c.env.PASSWORD_DERIVATION), account.id, account.password_hash, expiresAt).run();
   if (result.meta.changes !== 1) return invalidCode();
   return c.json({ message: '密码已重置，请使用新密码登录。' });
 });
