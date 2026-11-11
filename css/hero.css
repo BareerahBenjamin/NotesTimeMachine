@@ -132,7 +132,7 @@
 .hero-tag {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   letter-spacing: 0.1em;
   color: var(--accent);
   background: rgba(44,36,32,0.06);
@@ -159,7 +159,7 @@
 
 .hero-subtitle {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: var(--text-small);
   color: var(--muted);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -190,7 +190,7 @@
 }
 
 .hero-desc {
-  font-size: 1.05rem;
+  font-size: var(--text-body-lg);
   color: var(--ink-light);
   max-width: 600px;
   margin: 0 auto 36px;
@@ -260,7 +260,7 @@
 
 .author-float-name {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: var(--text-control);
   color: var(--muted);
   letter-spacing: 0.1em;
   position: relative;

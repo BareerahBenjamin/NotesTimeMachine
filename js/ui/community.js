@@ -58,7 +58,7 @@ export async function renderCommunityPage() {
       <div class="community-container">
         <div class="empty-state">
           <div class="empty-state-text">加载失败，请刷新页面重试</div>
-          <div style="font-size: 0.9rem; color: var(--muted); margin-top: 8px;">${error.message}</div>
+          <div style="font-size: var(--text-small); color: var(--muted); margin-top: 8px;">${error.message}</div>
         </div>
       </div>
     `;
@@ -661,7 +661,7 @@ export function updateUserMenu() {
         <div class="user-dropdown" id="userDropdown">
           <div style="padding: 12px 16px; border-bottom: 1px solid var(--rule);">
             <div style="font-weight: 600;">${escapeHtml(userInfo.nickname || userInfo.username)}</div>
-            <div style="font-size: 0.85rem; color: var(--muted);">@${escapeHtml(userInfo.username)}</div>
+            <div style="font-size: var(--text-small); color: var(--muted);">@${escapeHtml(userInfo.username)}</div>
           </div>
           <button class="user-dropdown-item" data-action="myProfile">我的主页</button>
           <button class="user-dropdown-item" data-action="logout">退出登录</button>
@@ -686,7 +686,7 @@ export function updateUserMenu() {
     });
   } else {
     userMenuContainer.innerHTML = `
-      <button class="btn-secondary" id="loginBtn" style="padding: 8px 16px; font-size: 0.9rem;">
+      <button class="btn-secondary" id="loginBtn">
         登录 / 注册
       </button>
     `;
