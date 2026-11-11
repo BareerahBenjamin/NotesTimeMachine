@@ -1,10 +1,12 @@
 import { Hono } from 'hono';
 import { SignJWT, jwtVerify } from 'jose';
 import { hashPassword, verifyPassword } from '../passwords';
+import { recoveryCodeExpiry, RECOVERY_CODE } from '../accountRecovery';
 import { ApiError, database, integer, jsonObject, text } from '../reliability';
 import type { AppEnv } from '../reliability';
 
 export const communityRoutes = new Hono<AppEnv>();
+const SESSION_ISSUER = 'zhushu-notes-community';
 
 function signingKey(secret: string | undefined): Uint8Array | undefined {
   if (!secret || !/^[0-9a-f]{64}$/i.test(secret)) return undefined;
@@ -17,7 +19,9 @@ communityRoutes.use('*', async (c, next) => {
   const key = signingKey(c.env.JWT_SIGNING_KEY);
   if (token && key) {
     try {
-      const { payload } = await jwtVerify(token, key, { algorithms: ['HS256'], requiredClaims: ['sub', 'exp'] });
+      const { payload } = await jwtVerify(token, key, {
+        algorithms: ['HS256'], issuer: SESSION_ISSUER, requiredClaims: ['sub', 'exp', 'iat'],
+      });
       if (payload && typeof payload.sub === 'string' && /^[1-9]\d*$/.test(payload.sub) && Number.isSafeInteger(Number(payload.sub))) {
         c.set('userId', Number(payload.sub));
       }
@@ -64,6 +68,7 @@ communityRoutes.post('/register', async (c) => {
 });
 
 communityRoutes.post('/login', async (c) => {
+  c.header('Cache-Control', 'no-store');
   const key = signingKey(c.env.JWT_SIGNING_KEY);
   if (!key) throw new ApiError(503, 'auth_configuration', '账号服务暂不可用，请稍后重试。');
   const body = await jsonObject(c);
@@ -73,7 +78,7 @@ communityRoutes.post('/login', async (c) => {
 
   const db = database(c);
   const user = await db
-    .prepare('SELECT * FROM users WHERE username = ?')
+    .prepare('SELECT id, username, nickname, password_hash FROM users WHERE username = ?')
     .bind(username)
     .first();
 
@@ -83,6 +88,7 @@ communityRoutes.post('/login', async (c) => {
 
   const token = await new SignJWT({ sub: String(user.id) })
     .setProtectedHeader({ alg: 'HS256' })
+    .setIssuer(SESSION_ISSUER)
     .setIssuedAt()
     .setExpirationTime('7d')
     .sign(key);
@@ -96,6 +102,37 @@ communityRoutes.post('/login', async (c) => {
     },
     token,
   });
+});
+
+communityRoutes.post('/reset-password', async (c) => {
+  c.header('Cache-Control', 'no-store');
+  if (!signingKey(c.env.JWT_SIGNING_KEY)) {
+    throw new ApiError(503, 'auth_configuration', '账号服务暂不可用，请稍后重试。');
+  }
+  const body = await jsonObject(c);
+  const username = text(body.username, '用户名', 100);
+  const code = text(body.code, '恢复码', 64);
+  const password = text(body.password, '新密码', 1024);
+  if (password.length < 15) return c.json({ error: '新密码至少需要 15 个字符' }, 400);
+
+  const invalidCode = () => c.json({ error: '恢复码无效、已过期或已使用' }, 401);
+  if (!RECOVERY_CODE.test(code)) return invalidCode();
+
+  const db = database(c);
+  const account = await db.prepare('SELECT id, password_hash FROM users WHERE username = ?')
+    .bind(username).first<{ id: number; password_hash: string }>();
+  if (!account) return invalidCode();
+  const expiresAt = await recoveryCodeExpiry(code, account.password_hash);
+  if (expiresAt === null) return invalidCode();
+
+  // The conditional update consumes the grant once, including concurrent requests.
+  // Checking expiry in D1 also covers expiry while deriving the new password hash.
+  const result = await db.prepare(`
+    UPDATE users SET password_hash = ?
+    WHERE id = ? AND password_hash = ? AND ? > unixepoch('now')
+  `).bind(await hashPassword(password), account.id, account.password_hash, expiresAt).run();
+  if (result.meta.changes !== 1) return invalidCode();
+  return c.json({ message: '密码已重置，请使用新密码登录。' });
 });
 
 communityRoutes.get('/user', async (c) => {
@@ -380,6 +417,7 @@ communityRoutes.post('/posts/:id/like', async (c) => {
 // ==================== 用户个人主页 ====================
 
 communityRoutes.get('/users/:id', async (c) => {
+  c.header('Cache-Control', 'private, no-store');
   try {
     const userId = integer(c.req.param('id'), 'id');
 
@@ -405,10 +443,10 @@ communityRoutes.get('/users/:id', async (c) => {
       .bind(userId)
       .first();
 
-    const booksCount = await database(c)
+    const booksCount = userId === c.get('userId') ? await database(c)
       .prepare('SELECT COUNT(*) AS c FROM reading_progress WHERE user_id = ?')
       .bind(userId)
-      .first();
+      .first() : null;
 
     const commentsCount = await database(c)
       .prepare('SELECT COUNT(*) AS c FROM comments WHERE user_id = ?')
@@ -429,7 +467,7 @@ communityRoutes.get('/users/:id', async (c) => {
         total_views: Number(postStats?.total_views || 0),
         total_likes: Number(postStats?.total_likes || 0),
         total_comments: Number(postStats?.total_comments || 0) + Number(commentsCount?.c || 0),
-        books_count: Number(booksCount?.c || 0),
+        ...(booksCount ? { books_count: Number(booksCount.c || 0) } : {}),
       },
     });
   } catch (e: any) {
@@ -486,9 +524,12 @@ communityRoutes.get('/users/:id/posts', async (c) => {
 });
 
 communityRoutes.get('/users/:id/reading-progress', async (c) => {
+  c.header('Cache-Control', 'private, no-store');
+  const viewerId = c.get('userId');
+  if (!viewerId) return c.json({ error: '需要登录' }, 401);
+  const userId = integer(c.req.param('id'), 'id');
+  if (viewerId !== userId) return c.json({ error: '仅本人可查看读书进度' }, 403);
   try {
-    const userId = integer(c.req.param('id'), 'id');
-
     const rows = await database(c).prepare(`
       SELECT id, user_id, classic_id, chapter_index, paragraph_id, progress_pct, last_read_at
       FROM reading_progress

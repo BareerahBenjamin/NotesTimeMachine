@@ -11,17 +11,23 @@ function getAuthHeaders() {
   return token ? { 'Authorization': `Bearer ${token}` } : {};
 }
 
-async function request(url, options = {}) {
+async function request(url, { clearRejectedSession = false, ...options } = {}) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 30000);
   try {
+    const auth = getAuthHeaders();
     const resp = await fetch(url, {
-      headers: { 'Content-Type': 'application/json', ...getAuthHeaders(), ...options.headers },
       ...options,
+      headers: { 'Content-Type': 'application/json', ...auth, ...options.headers },
       signal: controller.signal,
     });
     const data = await resp.json().catch(() => ({}));
     if (!resp.ok) {
+      if (clearRejectedSession && resp.status === 401 && auth.Authorization &&
+          auth.Authorization === getAuthHeaders().Authorization) {
+        clearUserSession();
+        document.dispatchEvent(new Event('community-session-expired'));
+      }
       return { error: data.error || `请求失败 (${resp.status})` };
     }
     return data;
@@ -47,8 +53,15 @@ export async function register(username, password, nickname) {
   });
 }
 
+export async function resetPassword(username, code, password) {
+  return request(`${COMMUNITY_API}/reset-password`, {
+    method: 'POST',
+    body: JSON.stringify({ username, code, password }),
+  });
+}
+
 export async function getCurrentUser() {
-  const result = await request(`${COMMUNITY_API}/user`);
+  const result = await request(`${COMMUNITY_API}/user`, { clearRejectedSession: true });
   if (result && !result.error) return result;
   return null;
 }

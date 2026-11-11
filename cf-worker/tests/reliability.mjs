@@ -4,6 +4,7 @@ import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {SignJWT} from 'jose';
 import {randomBytes} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
 await build({entryPoints:['src/index.ts'],bundle:true,platform:'node',format:'esm',outfile:'/tmp/ntm-reliability.mjs',logLevel:'silent'});
 const {default:app}=await import('/tmp/ntm-reliability.mjs?v='+Date.now());
 const mf=new Miniflare(convertV4MiniflareOptions({modules:true,script:'export default {fetch(){return new Response("test")}}',compatibilityDate:'2026-07-01',d1Databases:{DB:'isolated-tests'},r2Buckets:{KNOWLEDGE_BUCKET:'isolated-tests'}}));
@@ -41,7 +42,7 @@ await check('legacy credential requires reset and preserves account data', async
 await check('missing or malformed signing key fails closed', async () => {
   for (const key of [undefined, 'TEST ONLY invalid key']) {
     const config = { ...env, JWT_SIGNING_KEY: key };
-    for (const path of ['/register', '/login']) {
+    for (const path of ['/register', '/login', '/reset-password']) {
       const response = await req(path, { username: 'alice', password: 'private-test-password' }, null, 'POST', config);
       assert.equal(response.status, 503);
       assert.equal(response.body.token, undefined);
@@ -57,17 +58,84 @@ await check('reject signed JWT with invalid subject, missing expiration or old k
   const key = new TextEncoder().encode(env.JWT_SIGNING_KEY);
   const oldKey = new TextEncoder().encode('TEST ONLY OLD KEY');
   const token = (subject, signingKey) => new SignJWT({ sub: subject })
-    .setProtectedHeader({ alg: 'HS256' }).setExpirationTime('1m').sign(signingKey);
+    .setProtectedHeader({ alg: 'HS256' }).setIssuer('zhushu-notes-community').setIssuedAt()
+    .setExpirationTime('1m').sign(signingKey);
   const invalid = [
     await token('Infinity', key),
-    await new SignJWT({ sub: String(a.user.id) }).setProtectedHeader({ alg: 'HS256' }).sign(key),
+    await new SignJWT({ sub: String(a.user.id) }).setProtectedHeader({ alg: 'HS256' })
+      .setIssuer('zhushu-notes-community').setIssuedAt().sign(key),
     await token(String(a.user.id), oldKey),
+    await new SignJWT({ sub: String(a.user.id) }).setProtectedHeader({ alg: 'HS256' })
+      .setIssuedAt().setExpirationTime('1m').sign(key),
+    await new SignJWT({ sub: String(a.user.id) }).setProtectedHeader({ alg: 'HS256' })
+      .setIssuer('zhushu-notes-community').setIssuedAt().setExpirationTime('1s ago').sign(key),
   ];
   for (const jwt of invalid) assert.equal((await req('/posts', { title: 'x', content: 'x' }, jwt)).status, 401);
+  assert.equal((await req('/user', undefined, a.token)).body.id, a.user.id);
+});
+await check('similar usernames remain distinct accounts', async () => {
+  assert.equal((await req('/login', { username: 'Alice', password: 'private-test-password' })).status, 401);
+  assert.equal((await req('/register', { username: 'Alice', password: 'different-fixture-password' })).status, 201);
+  assert.equal((await req('/login', { username: 'Alice', password: 'private-test-password' })).status, 401);
+  assert.notEqual((await req('/login', { username: 'Alice', password: 'different-fixture-password' })).body.user.id, a.user.id);
+});
+await check('verified recovery grant is scoped, expires and is consumed exactly once', async () => {
+  const account = await db.prepare('SELECT id FROM users WHERE username = ?').bind('legacy-test').first();
+  await db.prepare('INSERT INTO reading_progress (user_id, classic_id, chapter_index, progress_pct) VALUES (?, ?, ?, ?)')
+    .bind(account.id, 'shuyuci', 1, 0.5).run();
+  await db.prepare('INSERT INTO posts (user_id, title, content) VALUES (?, ?, ?)').bind(account.id, 'Recovery fixture', 'Test only').run();
+  const code = randomBytes(32).toString('hex');
+  const password = 'recovery-fixture-password';
+  const sql = (id, input) => {
+    const plan = spawnSync(process.execPath, ['scripts/prepare-account-recovery.mjs', String(id)], { input, encoding: 'utf8' });
+    assert.equal(plan.status, 0);
+    assert.ok(!plan.stdout.includes(input));
+    return plan.stdout;
+  };
+  const reset = (username, grant = code, nextPassword = password) => req('/reset-password', { username, code: grant, password: nextPassword });
+  const invalid = await reset('legacy-test');
+  assert.equal(invalid.status, 401);
+  assert.equal((await db.prepare(sql(a.user.id, code)).all()).results.length, 0);
+  assert.equal((await db.prepare(sql(account.id, code)).all()).results.length, 1);
+  for (const username of ['Legacy-test', 'alice', 'absent']) assert.deepEqual((await reset(username)).body, invalid.body);
+  assert.equal((await reset('legacy-test', randomBytes(32).toString('hex'))).status, 401);
+  assert.equal((await reset('legacy-test', code, 'short')).status, 400);
+  await db.prepare("UPDATE users SET password_hash = 'recovery-v1$1000000000$' || substr(password_hash, 24) WHERE id = ?").bind(account.id).run();
+  assert.deepEqual((await reset('legacy-test')).body, invalid.body);
+  const replacement = randomBytes(32).toString('hex');
+  assert.equal((await db.prepare(sql(account.id, replacement)).all()).results.length, 1);
+  assert.deepEqual((await reset('legacy-test')).body, invalid.body);
+  const responses = await Promise.all([reset('legacy-test', replacement), reset('legacy-test', replacement)]);
+  assert.deepEqual(responses.map(response => response.status).sort(), [200, 401]);
+  assert.ok(responses.every(response => response.body.token === undefined));
+  assert.equal((await reset('legacy-test', replacement)).status, 401);
+  assert.equal((await db.prepare(sql(account.id, replacement)).all()).results.length, 0);
+  const login = await req('/login', { username: 'legacy-test', password });
+  assert.equal(login.body.user.id, account.id);
+  assert.equal((await req('/login', { username: 'legacy-test', password: 'AaAaAa' })).status, 401);
+  assert.equal((await req('/users/' + account.id + '/reading-progress', undefined, login.body.token)).body.progress[0].progress_pct, 0.5);
+  assert.equal((await req('/users/' + account.id + '/posts')).body.posts[0].user_id, account.id);
+  assert.ok([code, replacement, password].every(value => !JSON.stringify(logs).includes(value)));
+  await db.prepare('DELETE FROM posts WHERE user_id = ?').bind(account.id).run();
 });
 await check('create/read post',async()=>{const r=await req('/posts',{title:'test post',content:'public fixture',category_id:1},a.token);assert.equal(r.status,201);id=r.body.post.id;assert.equal((await req('/posts/'+id)).body.title,'test post')});
 await check('invalid/dangling category',async()=>{for(const [v,status] of [['bad',400],[999,409]])assert.equal((await req('/posts',{title:'x',content:'x',category_id:v},a.token)).status,status)});
-await check('progress consistency/user isolation',async()=>{for(const pct of [0.2,0.6])assert.equal((await req('/me/reading-progress',{classic_id:'shuyuci',chapter_index:1,paragraph_id:'private-paragraph-fixture',progress_pct:pct,user_id:b.user.id},a.token)).status,200);const p=(await req('/users/'+a.user.id+'/reading-progress')).body.progress;assert.equal(p.length,1);assert.equal(p[0].progress_pct,0.6);assert.equal((await req('/users/'+b.user.id+'/reading-progress')).body.progress.length,0)});
+await check('progress consistency/user isolation',async()=>{
+  const ownPath = '/users/' + a.user.id;
+  const progressPath = ownPath + '/reading-progress';
+  for (const pct of [0.2, 0.6]) {
+    const result = await req('/me/reading-progress', { classic_id:'shuyuci', chapter_index:1, paragraph_id:'private-paragraph-fixture', progress_pct:pct, user_id:b.user.id }, a.token);
+    assert.equal(result.status, 200);
+  }
+  const p = (await req(progressPath, undefined, a.token)).body.progress;
+  assert.equal(p.length, 1);
+  assert.equal(p[0].progress_pct, 0.6);
+  assert.equal((await req(progressPath)).status, 401);
+  assert.equal((await req(progressPath, undefined, b.token)).status, 403);
+  assert.equal((await req(ownPath, undefined, b.token)).body.stats.books_count, undefined);
+  assert.equal((await req(ownPath, undefined, a.token)).body.stats.books_count, 1);
+  assert.equal((await req('/users/' + b.user.id + '/reading-progress', undefined, b.token)).body.progress.length, 0);
+});
 await check('invalid progress parameters',async()=>{for(const change of [{progress_pct:'bad'},{progress_pct:1.1},{chapter_index:-1},{chapter_index:0.5},{paragraph_id:{}}])assert.equal((await req('/me/reading-progress',{classic_id:'shuyuci',...change},a.token)).status,400)});
 await check('comment create/read/authorization',async()=>{const r=await req(`/posts/${id}/comments`,{content:'fixture comment'},a.token);assert.equal(r.status,201);cid=r.body.comment.id;assert.equal((await req(`/posts/${id}/comments`)).body.length,1);assert.equal((await req(`/posts/${id}`)).body.comment_count,1);assert.equal((await req('/comments/'+cid,undefined,b.token,'DELETE')).status,400)});
 await check('missing comment/like parent',async()=>{assert.equal((await req('/posts/999/comments',{content:'x'},a.token)).status,404);assert.equal((await req('/posts/999/like',{},a.token)).status,404)});

@@ -451,6 +451,7 @@ export function showAuthModal() {
         <div class="auth-tabs">
           <button class="auth-tab active" data-tab="login">登录</button>
           <button class="auth-tab" data-tab="register">注册</button>
+          <button class="auth-tab" data-tab="recovery">重置旧账号密码</button>
         </div>
         
         <div class="auth-form active" id="loginForm">
@@ -463,6 +464,24 @@ export function showAuthModal() {
             <input type="password" class="form-input" id="loginPassword" aria-label="密码" placeholder="请输入密码">
           </div>
           <div class="form-error" id="loginError" style="display: none;"></div>
+          <p id="recoverySuccess" role="status" hidden></p>
+        </div>
+
+        <div class="auth-form" id="recoveryForm">
+          <p>请输入维护人员核验账号归属后交付的一次性恢复码。</p>
+          <div class="form-group">
+            <label class="form-label" for="recoveryUsername">原用户名</label>
+            <input type="text" class="form-input" id="recoveryUsername" autocomplete="username" maxlength="100">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="recoveryCode">恢复码</label>
+            <input type="password" class="form-input" id="recoveryCode" autocomplete="off" spellcheck="false" maxlength="64">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="recoveryPassword">新密码（至少 15 个字符）</label>
+            <input type="password" class="form-input" id="recoveryPassword" autocomplete="new-password" maxlength="1024">
+          </div>
+          <div class="form-error" id="recoveryError" role="alert" hidden></div>
         </div>
 
         <div class="auth-form" id="registerForm">
@@ -495,7 +514,9 @@ export function showAuthModal() {
       document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
       tab.classList.add('active');
       document.getElementById(`${tab.dataset.tab}Form`).classList.add('active');
-      document.getElementById('authSubmit').textContent = tab.dataset.tab === 'login' ? '登录' : '注册';
+      document.getElementById('authSubmit').textContent = {
+        login: '登录', register: '注册', recovery: '重置密码',
+      }[tab.dataset.tab];
     });
   });
 
@@ -515,9 +536,13 @@ async function handleAuth() {
 async function submitAuth() {
   const loginTab = document.querySelector('.auth-tab.active');
   const isLogin = loginTab.dataset.tab === 'login';
+  if (loginTab.dataset.tab === 'recovery') {
+    await submitAccountRecovery(document.getElementById('authModal'));
+    return;
+  }
 
   if (isLogin) {
-    const username = document.getElementById('loginUsername').value.trim();
+    const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
     const errorEl = document.getElementById('loginError');
 
@@ -581,10 +606,45 @@ async function submitAuth() {
   }
 }
 
+async function submitAccountRecovery(modal) {
+  const username = modal.querySelector('#recoveryUsername').value;
+  const code = modal.querySelector('#recoveryCode');
+  const password = modal.querySelector('#recoveryPassword');
+  const error = modal.querySelector('#recoveryError');
+  const showError = message => {
+    error.textContent = message;
+    error.hidden = false;
+  };
+  error.hidden = true;
+  if (!username.trim() || !/^[0-9a-f]{64}$/.test(code.value) || password.value.length < 15) {
+    showError('请输入原用户名、完整恢复码和至少 15 个字符的新密码。');
+    return;
+  }
+  const result = await communityApi.resetPassword(username, code.value, password.value);
+  if (!modal.contains(code) || !modal.classList.contains('visible')) return;
+  if (result.error) {
+    showError(result.error);
+    return;
+  }
+  code.value = '';
+  password.value = '';
+  modal.querySelector('[data-tab="login"]').click();
+  modal.querySelector('#loginUsername').value = username;
+  modal.querySelector('#loginPassword').value = '';
+  modal.querySelector('#loginError').style.display = 'none';
+  const status = modal.querySelector('#recoverySuccess');
+  status.textContent = '密码已重置，请使用新密码登录。';
+  status.hidden = false;
+  modal.querySelector('#loginPassword').focus();
+}
+
 // 关闭认证模态框
 function closeAuthModal() {
   const modal = document.getElementById('authModal');
-  if (modal) modal.classList.remove('visible');
+  if (modal) {
+    modal.classList.remove('visible');
+    modal.querySelectorAll('input[type="password"]').forEach(input => { input.value = ''; });
+  }
 }
 
 // 更新用户菜单
@@ -658,6 +718,8 @@ export function initCommunity() {
   if (initialized) return;
   initialized = true;
   updateUserMenu();
+  document.addEventListener('community-session-expired', updateUserMenu);
+  if (communityApi.isLoggedIn()) void communityApi.getCurrentUser();
 
   // 全局事件委托：帖子卡片、分类筛选、分页、模态框关闭等（innerHTML 重写后依然生效）
   document.addEventListener('click', (e) => {
@@ -682,7 +744,8 @@ export function initCommunity() {
     // 点击模态框外部关闭
     const modal = e.target.closest('.modal-overlay');
     if (modal && e.target === modal && modal.classList.contains('visible')) {
-      modal.classList.remove('visible');
+      if (modal.id === 'authModal') closeAuthModal();
+      else modal.classList.remove('visible');
       return;
     }
 

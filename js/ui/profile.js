@@ -40,10 +40,14 @@ export async function openUserProfile(userId) {
   state.navigateTo('profile');
   ++profileVersion; ++tabVersion;
   currentUserId = userId;
-  currentTab = 'reading';
+  currentTab = isOwnProfile(userId) ? 'reading' : 'posts';
   const content = document.getElementById(PROFILE_CONTENT_ID);
   if (content) content.innerHTML = '<div class="empty-state">加载中...</div>';
   await renderProfile();
+}
+
+function isOwnProfile(userId) {
+  return Number(state.getCurrentUserId()) === Number(userId);
 }
 
 async function renderProfile() {
@@ -51,11 +55,12 @@ async function renderProfile() {
   if (!content || !currentUserId) return;
   const version = profileVersion;
   const userId = currentUserId;
+  const ownProfile = isOwnProfile(userId);
   try {
     const [profileRes, postsRes, progressRes] = await Promise.all([
       communityApi.getUserProfile(userId),
       communityApi.getUserPosts(userId, 1, 20),
-      communityApi.getUserReadingProgress(userId),
+      ownProfile ? communityApi.getUserReadingProgress(userId) : null,
     ]);
 
     if (version !== profileVersion) return;
@@ -89,7 +94,7 @@ async function renderProfile() {
           </div>
         </div>
         <div class="profile-stats">
-          <div class="stat-item"><span class="stat-num">${stats.books_count || 0}</span><span class="stat-label">在读古籍</span></div>
+          ${ownProfile ? `<div class="stat-item"><span class="stat-num">${stats.books_count || 0}</span><span class="stat-label">在读古籍</span></div>` : ''}
           <div class="stat-item"><span class="stat-num">${stats.post_count || 0}</span><span class="stat-label">帖子</span></div>
           <div class="stat-item"><span class="stat-num">${stats.total_likes || 0}</span><span class="stat-label">获赞</span></div>
           <div class="stat-item"><span class="stat-num">${stats.total_views || 0}</span><span class="stat-label">阅读量</span></div>
@@ -98,7 +103,7 @@ async function renderProfile() {
       </div>
 
       <div class="profile-tabs">
-        <button class="tab-btn ${currentTab === 'reading' ? 'active' : ''}" data-profile-tab="reading">读书进度 <span class="tab-count">${(progressRes.progress || []).length}</span></button>
+        ${ownProfile ? `<button class="tab-btn ${currentTab === 'reading' ? 'active' : ''}" data-profile-tab="reading">读书进度 <span class="tab-count">${(progressRes?.progress || []).length}</span></button>` : ''}
         <button class="tab-btn ${currentTab === 'posts' ? 'active' : ''}" data-profile-tab="posts">发帖记录 <span class="tab-count">${postsRes.total || 0}</span></button>
       </div>
 
@@ -173,6 +178,7 @@ function renderTabBody(tab, postsRes, progressRes) {
 
 async function handleTabSwitch(tab) {
   if (tab !== 'reading' && tab !== 'posts') return;
+  if (tab === 'reading' && !isOwnProfile(currentUserId)) return;
   currentTab = tab;
   const version = ++tabVersion;
   const userId = currentUserId;

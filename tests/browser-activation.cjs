@@ -97,6 +97,12 @@ const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
      if(p==='/api/query')return reply({results:[{paragraph:{...f.chapters['shuyuci-01'].paragraphs[0],classic_id:'shuyuci',chapter_title:'春日闲情'},annotations:f.chapters['shuyuci-01'].paragraphs[0].annotations}]});
      if(p==='/api/analyze'||p==='/api/annotation/interpret')return s.aiValidated?reply({analysis:'TEST ONLY AI response fixture',interpretation:'TEST ONLY AI response fixture',generation_status:'validated',ai_response_id:s.aiResponseId,readings:[],sources:[]}):reply({error:'TEST ONLY AI unavailable'},503);
      if(p.endsWith('/reading-progress'))return reply({ok:true});
+     if(p==='/api/community/reset-password'){
+      const body=JSON.parse(options.body);
+      return body.code==='a'.repeat(64)
+       ? reply({message:'密码已重置，请使用新密码登录。'})
+       : reply({error:'恢复码无效、已过期或已使用'},401);
+     }
      if(p.endsWith('/categories'))return reply([{id:1,name:'测试分类'}]);
      if(p.endsWith('/comments'))return reply([]);
      if(p==='/api/community/posts/1')return reply({post:{id:1,title:'测试帖子',content:'TEST ONLY',user_id:999,nickname:'测试作者',created_at:'2026-01-01',comment_count:0,like_count:0}});
@@ -128,6 +134,23 @@ const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
   if(feedbackMode){await require('./feedback-browser-scenarios.cjs')({open,tap,evaluate,until,check,call,delay,screenshot,reload,report,output,fs});}
   else if(analyticsMode){await require('./analytics-browser-scenarios.cjs')({open,tap,evaluate,until,check,call,delay,screenshot,reload,report,output,fs});}
   else {
+  await check('移动端旧账号密码重置与登录回跳',async()=>{
+   await open({width:390});
+   await tap('#loginBtn');
+   await tap('[data-tab="recovery"]');
+   await evaluate(`document.getElementById('recoveryUsername').value='legacy-browser-fixture';
+    document.getElementById('recoveryCode').value='b'.repeat(64);
+    document.getElementById('recoveryPassword').value='isolated-browser-fixture-password';`);
+   await tap('#authSubmit');
+   await until("!document.getElementById('recoveryError').hidden");
+   assert.match(await evaluate("document.getElementById('recoveryError').textContent"),/恢复码无效/);
+   await evaluate("document.getElementById('recoveryCode').value='a'.repeat(64)");
+   await tap('#authSubmit');
+   await until("!document.getElementById('recoverySuccess').hidden");
+   assert.equal(await evaluate("document.getElementById('loginUsername').value"),'legacy-browser-fixture');
+   assert.ok(await evaluate("!document.getElementById('recoveryCode').value && !document.getElementById('recoveryPassword').value"));
+   assert.equal(await evaluate("localStorage.getItem('community_token')"),null);
+  });
   for(const width of [375,390,768,1440])await check(`完整触屏/鼠标流程 ${width}px`,async()=>{
    await open({width});await tap('#startReadingExperience',width);
    await until('!document.getElementById("readerGuide").hidden && document.querySelector(".is-reading-target")?.dataset.id==="shuyuci-01-01"');
