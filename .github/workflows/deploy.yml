@@ -65,8 +65,9 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           ANALYTICS_ENABLED: ${{ vars.ANALYTICS_ENABLED }}
           ANALYTICS_ENVIRONMENT: production
-          ANALYTICS_HOST: ${{ vars.ANALYTICS_HOST }}
-          ANALYTICS_PROJECT_TOKEN: ${{ vars.ANALYTICS_PROJECT_TOKEN }}
+          POSTHOG_API_HOST: ${{ vars.POSTHOG_API_HOST }}
+          POSTHOG_PROJECT_KEY: ${{ vars.POSTHOG_PROJECT_KEY }}
+          ANALYTICS_UTM_ALLOWLIST: ${{ vars.ANALYTICS_UTM_ALLOWLIST }}
         run: |
           node cf-worker/scripts/deploy-pages.mjs
           node cf-worker/scripts/release-smoke.mjs
