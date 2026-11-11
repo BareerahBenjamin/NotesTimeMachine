@@ -64,13 +64,13 @@
 
 .section-header h2 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: var(--text-heading-1);
   color: var(--ink);
   margin-bottom: 12px;
 }
 
 .section-desc {
-  font-size: 1rem;
+  font-size: var(--text-body);
   color: var(--muted);
   line-height: 1.8;
 }
@@ -92,7 +92,7 @@
   padding: 12px 24px;
   border-radius: var(--radius);
   font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-size: var(--text-control);
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-flex;

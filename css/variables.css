@@ -14,12 +14,12 @@
   --accent: #8B3A2A;
   --accent2: #2E5A4C;
   --gold: #B8954F;
-  --han: #C4553A;
+  --han: #A6442F;
   --tang: #8B5E3C;
   --song: #2E5A4C;
   --ming: #6A4C93;
-  --qing: #4A6FA5;
-  --modern: #8B6914;
+  --qing: #46699C;
+  --modern: #806016;
   --ink-wash-1: rgba(60,70,80,0.25);
   --ink-wash-2: rgba(100,110,120,0.15);
   --ink-wash-3: rgba(44,36,32,0.10);
@@ -30,8 +30,23 @@
   --font-serif: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
   --font-display: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
   --font-mono: 'SF Mono', 'Monaco', monospace;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --text-small: .875rem;
+  --text-control: 1rem;
+  --text-body: 1rem;
+  --text-body-lg: 1.125rem;
+  --text-reading: 1.25rem;
+  --text-heading-3: 1.25rem;
+  --text-heading-2: 1.5rem;
+  --text-heading-1: clamp(1.75rem, 1.5rem + 1vw, 2rem);
+  --leading-heading: 1.4;
+  --leading-control: 1.45;
+  --leading-body: 1.75;
+  --leading-reading: 2.1;
   --radius: 8px;
   --radius-sm: 4px;
+  --radius-exhibit: 12px;
+  --radius-pill: 999px;
 }
 
 /* Dark Mode Variables */
@@ -48,8 +63,8 @@
   --gold: #E0B85A;
   --han: #E07050;
   --tang: #B88E5C;
-  --song: #5A9A6A;
-  --ming: #9A7CC3;
+  --song: #62A174;
+  --ming: #A587CF;
   --qing: #7A9FC5;
   --modern: #C8A040;
   --ink-wash-1: rgba(220,210,200,0.12);

@@ -124,7 +124,7 @@ function renderTabBody(tab, postsRes, progressRes) {
   if (tab === 'reading') {
     const list = progressRes?.progress || [];
     if (list.length === 0) {
-      return `<div class="empty-state">暂无读书进度<br><span style="font-size:14px;color:var(--muted);">登录后在读书页翻章或选段会自动记录</span></div>`;
+      return `<div class="empty-state">暂无读书进度<br><span style="font-size:var(--text-small);color:var(--muted);">登录后在读书页翻章或选段会自动记录</span></div>`;
     }
     return `
       <div class="reading-list">

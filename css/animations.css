@@ -53,7 +53,7 @@
   background: transparent;
   color: var(--muted);
   border-radius: var(--radius-sm);
-  font-size: 0.75rem;
+  font-size: var(--text-control);
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: var(--font-serif);
@@ -83,8 +83,9 @@
   left: 0;
   top: 4px;
   color: var(--rule);
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   width: 1.5rem;
   text-align: right;
 }
@@ -94,7 +95,7 @@
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 0.7rem;
+  font-size: var(--text-small);
   color: var(--muted);
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -177,16 +178,8 @@
   user-select: none;
 }
 
-.legend-item:hover {
-  opacity: 0.7;
-}
-
-.legend-item.dimmed {
-  opacity: 0.3;
-}
-
 .legend-reset {
-  font-size: 0.75rem;
+  font-size: var(--text-control);
   color: var(--accent);
   border: 1px solid var(--accent);
   padding: 2px 8px;
@@ -221,7 +214,7 @@
   border: 1px solid rgba(184,149,79,0.3);
   border-radius: var(--radius-sm);
   color: var(--gold);
-  font-size: 0.8rem;
+  font-size: var(--text-control);
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: var(--font-serif);
@@ -235,7 +228,7 @@
 
 .btn-interpret.active {
   background: var(--gold);
-  color: white;
+  color: var(--bg-paper);
   border-color: var(--gold);
 }
 
@@ -245,7 +238,7 @@
 }
 
 .interpret-icon {
-  font-size: 0.9rem;
+  font-size: var(--text-control);
 }
 
 .annotation-interpretation {
@@ -259,7 +252,7 @@
 
 .interpretation-loading {
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: var(--text-small);
   font-style: italic;
 }
 
@@ -268,7 +261,7 @@
 }
 
 .interpretation-label {
-  font-size: 0.75rem;
+  font-size: var(--text-small);
   color: var(--gold);
   font-weight: 600;
   margin-bottom: 8px;
@@ -276,14 +269,14 @@
 }
 
 .interpretation-text {
-  font-size: 0.9rem;
+  font-size: var(--text-body-lg);
   color: var(--ink-light);
-  line-height: 1.8;
+  line-height: var(--leading-body);
 }
 
 .interpretation-error {
   color: var(--accent);
-  font-size: 0.85rem;
+  font-size: var(--text-body);
 }
 
 /* Timeline item expanded state */

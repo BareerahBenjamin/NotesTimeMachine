@@ -14,7 +14,7 @@
   padding: 10px 16px;
   border: 1px solid var(--rule);
   border-radius: var(--radius);
-  font-size: 0.95rem;
+  font-size: var(--text-control);
   background: var(--bg-paper);
   color: var(--ink);
   font-family: var(--font-serif);
@@ -37,7 +37,7 @@
   color: white;
   border: none;
   border-radius: var(--radius);
-  font-size: 0.95rem;
+  font-size: var(--text-control);
   cursor: pointer;
   font-family: var(--font-serif);
   transition: all 0.3s ease;
@@ -80,13 +80,13 @@
 }
 
 .search-result-meta {
-  font-size: 0.8rem;
+  font-size: var(--text-small);
   color: var(--muted);
   margin-bottom: 4px;
 }
 
 .search-result-text {
-  font-size: 0.95rem;
+  font-size: var(--text-body);
   color: var(--ink);
   line-height: 1.6;
 }
@@ -95,14 +95,14 @@
   text-align: center;
   padding: 16px;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: var(--text-body);
 }
 
 .search-error {
   text-align: center;
   padding: 12px;
   color: var(--accent);
-  font-size: 0.9rem;
+  font-size: var(--text-body);
   background: rgba(139, 58, 42, 0.05);
   border-radius: var(--radius);
 }

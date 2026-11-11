@@ -29,8 +29,8 @@ body {
   font-family: var(--font-serif);
   background: var(--bg);
   color: var(--ink);
-  line-height: 1.8;
-  font-size: 16px;
+  line-height: var(--leading-body);
+  font-size: var(--text-body);
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.02em;
 }
@@ -58,9 +58,16 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  line-height: 1.4;
+  font-weight: 600;
+  line-height: var(--leading-heading);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
+
+h1 { font-size: var(--text-heading-1); }
+h2 { font-size: var(--text-heading-2); }
+h3, h4, h5, h6 { font-size: var(--text-heading-3); }
+p { text-wrap: pretty; overflow-wrap: anywhere; }
 
 a {
   color: var(--accent);
@@ -77,13 +84,19 @@ img {
   height: auto;
 }
 
-button {
+button, input, select, textarea {
   font-family: inherit;
-  cursor: pointer;
+  font-size: var(--text-control);
+  line-height: var(--leading-control);
 }
 
-input, textarea {
-  font-family: inherit;
+::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Utility Classes */

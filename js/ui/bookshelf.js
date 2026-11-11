@@ -16,7 +16,7 @@ const BOOK_COLORS = {
   zhushuzhen: 'linear-gradient(135deg, #8A2A4A 0%, #5A1A2A 100%)',
   weiwan: 'linear-gradient(135deg, #2A5A8A 0%, #1A3A5A 100%)',
   baitouyin: 'linear-gradient(135deg, #8A5A2A 0%, #5A3515 100%)',
-  gongci: 'linear-gradient(135deg, #6A8A6A 0%, #4A5A4A 100%)',
+  gongci: 'linear-gradient(135deg, #597659 0%, #4A5A4A 100%)',
   huange: 'linear-gradient(135deg, #7A4A6A 0%, #4A2A4A 100%)',
   taishanyin: 'linear-gradient(135deg, #4A6A8A 0%, #2A4A5A 100%)',
   caishuyuan: 'linear-gradient(135deg, #8A4A4A 0%, #5A2A2A 100%)',

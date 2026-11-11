@@ -6,7 +6,7 @@
 
 ## 1. 已有测试审计与复用
 
-已阅读 [V2-AUDIT.md](V2-AUDIT.md)、[AI-RELEASE-READINESS.md](AI-RELEASE-READINESS.md)、当前测试入口、最近的 [用户反馈交付](USER-FEEDBACK.md) 及其证据。
+本轮复用了前端审计证据、当前测试入口及 AI 和反馈验收资料。早期审计的界面测量、故障与恢复记录保存在本地 `docs/audit-evidence/`。 [AI 验收](AI-RELEASE-READINESS.md) · [用户反馈](USER-FEEDBACK.md)
 
 | 已有结论 | 本轮处理 |
 | --- | --- |

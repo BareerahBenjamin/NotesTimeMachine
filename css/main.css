@@ -4,22 +4,22 @@
    ======================================== */
 
 /* Core */
-@import url('variables.css?v=20260715g');
-@import url('reset.css?v=20260715g');
+@import url('variables.css?v=20261111b');
+@import url('reset.css?v=20261111b');
 
 /* Layout */
-@import url('header.css?v=20260715g');
-@import url('pages.css?v=20260715g');
-@import url('hero.css?v=20260715g');
-@import url('components.css?v=20260715g');
-@import url('search.css?v=20260715g');
+@import url('header.css?v=20261111b');
+@import url('pages.css?v=20261111b');
+@import url('hero.css?v=20261111b');
+@import url('components.css?v=20261111b');
+@import url('search.css?v=20261111b');
 
 /* Components */
-@import url('bookshelf.css?v=20260715g');
-@import url('reader.css?v=20260715g');
-@import url('authors.css?v=20260715g');
-@import url('sections.css?v=20260715g');
+@import url('bookshelf.css?v=20261111b');
+@import url('reader.css?v=20261111b');
+@import url('authors.css?v=20261111b');
+@import url('sections.css?v=20261111b');
 
 /* Utilities */
-@import url('animations.css?v=20260715g');
-@import url('responsive.css?v=20260715g');
+@import url('animations.css?v=20261111b');
+@import url('responsive.css?v=20261111b');
