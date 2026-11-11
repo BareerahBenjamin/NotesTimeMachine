@@ -33,7 +33,6 @@ export function toggleAuthorDetail(bookId) {
 
   content.innerHTML = `
     <div class="modal-header-band" style="background: ${data.color}"></div>
-    <button class="modal-close" data-action="closeAuthorDetail">&#x2715;</button>
 
     <div class="author-profile-header">
       <div class="author-avatar-large" style="--avatar-bg: ${data.color}; --avatar-text: white">

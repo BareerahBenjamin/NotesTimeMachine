@@ -1,0 +1,33 @@
+name: V2 checks
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: cf-worker/package-lock.json
+      - run: npm ci
+        working-directory: cf-worker
+      - run: npm run typecheck && npm test
+        working-directory: cf-worker
+      - run: node tests/analytics.mjs
+      - run: node cf-worker/scripts/deploy-pages.mjs --prepare-only
+        env:
+          BRANCH: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+      - run: npx --no-install wrangler deploy --dry-run
+        working-directory: cf-worker

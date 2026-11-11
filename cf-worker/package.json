@@ -4,15 +4,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --var ENVIRONMENT:development",
     "deploy": "wrangler deploy",
-    "types": "wrangler types",
+    "types": "wrangler types src/worker-env.d.ts --include-runtime false --strict-vars false --env-interface WorkerBindings",
     "db:init": "wrangler d1 execute zhushu-community --remote --file ./schema.sql",
     "db:init:local": "wrangler d1 execute zhushu-community --local --file ./schema.sql",
     "r2:upload": "node scripts/upload-r2.mjs",
-    "vectorize:insert": "node scripts/vectorize-insert.mjs"
+    "vectorize:insert": "node scripts/vectorize-insert.mjs",
+    "dev:proxy": "node scripts/dev-proxy.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node tests/reliability.mjs && node tests/grounding.mjs && node tests/dev-transport.mjs && node tests/activation-feedback.mjs && node tests/feedback-workflow.mjs"
   },
   "dependencies": {
+    "@noble/hashes": "2.4.0",
     "hono": "^4.6.0",
     "jose": "^5.9.0"
   },

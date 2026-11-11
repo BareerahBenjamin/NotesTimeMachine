@@ -1,3 +1,6 @@
+import { scrollBehavior } from './motion/index.js';
+import { writePageRoute } from './readingRoute.js';
+
 /**
  * 全局状态管理（极简 Store）
  */
@@ -11,6 +14,7 @@ export const state = {
   apiAvailable: false,
   timelineFilter: null,
   previousPage: 'home',
+  guidedExample: null,
   pendingRead: null, // { classicId, chapterIndex, paragraphId? }
 
   reset() {
@@ -21,25 +25,30 @@ export const state = {
     this.selectedParagraph = null;
     this.timelineFilter = null;
     this.pendingRead = null;
+    this.guidedExample = null;
   },
 };
 
-export function navigateTo(pageId) {
-  if (!pageId) return;
-  const pages = document.querySelectorAll('.page');
-  let matched = false;
-  pages.forEach(p => {
-    if (p.id === `page-${pageId}`) {
-      p.classList.add('active');
-      matched = true;
-    } else {
-      p.classList.remove('active');
-    }
+export function navigateTo(pageId, {history=true}={}) {
+  const target = document.getElementById(`page-${pageId}`);
+  if (!target) return;
+  const current = document.querySelector('.page.active');
+  if (current === target) return;
+  if(history)writePageRoute(pageId);
+  state.previousPage = current?.id.replace('page-', '') || 'home';
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.toggle('active', page === target);
+    page.inert = page !== target;
   });
-  if (matched) {
-    state.previousPage = pageId;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  document.querySelectorAll('.nav-link[data-page], .mobile-nav-link[data-page]').forEach(link => {
+    const active = link.dataset.page === pageId;
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+  document.getElementById('mainContent')?.focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: scrollBehavior() });
+  document.dispatchEvent(new CustomEvent('page-change', { detail: { pageId } }));
 }
 
 export function getPreviousPage() {

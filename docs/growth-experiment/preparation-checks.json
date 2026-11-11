@@ -1,0 +1,16 @@
+{
+  "scope": "Offline preparation checks; 8 synthetic capture calls intercepted in memory, NOT real users or platform data",
+  "checked_at": "2026-11-06T14:14:16.825Z",
+  "draft_units": 8,
+  "channel_pairs": 4,
+  "utm_accepted_by_current_capture_interface": "PASS",
+  "same_channel_counterbalance": "PASS",
+  "all_result_fields_null": "PASS",
+  "all_urls_unconfigured": "PASS",
+  "local_document_links": 7,
+  "production_analytics_still_disabled": true,
+  "network_requests": 0,
+  "product_config_mutations": 0,
+  "posts_published": 0,
+  "real_interviews_conducted": 0
+}

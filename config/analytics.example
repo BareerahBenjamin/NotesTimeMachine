@@ -1,0 +1,8 @@
+# Copy to .env.analytics (ignored). Leave disabled until an actual project is configured.
+# This is a PUBLIC project capture token, never a personal/secret API key.
+ANALYTICS_ENABLED=false
+POSTHOG_PROJECT_KEY=
+POSTHOG_API_HOST=
+ANALYTICS_ENVIRONMENT=development
+# Approved non-personal campaign labels only; missing labels are omitted, not guessed.
+ANALYTICS_UTM_ALLOWLIST={"source":[],"medium":[],"campaign":[]}

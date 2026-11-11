@@ -11,21 +11,30 @@ function getAuthHeaders() {
   return token ? { 'Authorization': `Bearer ${token}` } : {};
 }
 
-async function request(url, options = {}) {
+async function request(url, { clearRejectedSession = false, ...options } = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 30000);
   try {
+    const auth = getAuthHeaders();
     const resp = await fetch(url, {
-      headers: { 'Content-Type': 'application/json', ...getAuthHeaders(), ...options.headers },
       ...options,
+      headers: { 'Content-Type': 'application/json', ...auth, ...options.headers },
+      signal: controller.signal,
     });
     const data = await resp.json().catch(() => ({}));
     if (!resp.ok) {
+      if (clearRejectedSession && resp.status === 401 && auth.Authorization &&
+          auth.Authorization === getAuthHeaders().Authorization) {
+        clearUserSession();
+        document.dispatchEvent(new Event('community-session-expired'));
+      }
       return { error: data.error || `请求失败 (${resp.status})` };
     }
     return data;
   } catch (e) {
     console.error('Request error:', e);
     return { error: '网络错误，请检查连接' };
-  }
+  } finally { clearTimeout(timer); }
 }
 
 // ==================== 认证相关（使用 Edge Functions）====================
@@ -44,8 +53,15 @@ export async function register(username, password, nickname) {
   });
 }
 
+export async function resetPassword(username, code, password) {
+  return request(`${COMMUNITY_API}/reset-password`, {
+    method: 'POST',
+    body: JSON.stringify({ username, code, password }),
+  });
+}
+
 export async function getCurrentUser() {
-  const result = await request(`${COMMUNITY_API}/user`);
+  const result = await request(`${COMMUNITY_API}/user`, { clearRejectedSession: true });
   if (result && !result.error) return result;
   return null;
 }
@@ -57,7 +73,7 @@ export async function getCategories() {
   if (Array.isArray(result)) return result;
   if (result && !result.error && Array.isArray(result.data)) return result.data;
   console.warn('获取分类失败:', result?.error);
-  return [];
+  throw new Error(result?.error || '分类加载失败');
 }
 
 // ==================== 帖子相关 ========================
@@ -70,7 +86,7 @@ export async function getPosts(categoryId = null, page = 1) {
 
   if (result?.error) {
     console.error('Error fetching posts:', result.error);
-    return { posts: [], total_pages: 0, page: 1 };
+    return { error: result.error, posts: [], total_pages: 0, page: 1 };
   }
 
   const posts = (result.posts || []).map((post) => ({
@@ -150,7 +166,7 @@ export async function getComments(postId) {
   const result = await request(`${COMMUNITY_API}/posts/${postId}/comments`);
   if (result?.error) {
     console.error('Error fetching comments:', result.error);
-    return [];
+    throw new Error(result.error);
   }
   const list = Array.isArray(result) ? result : (result.data || []);
   return list.map((comment) => ({

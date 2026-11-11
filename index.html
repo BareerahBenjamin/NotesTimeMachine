@@ -4,28 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>注疏时光机 - 女性古典文学注疏</title>
-  <link rel="icon" type="image/png" href="images/icon.png?v=20260715g">
-  <link rel="shortcut icon" type="image/png" href="images/icon.png?v=20260715g">
-  <link rel="apple-touch-icon" href="images/icon.png?v=20260715g">
-  <!-- Google Fonts (国内镜像) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
-  <!-- 备用：fonts.loli.net 镜像 -->
-  <!-- <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet"> -->
+  <link rel="icon" type="image/png" href="images/icon-small.png?v=20261019">
+  <link rel="shortcut icon" type="image/png" href="images/icon-small.png?v=20261019">
+  <link rel="apple-touch-icon" href="images/icon-small.png?v=20261019">
+  <!-- Native Chinese serif stacks keep the literary typography without remote font blocking or swaps. -->
   <link rel="stylesheet" href="css/main.css?v=20260715g">
   <link rel="stylesheet" href="css/community.css?v=20260715g">
+  <link rel="stylesheet" href="css/v2.css?v=20261019">
+  <link rel="stylesheet" href="css/motion.css?v=20261019">
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">跳至主要内容</a>
   <!-- Header -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <div class="logo" data-action="navigateToHome">
-        <img class="logo-icon" src="images/icon.png?v=20260715g" alt="注疏时光机">
-        <span class="logo-text">注疏时光机</span>
-      </div>
-      <nav class="nav" id="mainNav">
-        <a href="#" class="nav-link active" data-page="home">首页</a>
+      <button class="logo" data-action="navigateToHome" aria-label="注疏时光机，返回首页">
+        <img class="logo-icon" width="32" height="32" src="images/icon-small.png?v=20261019" alt="注疏时光机">
+        <span class="logo-text">注疏时光机<span class="brand-caption">WOMEN’S WORDS THROUGH TIME</span></span>
+      </button>
+      <nav class="nav" id="mainNav" aria-label="主导航">
+        <a href="#" class="nav-link active" data-page="home" aria-current="page">首页</a>
         <a href="#" class="nav-link" data-page="authors">作者</a>
         <a href="#" class="nav-link" data-page="bookshelf">书架</a>
         <a href="#" class="nav-link" data-page="community">社区</a>
@@ -36,11 +34,11 @@
           <span class="theme-icon-light">&#x2600;</span>
           <span class="theme-icon-dark">&#x263D;</span>
         </button>
-        <button class="menu-toggle" id="menuToggle" aria-label="菜单">&#x2630;</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="菜单" aria-expanded="false" aria-controls="mobileMenu">&#x2630;</button>
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#" class="mobile-nav-link active" data-page="home">首页</a>
+      <a href="#" class="mobile-nav-link active" data-page="home" aria-current="page">首页</a>
       <a href="#" class="mobile-nav-link" data-page="authors">作者</a>
       <a href="#" class="mobile-nav-link" data-page="bookshelf">书架</a>
       <a href="#" class="mobile-nav-link" data-page="community">社区</a>
@@ -48,71 +46,43 @@
   </header>
 
   <!-- Page Container -->
-  <main class="page-container">
+  <main class="page-container" id="mainContent" tabindex="-1">
 
     <!-- Home Page -->
     <section class="page page-home active" id="page-home">
-      <!-- Hero Section -->
       <div class="hero">
-        <div class="hero-mountains">
-          <div class="mountain-back">
-            <svg viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 200L60 180C120 160 240 120 360 110C480 100 600 120 720 130C840 140 960 140 1080 120C1200 100 1320 60 1380 40L1440 20V200H0Z" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="mountain-front">
-            <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 160L80 140C160 120 320 80 480 70C640 60 800 80 960 100C1120 120 1280 100 1360 90L1440 80V160H0Z" fill="currentColor"/>
-            </svg>
-          </div>
-        </div>
         <div class="container">
-          <div class="hero-authors-float">
-            <span class="author-float-name" style="--delay:0">班婕妤</span>
-            <span class="author-float-name" style="--delay:1">卓文君</span>
-            <span class="author-float-name" style="--delay:2">班昭</span>
-            <span class="author-float-name" style="--delay:3">蔡文姬</span>
-            <span class="author-float-name" style="--delay:4">谢道韫</span>
-            <span class="author-float-name" style="--delay:5">上官婉儿</span>
-            <span class="author-float-name" style="--delay:6">薛涛</span>
-            <span class="author-float-name" style="--delay:7">李冶</span>
-            <span class="author-float-name" style="--delay:8">鱼玄机</span>
-            <span class="author-float-name" style="--delay:9">花蕊夫人</span>
-            <span class="author-float-name" style="--delay:10">李清照</span>
-            <span class="author-float-name" style="--delay:11">朱淑真</span>
-            <span class="author-float-name" style="--delay:12">黄峨</span>
-            <span class="author-float-name" style="--delay:13">顾太清</span>
-          </div>
-          <h1 class="hero-title">听历代学者如何品读她们的文字</h1>
-          <p class="hero-subtitle">Women's Classical Literature Through Time</p>
-          <div class="hero-divider"></div>
-          <p class="hero-desc">
-            从李清照的婉约词风，到班昭的女教经典——<br>
-            点击任一句古籍，展开历代注疏时间轴，看千年学术对话如何诠释她们的才华。
-          </p>
-          
-          <!-- Semantic Search on Home Page -->
-          <div class="hero-search">
-            <div class="search-bar">
-              <input type="text" id="heroSemanticSearch" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
-              <button class="btn btn-search" data-action="semanticSearch">检索</button>
+          <div class="exhibit-masthead"><span>中国女性古典文学 · 数字典藏</span><span>A LITERARY JOURNEY ACROSS TIME</span></div>
+          <div class="hero-layout">
+            <div class="hero-copy">
+              <p class="eyebrow" data-hero-enter>一字一句，自有回响 / EST. IN LITERATURE</p>
+              <h1 data-hero-enter>循着她的文字，<br>与<em>千年</em>相逢。</h1>
+              <div data-hero-enter>
+                <p class="hero-desc">阅读中国女性古典文学，<br>对照馆藏注疏、核对文献出处，<br>用 AI 辅助理解，不把生成解释当作史实。</p>
+                <div class="hero-actions"><button id="startReadingExperience" class="btn btn-primary" data-action="startReadingExperience" aria-controls="activationStatus">开启一场千年阅读 <span aria-hidden="true">↗</span></button><button class="btn btn-secondary" data-action="navigateToBookshelf">浏览全部作品</button><button class="btn btn-secondary" data-action="navigateToAuthors">认识她们</button></div>
+                <p class="activation-access-note">无需注册 · 原文与注疏先读，AI 解读按需开启</p>
+                <div id="activationStatus" class="activation-status" role="status" aria-live="polite" hidden></div>
+                <div class="hero-search"><div class="search-bar"><input type="search" id="heroSemanticSearch" aria-label="检索古籍原文" placeholder="以一个词，寻一段共鸣…"><button class="btn btn-search" data-action="semanticSearch">检索</button></div><div class="search-results" id="heroSearchResults" aria-live="polite"></div><p class="search-caption">跨书语义检索 · 试试「相思」「离愁」「春日」</p></div>
+              </div>
             </div>
-            <div class="search-results" id="heroSearchResults"></div>
+            <article class="poem-exhibit" aria-label="今日展签：李清照如梦令">
+              <div><p class="exhibit-label">每日一笺 / THE DAILY VERSE</p><div class="poem-title"><h2>如梦令</h2><span>宋 · 李清照</span></div><p class="poem-lines">昨夜雨疏风骤，<br>浓睡不消残酒。<br>试问卷帘人，却道海棠依旧。<br><span class="accent-line">知否，知否？<br>应是绿肥红瘦。</span></p><button class="exhibit-link" data-action="selectBook" data-book="shuyuci">读原文 · 查看馆藏注疏 <span aria-hidden="true">→</span></button></div>
+              <div class="exhibit-side" aria-hidden="true">一卷藏千年 · 一读见天地</div><span class="exhibit-seal" aria-hidden="true">漱玉</span>
+            </article>
+            <div class="ink-landscape" data-parallax aria-hidden="true"><svg viewBox="0 0 800 200" preserveAspectRatio="none"><path d="M0 180Q45 164 78 149T138 146Q163 112 190 83Q203 69 220 96L240 111Q262 72 280 92Q317 121 355 154Q393 133 420 108Q437 99 455 127Q497 99 528 56Q541 35 558 61Q583 83 605 112Q631 69 650 85Q687 115 720 145Q757 119 800 110V200H0Z" fill="currentColor" opacity=".25"/><path d="M0 200Q72 174 125 176T195 185Q239 160 280 144Q307 130 340 166Q399 135 450 128Q481 121 510 154Q548 112 580 117Q625 132 670 163Q713 126 740 132T800 149V200Z" fill="currentColor" opacity=".35"/><path d="M0 195Q180 170 340 190T800 180V200H0Z" fill="currentColor"/></svg></div>
           </div>
-          
-          <div class="hero-actions">
-            <button class="btn btn-primary" data-action="navigateToBookshelf">
-              浏览书架
-            </button>
-            <button class="btn btn-secondary" data-action="navigateToAuthors">
-              认识作者
-            </button>
-          </div>
-          <div class="hero-scroll-hint">
-            <span>&#x25BD;</span>
-          </div>
+          <div class="hero-bottom"><span><b>17</b> 部传世作品</span><span>西汉 <span aria-hidden="true">——</span> 清代 · 跨越两千年的女性书写</span><span>向下展卷 ↓</span></div>
         </div>
       </div>
+      <section class="container home-collection" aria-labelledby="collectionTitle">
+        <div class="collection-heading" data-reveal><div><p class="eyebrow">01 / THE COLLECTION</p><h2 id="collectionTitle">在字里行间，遇见她们</h2></div><button class="text-link" data-action="navigateToBookshelf">全部馆藏 ↗</button></div>
+        <div class="collection-grid">
+          <article class="collection-card" data-reveal><p class="eyebrow">宋代 · 词</p><h3>漱玉词</h3><p>李清照 / 婉约词中的日常与生命</p><p class="collection-quote">「应是绿肥红瘦。」</p><button data-book="shuyuci" data-action="selectBook">展开此卷 →</button></article>
+          <article class="collection-card" data-reveal><p class="eyebrow">唐代 · 诗</p><h3>薛涛诗</h3><p>薛涛 / 浣花溪畔的诗意回声</p><p class="collection-quote">「花开不同赏，花落不同悲。」</p><button data-book="xuetao" data-action="selectBook">展开此卷 →</button></article>
+          <article class="collection-card" data-reveal><p class="eyebrow">西汉 · 乐府</p><h3>白头吟</h3><p>卓文君 / 爱情里的坚定与自持</p><p class="collection-quote">「愿得一心人，白头不相离。」</p><button data-book="baitouyin" data-action="selectBook">展开此卷 →</button></article>
+        </div>
+      </section>
+      <section class="container reading-journey" aria-labelledby="journeyTitle"><p class="eyebrow">02 / HOW TO READ</p><h2 id="journeyTitle">一行原文，多重回声。</h2><div class="journey-steps"><article class="journey-step" data-reveal><span>01 / 寻</span><h3>找到共鸣</h3><p>从书架选一部作品，或用关键词检索古籍。</p></article><article class="journey-step" data-reveal><span>02 / 读</span><h3>走入原文</h3><p>静心阅读，选中一句想进一步了解的文字。</p></article><article class="journey-step" data-reveal><span>03 / 对照</span><h3>听历代回声</h3><p>沿时间轴比较不同时代的注疏与理解。</p></article><article class="journey-step" data-reveal><span>04 / 理解</span><h3>读见思想脉络</h3><p>借助 AI 辅助解读，回到文本形成自己的判断。</p></article></div></section>
     </section>
 
     <!-- Authors Page -->
@@ -321,7 +291,7 @@
       <div class="container">
         <div class="section-header">
           <h2>古籍书架</h2>
-          <p class="section-desc">点击书脊，开启一段穿越千年的阅读之旅</p>
+          <p class="section-desc">十七部传世作品 · 从一卷书，走进她的时代</p>
         </div>
         
         <div class="bookshelf" id="bookshelf">
@@ -349,10 +319,10 @@
 
         <!-- Semantic Search -->
         <div class="search-bar">
-          <input type="text" id="readerSemanticSearch" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
+          <input type="text" id="readerSemanticSearch" aria-label="跨书语义检索" placeholder="跨书语义搜索（如：相思、离愁、妇德、悲愤）...">
           <button class="btn btn-search" data-action="semanticSearch">检索</button>
         </div>
-        <div class="search-results" id="readerSearchResults"></div>
+        <div class="search-results" id="readerSearchResults" aria-live="polite"></div>
 
         <!-- Current Book Header -->
         <div class="current-book-header" id="currentBookHeader">
@@ -368,18 +338,22 @@
             </div>
           </div>
           <span class="chapter-nav" id="chapterNav">
-            <button class="btn-nav" data-action="prevChapter">&#x25C0;</button>
+            <button class="btn-nav" data-action="prevChapter" aria-label="上一章">&#x25C0;</button>
             <span id="chapterIndicator">1/1</span>
-            <button class="btn-nav" data-action="nextChapter">&#x25B6;</button>
+            <button class="btn-nav" data-action="nextChapter" aria-label="下一章">&#x25B6;</button>
           </span>
         </div>
+        <p id="readingStatus" class="reading-status" role="status" aria-live="polite"></p>
 
+        <p class="reader-access-note">匿名即可阅读。跨设备保存进度、发帖和评论需登录。</p>
+        <section id="readerGuide" class="reader-guide" aria-label="阅读指引" hidden></section>
+        <div class="reading-workspace">
         <!-- Main Reader -->
         <div class="reader-container">
           <div class="panel panel-original">
             <div class="panel-header">
               <h3>原文</h3>
-              <span class="panel-badge">点击句子查看注疏</span>
+              <span class="panel-badge">选一句，查看注疏与来源</span>
             </div>
             <div class="panel-ornament"></div>
             <div class="text-content" id="originalText">
@@ -389,39 +363,43 @@
         </div>
 
         <!-- Detail Panels: Timeline + AI -->
-        <div class="detail-panels" id="detailPanels">
-          <div class="panel panel-timeline" id="timelinePanel">
+        <div class="detail-panels" id="detailPanels" inert aria-hidden="true">
+          <div class="panel panel-timeline" id="timelinePanel" tabindex="-1" role="region" aria-labelledby="timelineTitle">
             <div class="panel-header">
-              <h3>历代注疏时间轴</h3>
-              <button class="close-timeline" data-action="closeTimeline">&#x2715;</button>
+              <h3 id="timelineTitle">历代注疏时间轴</h3>
+              <button class="close-timeline" data-action="closeTimeline" aria-label="关闭注疏">&#x2715;</button>
             </div>
             <div class="panel-scroll" id="timelineScroll">
               <div class="timeline-selected-sentence" id="selectedSentence"></div>
+              <div class="era-navigation" id="eraNavigation" aria-label="按时代选择注疏"></div>
               <div class="timeline-track" id="timelineTrack">
                 <!-- Timeline items -->
               </div>
             </div>
             <div class="timeline-legend">
-              <span class="legend-item" data-era="han" data-action="filterTimeline"><span class="dot dot-han"></span>汉代</span>
-              <span class="legend-item" data-era="tang" data-action="filterTimeline"><span class="dot dot-tang"></span>唐代</span>
-              <span class="legend-item" data-era="song" data-action="filterTimeline"><span class="dot dot-song"></span>宋代</span>
-              <span class="legend-item" data-era="ming" data-action="filterTimeline"><span class="dot dot-ming"></span>明代</span>
-              <span class="legend-item" data-era="qing" data-action="filterTimeline"><span class="dot dot-qing"></span>清代</span>
-              <span class="legend-item" data-era="modern" data-action="filterTimeline"><span class="dot dot-modern"></span>现代</span>
-              <span class="legend-item legend-reset" data-action="filterTimeline">全部</span>
+              <button class="legend-item" data-era="han" data-action="filterTimeline"><span class="dot dot-han"></span>汉代</button>
+              <button class="legend-item" data-era="tang" data-action="filterTimeline"><span class="dot dot-tang"></span>唐代</button>
+              <button class="legend-item" data-era="song" data-action="filterTimeline"><span class="dot dot-song"></span>宋代</button>
+              <button class="legend-item" data-era="ming" data-action="filterTimeline"><span class="dot dot-ming"></span>明代</button>
+              <button class="legend-item" data-era="qing" data-action="filterTimeline"><span class="dot dot-qing"></span>清代</button>
+              <button class="legend-item" data-era="modern" data-action="filterTimeline"><span class="dot dot-modern"></span>现代</button>
+              <button class="legend-item legend-reset" data-action="filterTimeline">全部</button>
             </div>
+            <div class="timeline-reading-actions"><button class="btn btn-secondary" data-action="continueReading">返回原文，继续阅读</button></div>
           </div>
 
           <div class="panel panel-ai-summary" id="aiSummary">
             <div class="panel-header">
-              <h3><span class="ai-icon">&#x2728;</span> AI 思想史脉络</h3>
+              <h3><span class="ai-icon">&#x2728;</span> AI 辅助解读</h3>
             </div>
+            <p class="ai-disclosure">AI 辅助生成，可能存在误读；请对照原文与注疏来源核实。</p>
             <div class="panel-scroll">
               <div class="ai-content" id="aiContent">
-                <p class="ai-placeholder">选中句子后，AI 将自动分析历代注疏的演变脉络与思想差异。</p>
+                <p class="ai-placeholder">先对照原文与注疏；需要时再开启 AI 辅助解读。</p>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -446,7 +424,7 @@
   <div class="author-detail-modal" id="authorDetail">
     <div class="modal-overlay" data-action="closeAuthorDetail"></div>
     <div class="modal-content">
-      <button class="modal-close" data-action="closeAuthorDetail">&#x2715;</button>
+      <button class="modal-close" data-action="closeAuthorDetail" aria-label="关闭作者简介">&#x2715;</button>
       <div class="author-detail-content" id="authorDetailContent">
         <!-- Dynamic content -->
       </div>
@@ -456,7 +434,7 @@
   <div class="book-detail-modal" id="bookDetail">
     <div class="modal-overlay" data-action="closeBookDetail"></div>
     <div class="modal-content">
-      <button class="modal-close" data-action="closeBookDetail">&#x2715;</button>
+      <button class="modal-close" data-action="closeBookDetail" aria-label="关闭作品详情">&#x2715;</button>
       <div class="book-detail-content" id="bookDetailContent">
         <!-- Dynamic content -->
       </div>
@@ -468,21 +446,34 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <img class="footer-logo-icon" src="images/icon.png?v=20260715g" alt="注疏时光机">
+          <img class="footer-logo-icon" width="26" height="26" src="images/icon-small.png?v=20261019" alt="注疏时光机">
           <span>注疏时光机</span>
         </div>
         <p class="footer-desc">
           让古籍阅读从"知道意思"提升到"理解思想史"
         </p>
         <p class="footer-meta">
-          TRAE AI 创造力大赛 · 学习工作 + 社会公益赛道
+          中国女性古典文学数字典藏 · 在文字中与千年相逢
         </p>
+        <button type="button" class="btn btn-secondary" id="analyticsSettings">分析与隐私设置</button>
+        <a class="privacy-link" href="privacy.html">隐私说明</a>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script type="module" src="js/main.js?v=20260715g"></script>
+  <section id="analyticsConsent" class="analytics-consent" aria-label="非必要分析选择" hidden>
+    <p id="analyticsConsentStatus" tabindex="-1" role="status"></p>
+    <p>允许后使用随机标识，将功能事件发送到 PostHog 以了解激活与回访；不关联登录账号，不发送搜索词、阅读笔记、评论、反馈或 AI 对话正文。不启用录屏。拒绝不影响阅读。</p>
+    <p>本机分析标识有效期 90 天，过期后下次访问清除。你可在页尾随时撤回；已发送的平台数据不会因本机清除自动删除。<a href="privacy.html">了解处理方式</a></p>
+    <div class="analytics-consent-actions">
+      <button type="button" class="btn btn-secondary" id="analyticsAllow">允许匿名分析</button>
+      <button type="button" class="btn btn-secondary" id="analyticsDeny">仅必要功能</button>
+      <button type="button" class="btn btn-secondary" id="analyticsDismiss">关闭设置</button>
+    </div>
+  </section>
+
+  <script async src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" src="js/main.js?v=20261019"></script>
   <script type="module" src="js/ui/profile.js?v=20260715g"></script>
 </body>
 </html>

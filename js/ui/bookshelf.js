@@ -1,7 +1,7 @@
 /**
  * 书架渲染与交互
  */
-import { BOOKS } from '../config.js';
+import { BOOKS, AUTHOR_DATA } from '../config.js';
 import { state } from '../state.js';
 
 const BOOK_COLORS = {
@@ -35,14 +35,18 @@ export function renderBookshelf(filter = '') {
     return;
   }
 
-  shelf.innerHTML = filteredBooks.map((book, i) => `
-    <div class="book-item ${book.id === state.currentBook ? 'active' : ''}"
-         data-book="${book.id}" data-action="selectBook"
-         style="animation-delay: ${i * 0.1}s">
-      <div class="book-spine" style="background: ${BOOK_COLORS[book.color] || BOOK_COLORS.nujie}">${book.name}</div>
-      <span class="book-label">${book.name}</span>
-    </div>
-  `).join('');
+  shelf.innerHTML = filteredBooks.map((book, i) => {
+    const author = AUTHOR_DATA[book.id];
+    return `
+    <article class="book-item ${book.id === state.currentBook ? 'active' : ''}" data-book="${book.id}">
+      <span class="book-catalog-num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
+      <button class="book-read" data-book="${book.id}" data-action="selectBook" aria-label="阅读《${book.name}》">
+        <span class="book-spine" style="background: ${BOOK_COLORS[book.color] || BOOK_COLORS.nujie}" aria-hidden="true">${book.name}</span>
+        <span><span class="book-meta">${author?.dynasty || '古典文学'}</span><span class="book-label">${book.name}</span><span class="book-meta">${author?.name || ''}<br>${book.chapter}</span></span>
+      </button>
+      <button class="book-detail-trigger" data-action="toggleBookDetail" aria-label="查看《${book.name}》详情">作品档案 <span aria-hidden="true">↗</span></button>
+    </article>`;
+  }).join('');
 }
 
 export function updateBookshelfActive(bookId) {
