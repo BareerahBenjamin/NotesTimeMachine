@@ -4,7 +4,7 @@
 
 面向古典文学读者、教师与学生的中国古代女性文学阅读站。站点收录从西汉到清代的 17 部作品。读者可以逐段阅读原文，在时间轴上对照不同时代的注疏，并展开来源详情。
 
-[线上体验](https://zhushu-notes.pages.dev) · [V2 发布前 QA](docs/V2-RELEASE-QA.md)
+[线上体验](https://zhushu-notes.pages.dev) · [V2 正式发布报告](docs/V2-PRODUCTION-RELEASE.md)
 
 ---
 
