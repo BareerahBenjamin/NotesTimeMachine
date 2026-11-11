@@ -1,0 +1,8 @@
+# Non-secret Worker vars; keep disabled until migrations and security are configured.
+FEEDBACK_ENABLED=false
+FEEDBACK_ALLOWED_ORIGINS=
+# Server secrets: FEEDBACK_RATE_LIMIT_SECRET and FEEDBACK_ADMIN_TOKEN (independent random >=32 characters).
+# Do not put either in frontend files or wrangler vars.
+# Internal CLI only; copy to ignored .env.feedback and fill securely, never commit.
+FEEDBACK_API_URL=
+FEEDBACK_REVIEW_TOKEN=

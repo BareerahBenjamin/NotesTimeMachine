@@ -2,16 +2,22 @@
  * 社区功能组件
  */
 import * as communityApi from './communityApi.js';
-import { state } from '../state.js';
+import { navigateTo } from '../state.js';
+import { scrollBehavior } from '../motion/index.js';
 
 let currentCategoryId = null;
 let currentPage = 1;
 let categories = [];
 let posts = [];
 let currentPost = null;
+let initialized = false;
+let listVersion = 0;
+let detailVersion = 0;
+let pageVersion = 0;
 
 // 渲染社区页面
 export async function renderCommunityPage() {
+  const version = ++pageVersion; ++detailVersion; ++listVersion;
   const container = document.getElementById('communityContent');
   if (!container) {
     console.error('communityContent container not found');
@@ -22,7 +28,7 @@ export async function renderCommunityPage() {
   container.innerHTML = `
     <div class="community-container">
       <div class="category-filter" id="categoryFilter">
-        <button class="category-btn active" data-category="">全部</button>
+        <button class="category-btn ${currentCategoryId == null ? 'active' : ''}" data-category="">全部</button>
         <div class="loading" style="padding: 0 16px;">加载分类...</div>
       </div>
       <button class="create-post-btn" id="createPostBtn" style="display: none;">
@@ -39,8 +45,10 @@ export async function renderCommunityPage() {
     // 加载分类
     await loadCategories();
 
+    if (version !== pageVersion) return;
     // 加载帖子
     await loadPosts();
+    if (version !== pageVersion) return;
 
     // 绑定事件
     bindCommunityEvents();
@@ -64,20 +72,22 @@ async function loadCategories() {
     const filterContainer = document.getElementById('categoryFilter');
     
     const categoryBtns = categories.map(cat => `
-      <button class="category-btn" data-category="${cat.id}" style="border-color: ${cat.color}">${cat.name}</button>
+      <button class="category-btn ${Number(currentCategoryId) === Number(cat.id) ? 'active' : ''}" data-category="${cat.id}" style="border-color: ${cat.color}">${cat.name}</button>
     `).join('');
     
     filterContainer.innerHTML = `
-      <button class="category-btn active" data-category="">全部</button>
+      <button class="category-btn ${currentCategoryId == null ? 'active' : ''}" data-category="">全部</button>
       ${categoryBtns}
     `;
   } catch (error) {
-    console.error('加载分类失败:', error);
+    const container = document.getElementById('categoryFilter');
+    if (container) container.innerHTML = '<button class="category-btn" data-category="">全部</button><span role="status">分类加载失败，请重试。</span>';
   }
 }
 
 // 加载帖子
 async function loadPosts(page = 1) {
+  const version = ++listVersion;
   currentPage = page;
   const postList = document.getElementById('postList');
   
@@ -85,6 +95,8 @@ async function loadPosts(page = 1) {
 
   try {
     const result = await communityApi.getPosts(currentCategoryId, page);
+    if (version !== listVersion || !postList.isConnected) return;
+    if (result.error) throw new Error(result.error);
     posts = result.posts || [];
     
     if (posts.length === 0) {
@@ -98,13 +110,13 @@ async function loadPosts(page = 1) {
     }
 
     postList.innerHTML = posts.map(post => `
-      <div class="post-card" data-post-id="${post.id}">
+      <div class="post-card" role="group" data-post-id="${post.id}">
         <div class="post-header">
           <span class="post-category" style="background-color: ${post.category_color || '#8B3A2A'}">${post.category_name || '综合交流'}</span>
-          <span class="post-author" data-user-id="${post.user_id || ''}" title="查看个人主页">${post.nickname || post.username}</span>
+          <button class="post-author" data-user-id="${post.user_id || ''}" title="查看个人主页">${escapeHtml(post.nickname || post.username)}</button>
           <span class="post-time">${communityApi.formatTime(post.created_at)}</span>
         </div>
-        <h3 class="post-title">${escapeHtml(post.title)}</h3>
+        <h3 class="post-title"><button class="post-open">${escapeHtml(post.title)}</button></h3>
         <p class="post-preview">${escapeHtml(post.content)}</p>
         <div class="post-stats">
           <span class="post-stat">阅读 ${post.view_count || 0}</span>
@@ -118,7 +130,7 @@ async function loadPosts(page = 1) {
     renderPagination(result);
   } catch (error) {
     console.error('加载帖子失败:', error);
-    postList.innerHTML = '<div class="empty-state">加载失败，请重试</div>';
+    postList.innerHTML = '<div class="empty-state" role="status">加载失败，请检查网络后重试。<button class="btn btn-secondary" data-action="retryCommunity">重新加载社区</button></div>';
   }
 }
 
@@ -151,17 +163,17 @@ function renderPostForm() {
       <div class="modal-body">
         <div class="form-group">
           <label class="form-label">分类</label>
-          <select class="form-select" id="postCategory">
+          <select class="form-select" id="postCategory" aria-label="话题分类">
             ${categories.map(cat => `<option value="${cat.id}">${cat.name}</option>`).join('')}
           </select>
         </div>
         <div class="form-group">
           <label class="form-label">标题</label>
-          <input type="text" class="form-input" id="postTitle" placeholder="请输入标题" maxlength="100">
+          <input type="text" class="form-input" id="postTitle" aria-label="话题标题" placeholder="请输入标题" maxlength="100">
         </div>
         <div class="form-group">
           <label class="form-label">内容</label>
-          <textarea class="form-textarea" id="postContent" placeholder="请输入内容" maxlength="10000"></textarea>
+          <textarea class="form-textarea" id="postContent" aria-label="话题内容" placeholder="请输入内容" maxlength="10000"></textarea>
         </div>
         <div class="form-error" id="postError" style="display: none;"></div>
       </div>
@@ -226,14 +238,20 @@ function closePostModal() {
 
 // 渲染帖子详情
 export async function renderPostDetail(postId) {
+  navigateTo('community');
+  const version = ++detailVersion; ++pageVersion; ++listVersion;
+  // Navigation can start a list refresh; this detail request supersedes it.
+  ++pageVersion; ++listVersion;
   const container = document.getElementById('communityContent');
   container.innerHTML = '<div class="community-container"><div class="loading">加载中...</div></div>';
 
   try {
-    currentPost = await communityApi.getPost(postId);
+    const post = await communityApi.getPost(postId);
+    if (version !== detailVersion) return;
+    currentPost = post;
     
     if (!currentPost || currentPost.error) {
-      container.innerHTML = '<div class="community-container"><div class="empty-state">帖子不存在</div></div>';
+      container.innerHTML = '<div class="community-container"><div class="empty-state">帖子加载失败，请返回社区重试。</div><button class="back-btn" data-action="backToCommunity">返回社区</button></div>';
       return;
     }
 
@@ -248,7 +266,7 @@ export async function renderPostDetail(postId) {
           <h1 class="post-detail-title">${escapeHtml(currentPost.title)}</h1>
           <div class="post-detail-meta">
             <span class="post-category" style="background-color: ${currentPost.category_color || '#8B3A2A'}">${currentPost.category_name || '综合交流'}</span>
-            <span data-user-id="${currentPost.user_id || ''}" title="查看个人主页">${currentPost.nickname || currentPost.username}</span>
+            <button data-user-id="${currentPost.user_id || ''}" title="查看个人主页">${escapeHtml(currentPost.nickname || currentPost.username)}</button>
             <span>${communityApi.formatTime(currentPost.created_at)}</span>
             <span>${currentPost.view_count || 0} 阅读</span>
           </div>
@@ -269,7 +287,7 @@ export async function renderPostDetail(postId) {
         <div class="comments-section" id="commentsSection">
           <h2 class="comments-header">评论</h2>
           <div class="comment-form" id="commentForm" style="display: none;">
-            <textarea class="comment-input" id="commentInput" placeholder="写下你的评论..." maxlength="1000"></textarea>
+            <textarea class="comment-input" id="commentInput" aria-label="评论内容" placeholder="写下你的评论..." maxlength="1000"></textarea>
             <button class="comment-submit" id="submitComment">发表评论</button>
           </div>
           <div class="comment-list" id="commentList">
@@ -283,6 +301,7 @@ export async function renderPostDetail(postId) {
     await loadComments(postId);
 
     // 绑定事件
+    if (version !== detailVersion) return;
     bindPostDetailEvents(postId);
   } catch (error) {
     console.error('加载帖子详情失败:', error);
@@ -307,7 +326,7 @@ async function loadComments(postId) {
     commentList.innerHTML = comments.map(comment => `
       <div class="comment-item" data-comment-id="${comment.id}">
         <div class="comment-header">
-          <span class="comment-author" data-user-id="${comment.user_id || ''}" title="查看个人主页">${escapeHtml(comment.nickname || comment.username)}</span>
+          <button class="comment-author" data-user-id="${comment.user_id || ''}" title="查看个人主页">${escapeHtml(comment.nickname || comment.username)}</button>
           <span class="comment-time">${communityApi.formatTime(comment.created_at)}</span>
           ${userInfo && userInfo.id === comment.user_id ? `<button class="comment-delete" data-action="deleteComment" data-comment-id="${comment.id}">删除</button>` : ''}
         </div>
@@ -339,9 +358,7 @@ function bindCommunityEvents() {
 // 绑定帖子详情事件
 function bindPostDetailEvents(postId) {
   // 返回
-  document.querySelector('[data-action="backToCommunity"]')?.addEventListener('click', () => {
-    renderCommunityPage();
-  });
+
 
   // 显示评论框
   const commentForm = document.getElementById('commentForm');
@@ -357,6 +374,7 @@ function bindPostDetailEvents(postId) {
     }
     
     const result = await communityApi.toggleLike(postId);
+    if (result.error) { alert(result.error); return; }
     const likeBtn = document.getElementById('likeBtn');
     const likeCount = document.getElementById('likeCount');
     
@@ -371,7 +389,8 @@ function bindPostDetailEvents(postId) {
 
   // 滚动到评论
   document.querySelector('[data-action="scrollToComments"]')?.addEventListener('click', () => {
-    document.getElementById('commentsSection')?.scrollIntoView({ behavior: 'smooth' });
+    if (!communityApi.isLoggedIn()) { showAuthModal(); return; }
+    document.getElementById('commentsSection')?.scrollIntoView({ behavior: scrollBehavior() });
     if (communityApi.isLoggedIn()) {
       document.getElementById('commentInput')?.focus();
     }
@@ -388,9 +407,12 @@ function bindPostDetailEvents(postId) {
   // 发表评论
   document.getElementById('submitComment')?.addEventListener('click', async () => {
     const content = document.getElementById('commentInput').value.trim();
-    if (!content) return;
-
+    const submit = document.getElementById('submitComment');
+    if (!content || submit.disabled) return;
+    submit.disabled = true;
     const result = await communityApi.addComment(postId, content);
+    submit.disabled = false;
+    if (!document.getElementById('commentInput')) return;
     if (!result.error) {
       document.getElementById('commentInput').value = '';
       await loadComments(postId);
@@ -398,23 +420,19 @@ function bindPostDetailEvents(postId) {
       // 更新评论数
       const commentCount = document.getElementById('commentCount');
       commentCount.textContent = parseInt(commentCount.textContent) + 1;
-    }
+    } else { alert(result.error); }
   });
 
   // 删除评论
-  document.querySelectorAll('[data-action="deleteComment"]').forEach(btn => {
-    btn.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      const commentId = btn.dataset.commentId;
-      if (confirm('确定要删除这条评论吗？')) {
-        await communityApi.deleteComment(commentId);
-        await loadComments(postId);
-        
-        // 更新评论数
-        const commentCount = document.getElementById('commentCount');
-        commentCount.textContent = parseInt(commentCount.textContent) - 1;
-      }
-    });
+  document.getElementById('commentList')?.addEventListener('click', async event => {
+    const button = event.target.closest('[data-action="deleteComment"]');
+    if (!button || button.disabled || !confirm('确定要删除这条评论吗？')) return;
+    button.disabled = true;
+    const result = await communityApi.deleteComment(button.dataset.commentId);
+    if (result.error) { alert(result.error); button.disabled = false; return; }
+    await loadComments(postId);
+    const count = document.getElementById('commentCount');
+    if (count) count.textContent = Math.max(0, Number(count.textContent) - 1);
   });
 }
 
@@ -438,11 +456,11 @@ export function showAuthModal() {
         <div class="auth-form active" id="loginForm">
           <div class="form-group">
             <label class="form-label">用户名</label>
-            <input type="text" class="form-input" id="loginUsername" placeholder="请输入用户名">
+            <input type="text" class="form-input" id="loginUsername" aria-label="用户名" placeholder="请输入用户名">
           </div>
           <div class="form-group">
             <label class="form-label">密码</label>
-            <input type="password" class="form-input" id="loginPassword" placeholder="请输入密码">
+            <input type="password" class="form-input" id="loginPassword" aria-label="密码" placeholder="请输入密码">
           </div>
           <div class="form-error" id="loginError" style="display: none;"></div>
         </div>
@@ -450,15 +468,15 @@ export function showAuthModal() {
         <div class="auth-form" id="registerForm">
           <div class="form-group">
             <label class="form-label">用户名</label>
-            <input type="text" class="form-input" id="regUsername" placeholder="请输入用户名">
+            <input type="text" class="form-input" id="regUsername" aria-label="注册用户名" placeholder="请输入用户名">
           </div>
           <div class="form-group">
             <label class="form-label">昵称</label>
-            <input type="text" class="form-input" id="regNickname" placeholder="请输入昵称（选填）">
+            <input type="text" class="form-input" id="regNickname" aria-label="昵称" placeholder="请输入昵称（选填）">
           </div>
           <div class="form-group">
             <label class="form-label">密码</label>
-            <input type="password" class="form-input" id="regPassword" placeholder="请输入密码（至少6位）">
+            <input type="password" class="form-input" id="regPassword" aria-label="注册密码" placeholder="请输入密码（至少6位）">
           </div>
           <div class="form-error" id="regError" style="display: none;"></div>
         </div>
@@ -487,6 +505,14 @@ export function showAuthModal() {
 
 // 处理登录/注册
 async function handleAuth() {
+  const button = document.getElementById('authSubmit');
+  if (button.disabled) return;
+  button.disabled = true;
+  try { await submitAuth(); }
+  finally { button.disabled = false; }
+}
+
+async function submitAuth() {
   const loginTab = document.querySelector('.auth-tab.active');
   const isLogin = loginTab.dataset.tab === 'login';
 
@@ -547,6 +573,9 @@ async function handleAuth() {
         closeAuthModal();
         updateUserMenu();
         location.reload();
+      } else {
+        errorEl.textContent = loginResult.error || '注册成功，但登录失败，请切换登录重试。';
+        errorEl.style.display = 'block';
       }
     }
   }
@@ -568,11 +597,11 @@ export function updateUserMenu() {
   if (userInfo) {
     userMenuContainer.innerHTML = `
       <div class="user-menu">
-        <div class="user-avatar">${userInfo.nickname?.charAt(0) || userInfo.username.charAt(0)}</div>
+        <button class="user-avatar" aria-label="用户菜单" aria-expanded="false" aria-controls="userDropdown">${escapeHtml(userInfo.nickname?.charAt(0) || userInfo.username.charAt(0))}</button>
         <div class="user-dropdown" id="userDropdown">
           <div style="padding: 12px 16px; border-bottom: 1px solid var(--rule);">
-            <div style="font-weight: 600;">${userInfo.nickname || userInfo.username}</div>
-            <div style="font-size: 0.85rem; color: var(--muted);">@${userInfo.username}</div>
+            <div style="font-weight: 600;">${escapeHtml(userInfo.nickname || userInfo.username)}</div>
+            <div style="font-size: 0.85rem; color: var(--muted);">@${escapeHtml(userInfo.username)}</div>
           </div>
           <button class="user-dropdown-item" data-action="myProfile">我的主页</button>
           <button class="user-dropdown-item" data-action="logout">退出登录</button>
@@ -586,12 +615,7 @@ export function updateUserMenu() {
     
     userAvatar.addEventListener('click', () => {
       dropdown.classList.toggle('visible');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!userMenuContainer.contains(e.target)) {
-        dropdown.classList.remove('visible');
-      }
+      userAvatar.setAttribute('aria-expanded', String(dropdown.classList.contains('visible')));
     });
 
     // 退出登录
@@ -631,10 +655,20 @@ function escapeHtml(text) {
 
 // 导出初始化函数
 export function initCommunity() {
+  if (initialized) return;
+  initialized = true;
   updateUserMenu();
 
   // 全局事件委托：帖子卡片、分类筛选、分页、模态框关闭等（innerHTML 重写后依然生效）
   document.addEventListener('click', (e) => {
+    const menu = document.getElementById('userMenu');
+    if (!menu?.contains(e.target) || e.target.closest('[data-action="myProfile"]')) {
+      document.getElementById('userDropdown')?.classList.remove('visible');
+      menu?.querySelector('.user-avatar')?.setAttribute('aria-expanded', 'false');
+    }
+    if (e.target.closest('[data-user-id]')) return;
+    if (e.target.closest('[data-action="retryCommunity"]')) { renderCommunityPage(); return; }
+    if (e.target.closest('[data-action="backToCommunity"]')) { renderCommunityPage(); return; }
     // 关闭模态框
     if (e.target.dataset?.action === 'closePostModal') {
       closePostModal();

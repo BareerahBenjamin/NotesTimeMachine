@@ -31,6 +31,10 @@ export function toggleBookDetail(bookId) {
     </div>
   `;
 
+  const read=document.createElement('button');read.type='button';read.className='btn btn-primary';
+  read.dataset.action='selectBook';read.dataset.book=bookId;read.textContent='阅读这部作品';
+  content.appendChild(read);
+
   panel.classList.add('visible');
   document.body.style.overflow = 'hidden';
 }

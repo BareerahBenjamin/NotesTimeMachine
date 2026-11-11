@@ -1,0 +1,21 @@
+{
+  "source": [
+    "xiaohongshu",
+    "bilibili",
+    "zhihu",
+    "juejin"
+  ],
+  "medium": [
+    "organic_social"
+  ],
+  "campaign": [
+    "ntm_r1_xhs_a",
+    "ntm_r1_xhs_b",
+    "ntm_r1_bili_a",
+    "ntm_r1_bili_b",
+    "ntm_r1_zhihu_a",
+    "ntm_r1_zhihu_b",
+    "ntm_r1_dev_a",
+    "ntm_r1_dev_b"
+  ]
+}

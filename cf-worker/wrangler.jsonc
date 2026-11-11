@@ -1,39 +1,52 @@
 {
-	"$schema": "./node_modules/wrangler/config-schema.json",
-	"name": "zhushu-notes-api",
-	"main": "src/index.ts",
-	"compatibility_date": "2026-07-01",
-	"compatibility_flags": [
-		"nodejs_compat"
-	],
-	"vars": {
-		"ENVIRONMENT": "production",
-		"JWT_SECRET": "change-this-secret-in-production"
-	},
-	"r2_buckets": [
-		{
-			"binding": "KNOWLEDGE_BUCKET",
-			"bucket_name": "zhushu-knowledge-base",
-			"remote": true
-		}
-	],
-	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_name": "zhushu-community",
-			"database_id": "32cc4bdb-266e-409b-9da4-88751ba715b6",
-			"remote": true
-		}
-	],
-	"ai": {
-		"binding": "AI",
-		"remote": true
-	},
-	"vectorize": [
-		{
-			"binding": "VECTOR_INDEX",
-			"index_name": "zhushu-annotations",
-			"remote": true
-		}
-	]
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "zhushu-notes-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "ENVIRONMENT": "production",
+    "FEEDBACK_ENABLED": "false",
+    "FEEDBACK_ALLOWED_ORIGINS": ""
+  },
+  "secrets": {
+    "required": ["JWT_SIGNING_KEY"]
+  },
+  "r2_buckets": [
+    {
+      "binding": "KNOWLEDGE_BUCKET",
+      "bucket_name": "zhushu-knowledge-base"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "zhushu-community",
+      "database_id": "32cc4bdb-266e-409b-9da4-88751ba715b6"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "vectorize": [
+    {
+      "binding": "VECTOR_INDEX",
+      "index_name": "zhushu-annotations"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "redact_query_string": true,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": false
+    },
+    "traces": {
+      "enabled": false
+    }
+  },
+  "upload_source_maps": true
 }

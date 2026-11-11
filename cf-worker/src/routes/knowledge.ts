@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import type { Bindings } from '../index';
+import { normalizeAnnotation } from '../sources';
 
 type Env = { Bindings: Bindings };
 
@@ -88,17 +89,7 @@ knowledgeRoutes.get('/paragraphs/:chapterId', async (c) => {
       id: p.id,
       content: p.content,
       keywords: p.keywords || [],
-      annotations: (p.annotations || []).map((ann: any) => ({
-        id: ann.id || '',
-        era: ann.era || '',
-        era_name: ann.era_name || '',
-        author: ann.author || '',
-        author_id: ann.author_id || '',
-        source: ann.source || '',
-        view_angle: ann.view_angle || '',
-        content: ann.content || '',
-        ai_generated: ann.ai_generated || false,
-      })),
+      annotations: (p.annotations || []).map((ann: any) => normalizeAnnotation(ann,p.id)),
     })),
   });
 });
@@ -125,18 +116,7 @@ knowledgeRoutes.get('/paragraph/:paragraphId', async (c) => {
   const para = (data.paragraphs || []).find((p: any) => p.id === paragraphId);
   if (!para) return c.json({ error: '段落不存在' }, 404);
 
-  const annotations = (para.annotations || []).map((ann: any) => ({
-    id: ann.id || '',
-    paragraph_id: paragraphId,
-    era: ann.era || '',
-    era_name: ann.era_name || '',
-    author: ann.author || '',
-    author_id: ann.author_id || '',
-    source: ann.source || '',
-    view_angle: ann.view_angle || '',
-    content: ann.content || '',
-    chapter_title: data.title || '',
-  }));
+  const annotations = (para.annotations || []).map((ann: any) => ({...normalizeAnnotation(ann,paragraphId),chapter_title:data.title || ''}));
 
   return c.json({
     paragraph: {

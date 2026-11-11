@@ -1,0 +1,73 @@
+{
+  "prepared_at": "2026-11-06T14:14:57.436Z",
+  "status": "PREPARED_NOT_EXECUTED",
+  "interview_target_range": [
+    5,
+    8
+  ],
+  "planned_content_units": 8,
+  "growth_launch_status": "BLOCKED",
+  "user_results": "N/A",
+  "recruitment_messages_sent": 0,
+  "social_posts_published": 0,
+  "production_config_changes": 0,
+  "product_feature_changes": 0,
+  "commits": 0,
+  "pushes": 0,
+  "deliverables": [
+    {
+      "file": "docs/PRODUCT-GROWTH-EXPERIMENT.md",
+      "sha256": "cc028fbb99c868cc34aafaba70f59776a8220e44c9341423dd9330bfdb1f7960"
+    },
+    {
+      "file": "docs/growth-experiment/experiment-plan.json",
+      "sha256": "8a98688ec3a17074f25f6f7144b04e428e292ec6ec6b82c5da8e3731db07abbf"
+    },
+    {
+      "file": "docs/growth-experiment/utm-allowlist.json",
+      "sha256": "009094cc36f02c7f6e6c46017a3f93bdf7bc33e18a11c5fd4b84f58021a7ebcf"
+    },
+    {
+      "file": "docs/growth-experiment/preparation-checks.json",
+      "sha256": "de46d26d9c87103c1c867a1a7a34ba0e87228fe22604f1b42602e175791daf49"
+    }
+  ],
+  "source_snapshots": [
+    {
+      "file": "docs/PRODUCT-ANALYTICS.md",
+      "sha256": "37a34f236492fb531c2ca28749fd3ba45b7c81b056700f72e1ac60166840653a"
+    },
+    {
+      "file": "docs/USER-ACTIVATION-V2.md",
+      "sha256": "f1a47c36f4a42a65fd47925cf8318e907bbac5c47f771f25dc2bf3341fc196b6"
+    },
+    {
+      "file": "docs/USER-FEEDBACK.md",
+      "sha256": "8f7d12554d00a98d9161b4f22659297709577256636ccb313992fae630ae18e9"
+    },
+    {
+      "file": "docs/V2-RELEASE-QA.md",
+      "sha256": "960a044dedb2ef8d9c9acd67585ea9bfab694c773a25938cbc6f3b9d2cd00c71"
+    },
+    {
+      "file": "docs/AI-RELEASE-READINESS.md",
+      "sha256": "c68b61724dd198756074996d5f574e8b706462eb3c7b7ebd0e19f7c788f78d47"
+    },
+    {
+      "file": "js/analytics/core.js",
+      "sha256": "31e3c7f239c953bb29604e55f231ae598cc5f1355f8e73a716e80376933c36d5"
+    },
+    {
+      "file": "js/analytics/config.js",
+      "sha256": "c7eb8c6fe8744c0ac6014ddac2e03a7d6e422f9712ee3764a389cf2736c14813"
+    },
+    {
+      "file": "scripts/configure-analytics.mjs",
+      "sha256": "84ccec7251d55817943f01024e29a3a548003a5a85d364e0485bf9484480f0ea"
+    },
+    {
+      "file": "evaluations/ai/source-review-registry.json",
+      "sha256": "7414ecec0fe24065d1b8542aadc1ebe0ed925c3fef09d0600a2d83a43bf2104a"
+    }
+  ]
+}

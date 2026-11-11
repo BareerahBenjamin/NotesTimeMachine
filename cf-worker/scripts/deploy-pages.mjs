@@ -1,74 +1,59 @@
 #!/usr/bin/env node
-import { cpSync, existsSync, mkdtempSync, rmSync, statSync } from 'node:fs';
+import { copyFileSync, lstatSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
-import { spawnSync } from 'node:child_process';
+import { dirname, join, resolve } from 'node:path';
+import { execFileSync, spawnSync } from 'node:child_process';
+import { writeAnalyticsConfig } from '../../scripts/configure-analytics.mjs';
 
-const SCRIPT_DIR = resolve(import.meta.dirname ?? process.cwd());
-const WORKER_DIR = resolve(SCRIPT_DIR, '..');
+const WORKER_DIR = resolve(import.meta.dirname, '..');
 const PROJECT_ROOT = resolve(WORKER_DIR, '..');
-
-const INCLUDE_GLOBS_ROOT = [
-  'index.html',
-  'favicon.ico',
-  'robots.txt',
-  'site.webmanifest',
+const STATIC_PATHS = [
+  'index.html', 'privacy.html', 'favicon.ico', 'robots.txt', 'site.webmanifest',
+  'css', 'js', 'assets', 'fonts', 'images', 'img', 'icons',
 ];
 
-const INCLUDE_DIRS = [
-  'css',
-  'js',
-  'assets',
-  'fonts',
-  'images',
-  'img',
-  'icons',
-];
+async function main() {
+  const git = (...args) => execFileSync('git', args, { cwd: PROJECT_ROOT, encoding: 'utf8' });
+  const branch = process.env.BRANCH || git('branch', '--show-current').trim();
+  if (!branch) throw new Error('设置 BRANCH，明确 Pages 部署分支。');
+  const dirty = git('status', '--porcelain', '--', ...STATIC_PATHS, 'knowledge_base/metadata',
+    'scripts/configure-analytics.mjs', 'cf-worker/scripts/deploy-pages.mjs');
+  if (dirty) throw new Error('提交所有 Pages 构建输入后再部署。');
 
-function copyIfExists(relPath, dest) {
-  const src = join(PROJECT_ROOT, relPath);
-  if (!existsSync(src)) return 0;
-  const st = statSync(src);
-  const dst = join(dest, relPath);
-  if (st.isDirectory()) {
-    cpSync(src, dst, { recursive: true, dereference: true });
-    console.log(`  ✅ 目录  ${relPath}/`);
-    return 1;
+  if (process.env.ANALYTICS_ENABLED === 'true' &&
+      (branch === 'main') !== (process.env.ANALYTICS_ENVIRONMENT === 'production')) {
+    throw new Error('Pages 分支和 PostHog 数据环境不匹配。');
   }
-  cpSync(src, dst, { dereference: true });
-  console.log(`  ✅ 文件  ${relPath}`);
-  return 1;
-}
 
-function main() {
-  console.log('\n📦 准备 Pages 部署工件（只包含前端静态文件）...\n');
-
-  const tmp = mkdtempSync(join(tmpdir(), 'zhushu-pages-'));
+  const commit = git('rev-parse', 'HEAD').trim();
+  const assets = git('ls-tree', '-rz', '--name-only', commit, '--', ...STATIC_PATHS).split('\0').filter(Boolean);
+  if (!assets.includes('index.html')) throw new Error('Pages 工件缺少 index.html。');
+  const output = mkdtempSync(join(tmpdir(), 'zhushu-pages-'));
   try {
-    let copied = 0;
-    for (const f of INCLUDE_GLOBS_ROOT) copied += copyIfExists(f, tmp);
-    for (const d of INCLUDE_DIRS) copied += copyIfExists(d, tmp);
-
-    if (copied === 0) {
-      console.error('❌ 没有找到任何可部署的前端文件');
-      process.exit(1);
+    for (const asset of assets) {
+      const source = join(PROJECT_ROOT, asset);
+      const destination = join(output, asset);
+      if (!lstatSync(source).isFile()) throw new Error('Pages 工件只允许普通文件：' + asset);
+      mkdirSync(dirname(destination), { recursive: true });
+      copyFileSync(source, destination);
     }
+    await writeAnalyticsConfig(output);
+    console.log('Pages 工件就绪，提交 ' + commit + '，分支 ' + branch + '，静态文件 ' + assets.length + ' 项。');
+    if (process.argv.includes('--prepare-only')) return;
 
-    console.log(`\n🚀 开始部署 Pages（项目名: zhushu-notes）...\n`);
-
-    const args = ['pages', 'deploy', tmp, '--project-name', 'zhushu-notes'];
-    const branch = process.env.BRANCH;
-    if (branch) args.push('--branch', branch);
-
-    const res = spawnSync('npx', ['wrangler', ...args], {
-      cwd: PROJECT_ROOT,
-      stdio: 'inherit',
-      shell: process.platform === 'win32',
-    });
-    process.exit(res.status ?? 1);
+    const wrangler = join(WORKER_DIR, 'node_modules/wrangler/bin/wrangler.js');
+    const result = spawnSync(process.execPath, [
+      wrangler, 'pages', 'deploy', output, '--project-name', 'zhushu-notes',
+      '--branch', branch, '--commit-hash', commit, '--commit-dirty=false',
+    ], { cwd: WORKER_DIR, stdio: 'inherit' });
+    if (result.error) throw result.error;
+    process.exitCode = result.status ?? 1;
   } finally {
-    rmSync(tmp, { recursive: true, force: true });
+    rmSync(output, { recursive: true, force: true });
   }
 }
 
-main();
+main().catch(error => {
+  console.error(error.message);
+  process.exitCode = 1;
+});

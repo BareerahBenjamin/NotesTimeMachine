@@ -7,6 +7,8 @@ const PROFILE_PAGE_ID = 'page-profile';
 const PROFILE_CONTENT_ID = 'profileContent';
 let currentUserId = null;
 let currentTab = 'reading';
+let profileVersion = 0;
+let tabVersion = 0;
 
 function escapeHtml(str) {
   if (str == null) return '';
@@ -31,18 +33,12 @@ function classicTitle(classicId) {
   return extraMap[key] || key;
 }
 
-function navigateProfileBack() {
-  const prev = state.getPreviousPage() || 'community';
-  state.navigateTo(prev);
-}
-
 export async function openUserProfile(userId) {
   if (!userId) return;
   const page = document.getElementById(PROFILE_PAGE_ID);
   if (!page) return;
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  page.classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  state.navigateTo('profile');
+  ++profileVersion; ++tabVersion;
   currentUserId = userId;
   currentTab = 'reading';
   const content = document.getElementById(PROFILE_CONTENT_ID);
@@ -53,13 +49,16 @@ export async function openUserProfile(userId) {
 async function renderProfile() {
   const content = document.getElementById(PROFILE_CONTENT_ID);
   if (!content || !currentUserId) return;
+  const version = profileVersion;
+  const userId = currentUserId;
   try {
     const [profileRes, postsRes, progressRes] = await Promise.all([
-      communityApi.getUserProfile(currentUserId),
-      communityApi.getUserPosts(currentUserId, 1, 20),
-      communityApi.getUserReadingProgress(currentUserId),
+      communityApi.getUserProfile(userId),
+      communityApi.getUserPosts(userId, 1, 20),
+      communityApi.getUserReadingProgress(userId),
     ]);
 
+    if (version !== profileVersion) return;
     if (profileRes.error) {
       content.innerHTML = `<div class="empty-state">加载失败：${escapeHtml(profileRes.error)}</div>`;
       return;
@@ -69,13 +68,13 @@ async function renderProfile() {
       return;
     }
 
-    const { user, stats } = profileRes;
+    const { user, stats = {} } = profileRes;
 
     content.innerHTML = `
       <div class="profile-card">
         <div class="profile-avatar">
           ${user.avatar
-            ? `<img src="${escapeHtml(user.avatar)}" alt="${escapeHtml(user.nickname || user.username)}" onerror="this.parentNode.innerHTML='<span class=avatar-placeholder>${escapeHtml((user.nickname || user.username || '?').charAt(0))}</span>'">`
+            ? `<img src="${escapeHtml(user.avatar)}" alt="${escapeHtml(user.nickname || user.username)}">`
             : `<span class="avatar-placeholder">${escapeHtml((user.nickname || user.username || '?').charAt(0))}</span>`
           }
         </div>
@@ -108,16 +107,19 @@ async function renderProfile() {
       </div>
     `;
   } catch (error) {
+    if (version !== profileVersion) return;
     console.error('渲染个人页失败:', error);
     content.innerHTML = `<div class="empty-state">加载失败：${escapeHtml(error.message || String(error))}</div>`;
   }
 }
 
 function renderTabBody(tab, postsRes, progressRes) {
+  const error = tab === 'reading' ? progressRes?.error : postsRes?.error;
+  if (error) return `<div class="empty-state" role="status">加载失败：${escapeHtml(error)}</div>`;
   if (tab === 'reading') {
     const list = progressRes?.progress || [];
     if (list.length === 0) {
-      return `<div class="empty-state">暂无读书进度<br><span style="font-size:14px;color:#999;">登录后在读书页翻章或选段会自动记录</span></div>`;
+      return `<div class="empty-state">暂无读书进度<br><span style="font-size:14px;color:var(--muted);">登录后在读书页翻章或选段会自动记录</span></div>`;
     }
     return `
       <div class="reading-list">
@@ -126,7 +128,7 @@ function renderTabBody(tab, postsRes, progressRes) {
           const title = classicTitle(p.classic_id);
           const chapterLabel = typeof p.chapter_index === 'number' ? `第 ${p.chapter_index + 1} 章` : (p.chapter_index || '-');
           return `
-          <div class="reading-card" data-action="openClassicFromProgress" data-classic-id="${escapeHtml(p.classic_id)}" data-chapter-index="${Number(p.chapter_index || 0)}" data-paragraph-id="${escapeHtml(p.paragraph_id || '')}">
+          <div class="reading-card" role="button" tabindex="0" data-action="openClassicFromProgress" data-classic-id="${escapeHtml(p.classic_id)}" data-chapter-index="${Number(p.chapter_index || 0)}" data-paragraph-id="${escapeHtml(p.paragraph_id || '')}">
             <div class="reading-card-header">
               <div class="reading-title">${escapeHtml(title)}</div>
               <div class="reading-time">${escapeHtml(communityApi.formatTime(p.last_read_at))}</div>
@@ -151,12 +153,12 @@ function renderTabBody(tab, postsRes, progressRes) {
   return `
     <div class="posts-list">
       ${list.map(p => `
-        <div class="post-card" data-post-id="${p.id}">
+        <div class="post-card" role="group" data-post-id="${p.id}">
           <div class="post-header">
             <span class="post-category" style="background-color:${p.category_color || '#8B3A2A'}">${escapeHtml(p.category_name || '综合交流')}</span>
             <span class="post-time">${escapeHtml(communityApi.formatTime(p.created_at))}</span>
           </div>
-          <h3 class="post-title">${escapeHtml(p.title)}</h3>
+          <h3 class="post-title"><button class="post-open">${escapeHtml(p.title)}</button></h3>
           <p class="post-preview">${escapeHtml(p.content)}</p>
           <div class="post-stats">
             <span class="post-stat">阅读 ${p.view_count || 0}</span>
@@ -172,25 +174,23 @@ function renderTabBody(tab, postsRes, progressRes) {
 async function handleTabSwitch(tab) {
   if (tab !== 'reading' && tab !== 'posts') return;
   currentTab = tab;
+  const version = ++tabVersion;
+  const userId = currentUserId;
   const panel = document.getElementById('profileTabPanel');
   if (!panel) return;
   panel.innerHTML = '<div class="empty-state">加载中...</div>';
   if (tab === 'reading') {
     const pr = await communityApi.getUserReadingProgress(currentUserId);
+    if (version !== tabVersion || currentUserId !== userId) return;
     panel.innerHTML = renderTabBody('reading', null, pr);
   } else {
     const po = await communityApi.getUserPosts(currentUserId, 1, 20);
+    if (version !== tabVersion || currentUserId !== userId) return;
     panel.innerHTML = renderTabBody('posts', po, null);
   }
 }
 
 document.addEventListener('click', (e) => {
-  const backBtn = e.target.closest('#page-profile [data-action="navigateBack"]');
-  if (backBtn) {
-    navigateProfileBack();
-    return;
-  }
-
   const authorEl = e.target.closest('[data-user-id]');
   if (authorEl && authorEl.dataset.userId) {
     const uid = Number(authorEl.dataset.userId);
@@ -229,24 +229,11 @@ document.addEventListener('click', (e) => {
       paragraphId,
     });
     state.navigateTo('reader');
-    setTimeout(() => {
-      reader.loadBook(classicId);
-    }, 250);
+    reader.loadBook(classicId);
     return;
   }
 
-  const postCard = e.target.closest('#profileTabPanel .post-card[data-post-id]');
-  if (postCard) {
-    const postId = Number(postCard.dataset.postId);
-    if (!isNaN(postId)) {
-      state.navigateTo('community');
-      setTimeout(() => {
-        const ev = new CustomEvent('open-post-detail', { detail: { postId } });
-        document.dispatchEvent(ev);
-      }, 80);
-    }
-    return;
-  }
+
 });
 
 export { openUserProfile as default };

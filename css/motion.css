@@ -1,0 +1,38 @@
+/* motion-anything MOTION-SPEC: fast / base / slow; transform + opacity only. */
+:root { --motion-fast: 180ms; --motion-base: 280ms; --motion-slow: 320ms; --motion-out: cubic-bezier(.16,1,.3,1); }
+.page, .page.active { transition: none; transform: none; }
+.hero *, .panel-original, .timeline-item, .timeline-item::before, .ancient-text.selected::after { animation: none; }
+.hero-scroll-hint span, .author-float-name { animation: none; }
+.detail-panels, .panel-timeline, .reader-container { transition: none; }
+.ancient-text { transition: opacity var(--motion-fast) var(--motion-out); }
+.ancient-text.selected::after { transform-origin: top; animation: line-grow 280ms var(--motion-out); }
+.timeline-track::before { transform-origin: top; animation: line-grow 400ms var(--motion-out); }
+@keyframes line-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.book-item, .book-spine, .btn { transition: transform var(--motion-fast) var(--motion-out); }
+.book-spine:hover { transform: none; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .book-item:hover { transform: translateY(-4px); }
+}
+.book-read:active, .btn:active { transform: translateY(1px); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .book-item:hover, .btn:hover, [data-parallax] { transform: none !important; }
+}
+.timeline-item:hover::before, .timeline-item.han:hover::before, .timeline-item.song:hover::before,
+.timeline-item.qing:hover::before, .timeline-item.modern:hover::before { animation: none; }
+
+/* A bounded compositor scroll effect; no JS scroll listener or persistent RAF. */
+@supports (animation-timeline: scroll()) {
+  @media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+    [data-parallax] { animation: ink-drift linear both; animation-timeline: scroll(root block); animation-range: 0px 440px; }
+  }
+}
+@keyframes ink-drift { from { transform: translateY(0); } to { transform: translateY(24px); } }
+.author-card, .author-detail-btn, .btn-secondary, .btn-nav, .btn-author-info, .btn-book-info,
+.era-node, .btn-interpret, .category-btn, .post-card, .user-avatar {
+  transition: transform var(--motion-fast) var(--motion-out), opacity var(--motion-fast) var(--motion-out);
+}
+
+/* Detail dialogs use the same WAAPI entrance, with no second legacy CSS entrance. */
+.modal-content, .modal-overlay { animation: none; }
+.modal-overlay, .modal { transition: none; }

@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "prepared_at": "2026-11-06",
+  "purpose": "DRAFT planning registry only; not a platform import, live campaign, or user dataset",
+  "experiment_id": "ntm_r1",
+  "production_launch_status": "BLOCKED_RELEASE_AND_INSTRUMENTATION_GATES",
+  "analysis_environment_required": {
+    "environment": "production",
+    "is_test": false,
+    "schema_version": 1,
+    "identity_persistence": "local"
+  },
+  "research_data_policy": "Moderated sessions use an isolated staging project; exclude from organic growth statistics",
+  "unsupported_attribution_fields": [
+    "utm_content",
+    "utm_term"
+  ],
+  "approved_base_url": null,
+  "items": [
+    {
+      "content_id": "ntm_r1_xhs_a",
+      "channel": "小红书",
+      "variant": "A",
+      "direction": "literature_comparison",
+      "status": "DRAFT_NOT_PUBLISHED",
+      "asset_status": "BLOCKED_TWO_HUMAN_VERIFIED_HISTORICAL_SOURCES",
+      "base_url": null,
+      "url": null,
+      "url_template": "{APPROVED_BASE_URL}/?utm_source=xiaohongshu&utm_medium=organic_social&utm_campaign=ntm_r1_xhs_a",
+      "utm": {
+        "utm_source": "xiaohongshu",
+        "utm_medium": "organic_social",
+        "utm_campaign": "ntm_r1_xhs_a"
+      },
+      "planned_wave": 1,
+      "published_at": null,
+      "external_link_permission": "NOT_VERIFIED",
+      "metrics": {
+        "impressions": null,
+        "native_metric_name": null,
+        "outbound_clicks": null,
+        "observed_site_uv": null,
+        "eligible_new_visitor_uv": null,
+        "activation_users": null,
+        "activation_rate": null,
+        "valid_feedback_units": null,
+        "d7_eligible_users": null,
+        "d7_returning_users": null
+      },
+      "data_status": "NOT_STARTED_NO_USER_DATA"
+    },
+    {
+      "content_id": "ntm_r1_xhs_b",
+      "channel": "小红书",
+      "variant": "B",
+      "direction": "independent_development",
+      "status": "DRAFT_NOT_PUBLISHED",
+      "asset_status": "DRAFT_REQUIRES_EDITORIAL_REVIEW",
+      "base_url": null,
+      "url": null,
+      "url_template": "{APPROVED_BASE_URL}/?utm_source=xiaohongshu&utm_medium=organic_social&utm_campaign=ntm_r1_xhs_b",
+      "utm": {
+        "utm_source": "xiaohongshu",
+        "utm_medium": "organic_social",
+        "utm_campaign": "ntm_r1_xhs_b"
+      },
+      "planned_wave": 2,
+      "published_at": null,
+      "external_link_permission": "NOT_VERIFIED",
+      "metrics": {
+        "impressions": null,
+        "native_metric_name": null,
+        "outbound_clicks": null,
+        "observed_site_uv": null,
+        "eligible_new_visitor_uv": null,
+        "activation_users": null,
+        "activation_rate": null,
+        "valid_feedback_units": null,
+        "d7_eligible_users": null,
+        "d7_returning_users": null
+      },
+      "data_status": "NOT_STARTED_NO_USER_DATA"
+    },
+    {
+      "content_id": "ntm_r1_bili_a",
+      "channel": "B站",
+      "variant": "A",
+      "direction": "literature_comparison",
+      "status": "DRAFT_NOT_PUBLISHED",
+      "asset_status": "BLOCKED_TWO_HUMAN_VERIFIED_HISTORICAL_SOURCES",
+      "base_url": null,
+      "url": null,
+      "url_template": "{APPROVED_BASE_URL}/?utm_source=bilibili&utm_medium=organic_social&utm_campaign=ntm_r1_bili_a",
+      "utm": {
+        "utm_source": "bilibili",
+        "utm_medium": "organic_social",
+        "utm_campaign": "ntm_r1_bili_a"
+      },
+      "planned_wave": 2,
+      "published_at": null,
+      "external_link_permission": "NOT_VERIFIED",
+      "metrics": {
+        "impressions": null,
+        "native_metric_name": null,
+        "outbound_clicks": null,
+        "observed_site_uv": null,
+        "eligible_new_visitor_uv": null,
+        "activation_users": null,
+        "activation_rate": null,
+        "valid_feedback_units": null,
+        "d7_eligible_users": null,
+        "d7_returning_users": null
+      },
+      "data_status": "NOT_STARTED_NO_USER_DATA"
+    },
+    {
+      "content_id": "ntm_r1_bili_b",
+      "channel": "B站",
+      "variant": "B",
+      "direction": "independent_development",
+      "status": "DRAFT_NOT_PUBLISHED",
+      "asset_status": "DRAFT_REQUIRES_EDITORIAL_REVIEW",
+      "base_url": null,
+      "url": null,
+      "url_template": "{APPROVED_BASE_URL}/?utm_source=bilibili&utm_medium=organic_social&utm_campaign=ntm_r1_bili_b",
+      "utm": {
+        "utm_source": "bilibili",
+        "utm_medium": "organic_social",
+        "utm_campaign": "ntm_r1_bili_b"
+      },
+      "planned_wave": 1,
+      "published_at": null,
+      "external_link_permission": "NOT_VERIFIED",
+      "metrics": {
+        "impressions": null,
+        "native_metric_name": null,
+        "outbound_clicks": null,
+        "observed_site_uv": null,
+        "eligible_new_visitor_uv": null,
+        "activation_users": null,
+        "activation_rate": null,
+        "valid_feedback_units": null,
+        "d7_eligible_users": null,
+        "d7_returning_users": null
+      },
+      "data_status": "NOT_STARTED_NO_USER_DATA"
+    },
+    {
+      "content_id": "ntm_r1_zhihu_a",
+      "channel": "知乎",
+      "variant": "A",
+      "direction": "literature_comparison",
+      "status": "DRAFT_NOT_PUBLISHED",
+      "asset_status": "BLOCKED_TWO_HUMAN_VERIFIED_HISTORICAL_SOURCES",
+      "base_url": null,
+      "url": null,
+      "url_template": "{APPROVED_BASE_URL}/?utm_source=zhihu&utm_medium=organic_social&utm_campaign=ntm_r1_zhihu_a",
+      "utm": {
+        "utm_source": "zhihu",
+        "utm_medium": "organic_social",
+        "utm_campaign": "ntm_r1_zhihu_a"
+      },
+      "planned_wave": 1,
+      "published_at": null,
+      "external_link_permission": "NOT_VERIFIED",
+      "metrics": {
+        "impressions": null,
+        "native_metric_name": null,
+        "outbound_clicks": null,
+        "observed_site_uv": null,
+        "eligible_new_visitor_uv": null,
+        "activation_users": null,
+        "activation_rate": null,
+        "valid_feedback_units": null,
+        "d7_eligible_users": null,
+        "d7_returning_users": null
+      },
+      "data_status": "NOT_STARTED_NO_USER_DATA"
+    },
+    {
+      "content_id": "ntm_r1_zhihu_b",
+      "channel": "知乎",
+      "variant": "B",
+      "direction": "independent_development",
+      "status": "DRAFT_NOT_PUBLISHED",
+      "asset_status": "DRAFT_REQUIRES_EDITORIAL_REVIEW",
+      "base_url": null,
+      "url": null,
+      "url_template": "{APPROVED_BASE_URL}/?utm_source=zhihu&utm_medium=organic_social&utm_campaign=ntm_r1_zhihu_b",
+      "utm": {
+        "utm_source": "zhihu",
+        "utm_medium": "organic_social",
+        "utm_campaign": "ntm_r1_zhihu_b"
+      },
+      "planned_wave": 2,
+      "published_at": null,
+      "external_link_permission": "NOT_VERIFIED",
+      "metrics": {
+        "impressions": null,
+        "native_metric_name": null,
+        "outbound_clicks": null,
+        "observed_site_uv": null,
+        "eligible_new_visitor_uv": null,
+        "activation_users": null,
+        "activation_rate": null,
+        "valid_feedback_units": null,
+        "d7_eligible_users": null,
+        "d7_returning_users": null
+      },
+      "data_status": "NOT_STARTED_NO_USER_DATA"
+    },
+    {
+      "content_id": "ntm_r1_dev_a",
+      "channel": "开发者社区（暂定掘金，账号/板块待核对）",
+      "variant": "A",
+      "direction": "literature_comparison",
+      "status": "DRAFT_NOT_PUBLISHED",
+      "asset_status": "BLOCKED_TWO_HUMAN_VERIFIED_HISTORICAL_SOURCES",
+      "base_url": null,
+      "url": null,
+      "url_template": "{APPROVED_BASE_URL}/?utm_source=juejin&utm_medium=organic_social&utm_campaign=ntm_r1_dev_a",
+      "utm": {
+        "utm_source": "juejin",
+        "utm_medium": "organic_social",
+        "utm_campaign": "ntm_r1_dev_a"
+      },
+      "planned_wave": 2,
+      "published_at": null,
+      "external_link_permission": "NOT_VERIFIED",
+      "metrics": {
+        "impressions": null,
+        "native_metric_name": null,
+        "outbound_clicks": null,
+        "observed_site_uv": null,
+        "eligible_new_visitor_uv": null,
+        "activation_users": null,
+        "activation_rate": null,
+        "valid_feedback_units": null,
+        "d7_eligible_users": null,
+        "d7_returning_users": null
+      },
+      "data_status": "NOT_STARTED_NO_USER_DATA"
+    },
+    {
+      "content_id": "ntm_r1_dev_b",
+      "channel": "开发者社区（暂定掘金，账号/板块待核对）",
+      "variant": "B",
+      "direction": "independent_development",
+      "status": "DRAFT_NOT_PUBLISHED",
+      "asset_status": "DRAFT_REQUIRES_EDITORIAL_REVIEW",
+      "base_url": null,
+      "url": null,
+      "url_template": "{APPROVED_BASE_URL}/?utm_source=juejin&utm_medium=organic_social&utm_campaign=ntm_r1_dev_b",
+      "utm": {
+        "utm_source": "juejin",
+        "utm_medium": "organic_social",
+        "utm_campaign": "ntm_r1_dev_b"
+      },
+      "planned_wave": 1,
+      "published_at": null,
+      "external_link_permission": "NOT_VERIFIED",
+      "metrics": {
+        "impressions": null,
+        "native_metric_name": null,
+        "outbound_clicks": null,
+        "observed_site_uv": null,
+        "eligible_new_visitor_uv": null,
+        "activation_users": null,
+        "activation_rate": null,
+        "valid_feedback_units": null,
+        "d7_eligible_users": null,
+        "d7_returning_users": null
+      },
+      "data_status": "NOT_STARTED_NO_USER_DATA"
+    }
+  ]
+}

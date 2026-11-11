@@ -1,84 +1,76 @@
 import { BOOK_NAMES } from '../config.js';
 import { state } from '../state.js';
-import { semanticSearchApi } from '../api.js';
-import { jumpToParagraph } from './reader.js';
+import { semanticSearchApi, checkApiConnection } from '../api.js';
+import {analytics,EVENTS} from '../analytics/index.js';
 
-const SEARCH_INPUT_IDS = Object.freeze(['heroSemanticSearch', 'readerSemanticSearch']);
-const SEARCH_RESULTS_IDS = Object.freeze(['heroSearchResults', 'readerSearchResults']);
+const INPUT_IDS = ['heroSemanticSearch', 'readerSemanticSearch'];
+const RESULT_IDS = ['heroSearchResults', 'readerSearchResults'];
+let version = 0;
+let controller;
 
-function getActiveQueryInfo() {
-  const inputs = SEARCH_INPUT_IDS
-    .map(id => document.getElementById(id))
-    .filter(Boolean);
-  if (inputs.length === 0) return { query: '' };
-  const active = document.activeElement;
-  const activeInput = inputs.find(el => el === active) || inputs.find(el => el.value.trim() !== '') || inputs[0];
-  const query = activeInput.value.trim();
-  return { query, activeInput };
-}
-
-function renderAllResults(html) {
-  for (const id of SEARCH_RESULTS_IDS) {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = html;
+function showMessage(message, error = false) {
+  for (const id of RESULT_IDS) {
+    const element = document.getElementById(id);
+    if (!element) continue;
+    const status = document.createElement('div');
+    status.className = error ? 'search-error' : 'search-loading';
+    status.textContent = message;
+    element.replaceChildren(status);
   }
 }
 
 export async function semanticSearch() {
-  const { query } = getActiveQueryInfo();
-  if (!query) {
-    renderAllResults('<div class="search-error">请先输入检索关键词。</div>');
-    return;
-  }
-
-  if (!state.apiAvailable) {
-    renderAllResults('<div class="search-error">后端未启动，无法进行语义搜索。</div>');
-    return;
-  }
-
-  renderAllResults('<div class="search-loading">正在检索...</div>');
-
+  const inputs = INPUT_IDS.map(id => document.getElementById(id)).filter(Boolean);
+  const input = inputs.find(el => el.closest('.page.active')) || inputs.find(el => el === document.activeElement) || inputs[0];
+  const query = input?.value.trim();
+  const current = ++version;
+  controller?.abort();
+  controller = new AbortController();
+  const signal = controller.signal;
+  if (!query) { showMessage('请先输入检索关键词。', true); return; }
+  const searchId=analytics.operationId();
+  analytics.track(EVENTS.SEARCH,{search_id:searchId,query_length:query.length},searchId);
+  showMessage('正在检索…');
   try {
-    const data = await semanticSearchApi(query, 5);
-
-    if (data.error) {
-      renderAllResults(`<div class="search-error">搜索失败：${data.error}</div>`);
-      return;
+    if (!state.apiAvailable) await checkApiConnection();
+    if (current !== version) return;
+    const data = await semanticSearchApi(query, 5, signal);
+    if (current !== version) return;
+    if (data.error) throw new Error(data.error);
+    const unique = new Map();
+    for (const result of data.results || []) {
+      const p = result.paragraph;
+      if (!p?.id || !p.classic_id) continue;
+      const key = `${p.classic_id}:${p.id}`;
+      if (!unique.has(key)) unique.set(key, { paragraph: p, annotations: new Map() });
+      for (const ann of result.annotations || []) unique.get(key).annotations.set(ann.id || `${ann.author}:${ann.content}`, ann);
     }
-
-    const results = data.results || [];
-    if (results.length === 0) {
-      renderAllResults('<div class="search-loading">未找到相关段落。</div>');
-      return;
+    if (!unique.size) { showMessage('未找到相关段落。'); return; }
+    for (const id of RESULT_IDS) {
+      const element = document.getElementById(id);
+      if (!element) continue;
+      element.replaceChildren();
+      let position=0;
+      for (const { paragraph: p, annotations } of unique.values()) {
+        const resultPosition=++position;
+        const button = document.createElement('button');
+        button.className = 'search-result-item'; button.dataset.action = 'jumpToParagraph';
+        button.dataset.classic = p.classic_id; button.dataset.paragraph = p.id;
+        const meta = document.createElement('span'); meta.className = 'search-result-meta';
+        meta.textContent = `${BOOK_NAMES[p.classic_id] || p.classic_id} · ${p.chapter_title || ''} · ${annotations.size} 条匹配注疏`;
+        const content = document.createElement('span'); content.className = 'search-result-text'; content.textContent = p.content;
+        button.append(meta, content); element.appendChild(button);
+        button.addEventListener('click',()=>analytics.track(EVENTS.SEARCH_CLICK,{work_id:p.classic_id,paragraph_id:p.id,search_id:searchId,result_position:resultPosition,entry_point:'search'},searchId?`${searchId}:${p.id}`:undefined));
+      }
     }
-
-    const html = results.map(r => {
-      const p = r.paragraph;
-      const bookName = BOOK_NAMES[p.classic_id] || p.classic_id;
-      const annCount = (r.annotations || []).length;
-      return `
-        <div class="search-result-item" data-action="jumpToParagraph"
-             data-classic="${p.classic_id}" data-paragraph="${p.id}">
-          <div class="search-result-meta">${bookName} · ${p.chapter_title} · ${annCount} 条注疏</div>
-          <div class="search-result-text">${p.content}</div>
-        </div>
-      `;
-    }).join('');
-    renderAllResults(html);
-  } catch (e) {
-    console.error('Semantic search failed', e);
-    const detail = e?.message ? `（${String(e.message).slice(0, 120)}）` : '';
-    renderAllResults(`<div class="search-error">搜索失败，请检查后端连接。${detail}</div>`);
-  }
+  } catch (error) {
+    if (current !== version) return;
+    showMessage(error.name === 'AbortError' ? '检索超时，请重试。' : '搜索失败，请检查后端连接后重试。', true);
+  } finally { if (current === version) controller = null; }
 }
 
 export function clearSearch() {
-  for (const id of SEARCH_RESULTS_IDS) {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = '';
-  }
-  for (const id of SEARCH_INPUT_IDS) {
-    const el = document.getElementById(id);
-    if (el) el.value = '';
-  }
+  ++version; controller?.abort(); controller = null;
+  RESULT_IDS.forEach(id => document.getElementById(id)?.replaceChildren());
+  INPUT_IDS.forEach(id => { const input = document.getElementById(id); if (input) input.value = ''; });
 }

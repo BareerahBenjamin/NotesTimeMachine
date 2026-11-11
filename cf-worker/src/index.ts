@@ -1,46 +1,38 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
-import { logger } from 'hono/logger';
+import { observeRequests, handleError } from './reliability';
+import type { AppEnv } from './reliability';
 import { knowledgeRoutes } from './routes/knowledge';
 import { communityRoutes } from './routes/community';
 import { aiRoutes } from './routes/ai';
+import { activationRoutes } from './routes/activation';
+import { feedbackRoutes } from './routes/feedback';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { resolve, normalize, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export type Bindings = {
-  KNOWLEDGE_BUCKET: R2Bucket;
-  DB: D1Database;
-  AI: Ai;
-  VECTOR_INDEX: VectorizeIndex;
+export type Bindings = WorkerBindings & {
   ASSETS?: Fetcher;
-  ENVIRONMENT: string;
-  JWT_SECRET: string;
   OPENAI_API_KEY?: string;
   OPENAI_BASE_URL?: string;
   OPENAI_MODEL?: string;
+  FEEDBACK_RATE_LIMIT_SECRET?: string;
+  FEEDBACK_ADMIN_TOKEN?: string;
 };
 
-type Env = {
-  Bindings: Bindings;
-  Variables: {
-    userId?: number;
-  };
-};
+const app = new Hono<AppEnv>();
 
-const app = new Hono<Env>();
-
-app.use('*', logger());
+app.use('*', observeRequests);
 app.use(
   '*',
   cors({
     origin: (o) => {
-      if (!o) return true;
+      if (!o) return null;
       return o;
     },
     allowHeaders: ['Content-Type', 'Authorization', 'Accept', 'Origin', 'X-Requested-With'],
     allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    exposeHeaders: ['Content-Length', 'Content-Type'],
+    exposeHeaders: ['Content-Length', 'Content-Type', 'X-Request-ID'],
     maxAge: 86400,
     credentials: true,
   })
@@ -57,6 +49,8 @@ app.get('/api/health', (c) => {
 app.route('/api', knowledgeRoutes);
 app.route('/api/community', communityRoutes);
 app.route('/api', aiRoutes);
+app.route('/api', activationRoutes);
+app.route('/api', feedbackRoutes);
 
 // ==================== 前端静态资源（仅本地 dev 有效；生产前端走 Cloudflare Pages）====================
 let PROJECT_ROOT: string | null = null;
@@ -113,13 +107,14 @@ function readLocalAsset(urlPath: string): { body: ArrayBuffer | string; type: st
   if (!PROJECT_ROOT) return null;
   let rel = decodeURIComponent(urlPath.split('?')[0]);
   if (rel === '/' || rel === '') rel = '/index.html';
+  if (!/^\/(?:index\.html|privacy\.html|(?:css|js|images)\/(?:[a-z0-9_-]+\/)*[a-z0-9_.-]+)$/i.test(rel)) return null;
   const full = safeJoin(PROJECT_ROOT, rel);
   if (!full || !existsSync(full)) return null;
   try {
     if (!statSync(full).isFile()) return null;
     const ext = rel.toLowerCase().match(/\.[^.]+$/)?.[0] || '';
     const isText = ['.html', '.htm', '.css', '.js', '.mjs', '.json', '.svg', '.md'].includes(ext);
-    const body = isText ? readFileSync(full, 'utf-8') : readFileSync(full);
+    const body = isText ? readFileSync(full, 'utf-8') : new Uint8Array(readFileSync(full)).buffer;
     return { body, type: mimeOf(rel), html: ext === '.html' || ext === '.htm' };
   } catch {
     return null;
@@ -134,7 +129,8 @@ app.notFound(async (c) => {
     return c.json({ error: 'Not Found' }, 404);
   }
 
-  const local = readLocalAsset(path);
+  const development = c.env.ENVIRONMENT === 'development';
+  const local = development && readLocalAsset(path);
   if (local) {
     return c.body(local.body as any, 200, {
       'Content-Type': local.type,
@@ -142,7 +138,7 @@ app.notFound(async (c) => {
     });
   }
 
-  if (!path.includes('.')) {
+  if (development && !path.includes('.')) {
     const fallback = readLocalAsset('/index.html');
     if (fallback) {
       return c.body(fallback.body as any, 200, {
@@ -179,9 +175,6 @@ app.notFound(async (c) => {
   return c.body(`Not Found: ${path}`, 404, { 'Content-Type': 'text/plain; charset=utf-8' });
 });
 
-app.onError((err, c) => {
-  console.error('API Error:', err);
-  return c.json({ error: err.message || 'Internal Server Error' }, 500);
-});
+app.onError(handleError);
 
 export default app;

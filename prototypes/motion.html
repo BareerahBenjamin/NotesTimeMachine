@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>注疏时光机 · 三个动效原型</title>
+<link rel="stylesheet" href="../css/main.css"><link rel="stylesheet" href="../css/v2.css"><link rel="stylesheet" href="../css/motion.css">
+<body><main class="container prototype"><p class="eyebrow">MOTION STUDIES · V2.0</p><h1>让文字，连接时间。</h1><p>三个独立原型 · 不依赖后端 · 与主站共用动效模块</p>
+<section class="prototype-study"><h2>01 / 长卷入场</h2><div id="study-entrance"><p class="eyebrow">中国女性古典文学</p><h2>循着她的文字，<br>与千年相逢。</h2><p>从一行原文，读见不同时代的回声。</p></div><button id="replay" class="btn btn-secondary">重播入场</button></section>
+<section class="prototype-study"><h2>02 / 原文聚焦与注疏展开</h2><button id="sentence" class="ancient-text" aria-expanded="false" aria-controls="study-panel">知否，知否？应是绿肥红瘦。</button><div id="study-panel" class="detail-panels" inert aria-hidden="true"><div class="panel"><p class="ai-content">以日常之语，写惜春之情。</p></div></div></section>
+<section class="prototype-study"><h2>03 / 时间线与时代切换</h2><div id="study-nodes" class="era-navigation"><button class="era-node" aria-pressed="true">宋代</button><button class="era-node" aria-pressed="false">现代</button></div><div class="timeline-track"><p id="study-annotation">宋代 · 从词句与音律读其清新婉丽。</p></div></section></main>
+<script type="module">
+import {stagger, focusText, setPanelVisible, switchContent} from '../js/motion/index.js';
+const children = document.querySelector('#study-entrance').children;
+document.querySelector('#replay').onclick = () => stagger(children, 320);
+stagger(children, 320);
+document.querySelector('#sentence').onclick = e => {const open = e.currentTarget.getAttribute('aria-expanded') !== 'true'; e.currentTarget.setAttribute('aria-expanded', open); e.currentTarget.classList.toggle('selected', open); focusText(e.currentTarget); setPanelVisible(document.querySelector('#study-panel'), open);};
+document.querySelectorAll('.era-node').forEach((button,index) => button.onclick = () => {document.querySelectorAll('.era-node').forEach(b=>b.setAttribute('aria-pressed',String(b===button))); const p=document.querySelector('#study-annotation'); p.textContent=index?'现代 · 从女性经验读其细腻的生命感受。':'宋代 · 从词句与音律读其清新婉丽。'; switchContent(p);});
+</script></body></html>

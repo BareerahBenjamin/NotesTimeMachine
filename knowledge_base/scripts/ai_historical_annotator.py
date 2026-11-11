@@ -203,7 +203,7 @@ def process_classic(client: OpenAI, classic_id: str, sources: list[dict],
 
         for para in data.get("paragraphs", []):
             # 检查哪些源还缺失
-            missing = [s for s in sources if not has_annotation(para, s["id_prefix"])]
+            missing = [s for s in sources if not has_annotation(para, s["author_id"])]
             if not missing:
                 continue
             if limit is not None and processed >= limit:
@@ -232,6 +232,10 @@ def process_classic(client: OpenAI, classic_id: str, sources: list[dict],
                     "source": src["source"],
                     "view_angle": src["view_angle"],
                     "content": text,
+                    "ai_generated": True,
+                    "content_type": "ai_interpretation",
+                    "verification_status": "ai_generated",
+                    "provenance_note": "AI 模拟历史视角，并非所署注家原文；书名仅为模拟风格参考",
                 }
                 para.setdefault("annotations", []).append(ann)
                 chapter_changed = True

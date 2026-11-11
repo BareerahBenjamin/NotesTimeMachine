@@ -12,10 +12,13 @@ function getAuthHeaders() {
 }
 
 async function request(url, options = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 30000);
   try {
     const resp = await fetch(url, {
       headers: { 'Content-Type': 'application/json', ...getAuthHeaders(), ...options.headers },
       ...options,
+      signal: controller.signal,
     });
     const data = await resp.json().catch(() => ({}));
     if (!resp.ok) {
@@ -25,7 +28,7 @@ async function request(url, options = {}) {
   } catch (e) {
     console.error('Request error:', e);
     return { error: '网络错误，请检查连接' };
-  }
+  } finally { clearTimeout(timer); }
 }
 
 // ==================== 认证相关（使用 Edge Functions）====================
@@ -57,7 +60,7 @@ export async function getCategories() {
   if (Array.isArray(result)) return result;
   if (result && !result.error && Array.isArray(result.data)) return result.data;
   console.warn('获取分类失败:', result?.error);
-  return [];
+  throw new Error(result?.error || '分类加载失败');
 }
 
 // ==================== 帖子相关 ========================
@@ -70,7 +73,7 @@ export async function getPosts(categoryId = null, page = 1) {
 
   if (result?.error) {
     console.error('Error fetching posts:', result.error);
-    return { posts: [], total_pages: 0, page: 1 };
+    return { error: result.error, posts: [], total_pages: 0, page: 1 };
   }
 
   const posts = (result.posts || []).map((post) => ({
@@ -150,7 +153,7 @@ export async function getComments(postId) {
   const result = await request(`${COMMUNITY_API}/posts/${postId}/comments`);
   if (result?.error) {
     console.error('Error fetching comments:', result.error);
-    return [];
+    throw new Error(result.error);
   }
   const list = Array.isArray(result) ? result : (result.data || []);
   return list.map((comment) => ({

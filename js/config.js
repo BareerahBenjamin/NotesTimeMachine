@@ -445,6 +445,5 @@ export const ERA_CLASS_MAP = {
 const WORKERS_PROD_URL = 'https://zhushu-notes-api.bareerahmoooo.workers.dev';
 
 const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-export const API_BASE = isLocal 
-  ? 'http://localhost:8787'     // 本地开发：wrangler dev 默认端口 8787
-  : WORKERS_PROD_URL;            // 生产环境：Cloudflare Workers
+const isProduction = location.hostname === 'zhushu-notes.pages.dev';
+export const API_BASE = isLocal ? 'http://localhost:8787' : isProduction ? WORKERS_PROD_URL : '';

@@ -27,8 +27,8 @@
   --shelf-wood-dark: #A89878;
   --shadow: rgba(44,36,32,0.08);
   --shadow-lg: rgba(44,36,32,0.12);
-  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
-  --font-display: 'ZCOOL XiaoWei', serif;
+  --font-serif: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
+  --font-display: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
   --font-mono: 'SF Mono', 'Monaco', monospace;
   --radius: 8px;
   --radius-sm: 4px;

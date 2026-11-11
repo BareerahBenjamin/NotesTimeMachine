@@ -37,6 +37,7 @@ pip-delete-this-directory.txt
 # ============================================
 node_modules/
 package-lock.json
+!/cf-worker/package-lock.json
 yarn.lock
 pnpm-lock.yaml
 npm-debug.log*
@@ -73,8 +74,9 @@ index/
 # Environment & Secrets
 # ============================================
 .env
-.env.local
-.env.*.local
+.env.*
+.dev.vars
+.dev.vars.*
 credentials.json
 *.pem
 *.key
@@ -159,3 +161,5 @@ CLAUDE.md
 # Agent 工作目录
 .trae/
 .agola/
+/outputs/
+/docs/*-evidence/
